@@ -1,0 +1,49 @@
+@import "../../public/font/fonts";
+@import "./mixins/null-style";
+@import "./mixins/adaptive";
+@import "../content/import-scss";
+
+:root {
+
+}
+
+img {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: transparent;
+}
+
+#root {
+    height: 100%;
+    min-width: 375px;
+}
+
+html {
+    scrollbar-gutter: stable;
+}
+
+body {
+    background-color: var(--bg-main);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--text-h);
+    font-family: "TS";
+    line-height: 150%;
+    @include adap(font-size, 48, 40, 32);
+}
+
+p, a, li {
+    color: var(--text-p);
+    @include adap(font-size, 16);
+    font-family: "OS";
+    line-height: 150%;
+}
+
+.scroll-lock {
+    overflow: hidden;
+}
+
+.content {
+    @include adap(padding-right, 140, 30);
+    @include adap(padding-left, 140, 30);
+}

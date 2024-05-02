@@ -75,3 +75,14 @@
   p {
     cursor: default;
   }
+
+  address {
+    font-style: normal;
+  }
+
+  select { 
+    font: inherit;
+    letter-spacing: inherit;
+    word-spacing: inherit;
+    appearance: none;
+  }

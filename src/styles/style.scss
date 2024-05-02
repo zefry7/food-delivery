@@ -4,7 +4,10 @@
 @import "../content/import-scss";
 
 :root {
-
+    --green-c: #8EC038;
+    --black-c: #302929;
+    --white-c: #ffffff;
+    --orange-c: #FFA800;
 }
 
 img {
@@ -43,7 +46,7 @@ p, a, li {
     overflow: hidden;
 }
 
-.content {
-    @include adap(padding-right, 140, 30);
-    @include adap(padding-left, 140, 30);
+.padding-content {
+    @include adap(padding-right, 120, 70, 20);
+    @include adap(padding-left, 120, 70, 20);
 }

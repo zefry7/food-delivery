@@ -1,3 +1,27 @@
+@font-face {
+  font-family: "MB";
+  src: url("../../public/font/Montserrat-Bold.eot");
+  src: url("../../public/font/Montserrat-Bold.eot?#iefix") format("embedded-opentype"), url("../../public/font/Montserrat-Bold.woff2") format("woff2"), url("../../public/font/Montserrat-Bold.woff") format("woff"), url("../../public/font/Montserrat-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "MR";
+  src: url("../../public/font/Montserrat-Regular.eot");
+  src: url("../../public/font/Montserrat-Regular.eot?#iefix") format("embedded-opentype"), url("../../public/font/Montserrat-Regular.woff2") format("woff2"), url("../../public/font/Montserrat-Regular.woff") format("woff"), url("../../public/font/Montserrat-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "MN";
+  src: url("../../public/font/Montserrat-Medium.eot");
+  src: url("../../public/font/Montserrat-Medium.eot?#iefix") format("embedded-opentype"), url("../../public/font/Montserrat-Medium.woff2") format("woff2"), url("../../public/font/Montserrat-Medium.woff") format("woff"), url("../../public/font/Montserrat-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
 * {
   padding: 0;
   margin: 0;
@@ -74,6 +98,140 @@ h1, h2, h3, h4, h5, h6 {
 
 p {
   cursor: default;
+}
+
+address {
+  font-style: normal;
+}
+
+select {
+  font: inherit;
+  letter-spacing: inherit;
+  word-spacing: inherit;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+.header {
+  margin: 0 auto;
+  width: -moz-max-content;
+  width: max-content;
+  height: 100px;
+  background-color: var(--white-c);
+}
+.header__content {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.header__menu {
+  display: flex;
+  align-items: center;
+}
+.header__logo {
+  margin-right: 57px;
+  cursor: pointer;
+}
+.header__logo img {
+  max-width: 100%;
+  height: auto;
+}
+.header__nav {
+  margin-right: 137px;
+}
+.header__links-row {
+  display: flex;
+  align-items: center;
+  gap: 70px;
+}
+.header__link {
+  font-size: 16px;
+  font-family: "MN";
+  cursor: pointer;
+}
+.header__link:hover {
+  text-decoration: underline;
+}
+.header__link_show, .header__links-row .header__link:first-child {
+  color: var(--green-c);
+  text-decoration: underline;
+}
+.header__tel {
+  margin-right: 37px;
+  width: 118px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.header__tel::before {
+  content: "";
+  display: inline-block;
+  min-width: 24px;
+  height: 24px;
+  background: url("./img/Header/tel.svg") center/100% no-repeat;
+}
+.header__tel a {
+  font-size: 15px;
+  font-family: "MB";
+}
+.header__lang {
+  margin-right: 50px;
+  width: 47px;
+  font-size: 16px;
+  font-family: "MB";
+  position: relative;
+}
+.header__lang::after {
+  content: "";
+  display: inline-block;
+  width: 17px;
+  height: 10px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  background: url("./img/Header/arrow-bottom.svg") center/100% no-repeat;
+}
+.header__lang select {
+  position: relative;
+  z-index: 3;
+  margin-right: 5px;
+  text-transform: uppercase;
+  width: 100%;
+  background-color: inherit;
+  cursor: pointer;
+}
+.header__sing-in {
+  padding-left: 5px;
+  height: 35px;
+  width: 140px;
+  border-radius: 32px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color: var(--orange-c);
+  cursor: pointer;
+}
+.header__sing-in:hover {
+  background-color: var(--green-c);
+}
+.header__sing-in span {
+  font-size: 16px;
+  text-transform: uppercase;
+  font-family: "MB";
+  color: var(--white-c);
+}
+.header__account-img img {
+  max-width: 100%;
+  height: auto;
+}
+
+:root {
+  --green-c: #8EC038;
+  --black-c: #302929;
+  --white-c: #ffffff;
+  --orange-c: #FFA800;
 }
 
 img {
@@ -161,52 +319,52 @@ p, a, li {
 }
 
 @media (min-width: 1440px) {
-  .content {
-    padding-right: 9.7222222222vw;
+  .padding-content, .header__content {
+    padding-right: 8.3333333333vw;
   }
 }
 @media screen and (max-width: 1439px) and (min-width: 1280px) {
-  .content {
-    padding-right: calc(30px + 110 * (100vw - 1280px) / (1440 - 1280));
+  .padding-content, .header__content {
+    padding-right: calc(70px + 50 * (100vw - 1280px) / (1440 - 1280));
   }
 }
 @media screen and (max-width: 1279px) and (min-width: 768px) {
-  .content {
-    padding-right: calc(30px + 0 * (100vw - 768px) / (1280 - 768));
+  .padding-content, .header__content {
+    padding-right: calc(20px + 50 * (100vw - 768px) / (1280 - 768));
   }
 }
 @media screen and (max-width: 767px) and (min-width: 320px) {
-  .content {
-    padding-right: calc(30px + 0 * (100vw - 320px) / (768 - 320));
+  .padding-content, .header__content {
+    padding-right: calc(20px + 0 * (100vw - 320px) / (768 - 320));
   }
 }
 @media (max-width: 375px) {
-  .content {
-    padding-right: 30px;
+  .padding-content, .header__content {
+    padding-right: 20px;
   }
 }
 @media (min-width: 1440px) {
-  .content {
-    padding-left: 9.7222222222vw;
+  .padding-content, .header__content {
+    padding-left: 8.3333333333vw;
   }
 }
 @media screen and (max-width: 1439px) and (min-width: 1280px) {
-  .content {
-    padding-left: calc(30px + 110 * (100vw - 1280px) / (1440 - 1280));
+  .padding-content, .header__content {
+    padding-left: calc(70px + 50 * (100vw - 1280px) / (1440 - 1280));
   }
 }
 @media screen and (max-width: 1279px) and (min-width: 768px) {
-  .content {
-    padding-left: calc(30px + 0 * (100vw - 768px) / (1280 - 768));
+  .padding-content, .header__content {
+    padding-left: calc(20px + 50 * (100vw - 768px) / (1280 - 768));
   }
 }
 @media screen and (max-width: 767px) and (min-width: 320px) {
-  .content {
-    padding-left: calc(30px + 0 * (100vw - 320px) / (768 - 320));
+  .padding-content, .header__content {
+    padding-left: calc(20px + 0 * (100vw - 320px) / (768 - 320));
   }
 }
 @media (max-width: 375px) {
-  .content {
-    padding-left: 30px;
+  .padding-content, .header__content {
+    padding-left: 20px;
   }
 }/*# sourceMappingURL=style.css.map */

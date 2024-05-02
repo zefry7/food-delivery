@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import "./styles/style.css"
 import { Route, Routes, BrowserRouter } from 'react-router-dom';
 import { data } from "./data";
-import SwiperConstructor from "./components/SwiperConstructor/SwiperConstructor"
+import Layout from './content/Layout/Layout';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -13,18 +13,19 @@ if (url.length <= 2) {
   window.location.href += "/"
 }
 
-export const UserContext = createContext()
+export const DataContext = createContext()
 
 
 root.render(
-  <UserContext.Provider value={data}>
+  <DataContext.Provider value={data}>
     <BrowserRouter basename={`${url[1]}/`}>
       <Routes>
-        <Route path="/" element={<SwiperConstructor data={[1, 2, 3]} setting={"settingComment"}/>}>
+        <Route path="/" element={<Layout/>}>
+
         </Route>
       </Routes>
     </BrowserRouter >
-  </UserContext.Provider>
+  </DataContext.Provider>
 );
 
 

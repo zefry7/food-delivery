@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/furniture-restoration/static/css/main.e41de3db.css",
+    "main.js": "/furniture-restoration/static/js/main.117dbbbb.js",
+    "index.html": "/furniture-restoration/index.html",
+    "main.e41de3db.css.map": "/furniture-restoration/static/css/main.e41de3db.css.map",
+    "main.117dbbbb.js.map": "/furniture-restoration/static/js/main.117dbbbb.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e41de3db.css",
+    "static/js/main.117dbbbb.js"
+  ]
+}

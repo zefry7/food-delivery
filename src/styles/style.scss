@@ -1,6 +1,7 @@
 @import "../../public/font/fonts";
 @import "./mixins/null-style";
 @import "./mixins/adaptive";
+@import "./mixins/components";
 @import "../content/import-scss";
 
 :root {
@@ -26,20 +27,7 @@ html {
 
 body {
     background-color: var(--bg-main);
-}
-
-h1, h2, h3, h4, h5, h6 {
-    color: var(--text-h);
-    font-family: "TS";
-    line-height: 150%;
-    @include adap(font-size, 48, 40, 32);
-}
-
-p, a, li {
-    color: var(--text-p);
-    @include adap(font-size, 16);
-    font-family: "OS";
-    line-height: 150%;
+    overflow: hidden;
 }
 
 .scroll-lock {

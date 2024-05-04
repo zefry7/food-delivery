@@ -1,63 +1,17 @@
-.button {
-    display: block;
-    @include adap(width, 245);
-    @include adap(height, 60);
-    @include adap(font-size, 16);
-    font-family: "OS";
-    line-height: 150%;
-    font-weight: 700;
-    color: var(--button-text);
+.my-button {
+    height: 55px;
+    width: 202px;
+    font-size: 16px;
+    border-radius: 32px;
+    font-size: 16px;
+    font-family: "MB";
+    background-color: var(--orange-c);
+    color: var(--white-c);
     position: relative;
-    transition: transform linear 0.1s;
-    &::before {
-        content: attr(data-text);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 100%;
-        width: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        background-color: var(--button-bg-hover);
-        transition: all linear 0.3s;
-        transform: rotateX(90deg) translateY(-100%);
-        z-index: 5;
-        opacity: 0;
-    }
-    &::after {
-        content: attr(data-text);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 100%;
-        width: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        background-color: var(--button-bg);
-        transition: all linear 0.3s;
-        transform: rotateX(0) translateY(0);
-        z-index: 4;
-        opacity: 1;
-    }
+    z-index: 5;
     &:hover {
-        &::before {
-            transform: rotateX(0) translateY(0%);
-            opacity: 1;
-        }
-        &::after {
-            transform: rotateX(-90deg) translateY(100%);
-            opacity: 0;
-        }
-    }
-    &:active {
-        transform: translateY(10%);
+        background-color: var(--white-c);
+        color: var(--green-c);    
     }
 }
 
-@media (max-width: 425px) {
-    .button {
-        width: 100% !important;
-    }
-}

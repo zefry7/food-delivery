@@ -11,9 +11,8 @@ function MyButton(props) {
     }
 
     return <>
-        <button>
-            <Link to={props?.href} className={"button " + props?.class} onClick={(e) => moveUp(e)} data-text={props?.text} aria-label={props?.text}>
-            </Link>
+        <button className={"my-button " + props?.class}>
+            {props?.text}
         </button>
     </>
 }

@@ -4,6 +4,7 @@ import "./styles/style.css"
 import { Route, Routes, BrowserRouter } from 'react-router-dom';
 import { data } from "./data";
 import Layout from './content/Layout/Layout';
+import MainPage from './content/MainPage/MainPage';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -21,7 +22,7 @@ root.render(
     <BrowserRouter basename={`${url[1]}/`}>
       <Routes>
         <Route path="/" element={<Layout/>}>
-
+          <Route index element={<MainPage/>}/>
         </Route>
       </Routes>
     </BrowserRouter >

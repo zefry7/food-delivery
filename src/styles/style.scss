@@ -9,6 +9,8 @@
     --black-c: #302929;
     --white-c: #ffffff;
     --orange-c: #FFA800;
+    --grey-c: #6A6A6A;
+    --grey-bg: #D9D9D9;
 }
 
 img {
@@ -27,7 +29,6 @@ html {
 
 body {
     background-color: var(--bg-main);
-    overflow: hidden;
 }
 
 .scroll-lock {

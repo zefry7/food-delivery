@@ -1,7 +1,16 @@
 //настройки для свайперов
 
-const settingSwiper = {
+const settingComplex = {
+    breakpoints: {
+        1440: {
+            slidesPerView: 'auto'
+        }
+    }
+}
 
+
+const settingSwiper = {
+    "settingComplex": settingComplex
 }
 
 export default settingSwiper;

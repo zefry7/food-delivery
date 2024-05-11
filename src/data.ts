@@ -66,5 +66,49 @@ export const data = {
                 dataSpeed: "0.06"
             }
         ]
+    },
+    menu: {
+        title: "Our menu",
+        complex: [
+            {
+                name: "Power",
+                kcal: "1800 kcal"
+            },
+            {
+                name: "Slim",
+                kcal: "1500 kcal"
+            },
+            {
+                name: "Balance",
+                kcal: "1300 kcal"
+            },
+            {
+                name: "Slim",
+                kcal: "1500 kcal"
+            },
+            {
+                name: "Balance",
+                kcal: "1300 kcal"
+            },
+            {
+                name: "Slim",
+                kcal: "1500 kcal"
+            },
+            {
+                name: "Balance",
+                kcal: "1300 kcal"
+            },
+        ],
+        mainBlock: {
+            days: [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday",
+                "Saturday",
+                "Sunday"
+            ]
+        }
     }
 }

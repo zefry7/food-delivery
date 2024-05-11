@@ -16,7 +16,7 @@ export default function SwiperConstructor(props) {
       modules={[Navigation]}
     >
       {data?.map((v, i) => (
-        <></>
+        slideViews[setting](v, i)
       ))} 
     </Swiper>
   );

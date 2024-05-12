@@ -18,10 +18,19 @@ const slideComplex = (value, index, key) => {
     )
 }
 
+const slideMenu = (value, index, key) => {
+    return (
+        <SwiperSlide data-index={index + 1 < 10 ? "0" + (index + 1) : index + 1}>
+            {value}
+        </SwiperSlide>
+    )
+}
+
 
 const slideViews = {
     // setting*Name*: slide*Name*
-    "settingComplex": slideComplex
+    "settingComplex": slideComplex,
+    "settingMenu": slideMenu
 }
 
 export default slideViews;

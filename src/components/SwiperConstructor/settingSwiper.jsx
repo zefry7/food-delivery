@@ -8,9 +8,16 @@ const settingComplex = {
     }
 }
 
+const settingMenu = {
+    slidesPerView: 'auto',
+    spaceBetween: "10",
+    centeredSlides: "true"
+}
+
 
 const settingSwiper = {
-    "settingComplex": settingComplex
+    "settingComplex": settingComplex,
+    "settingMenu": settingMenu
 }
 
 export default settingSwiper;

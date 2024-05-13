@@ -5,6 +5,8 @@ import { Route, Routes, BrowserRouter } from 'react-router-dom';
 import { data } from "./data";
 import Layout from './content/Layout/Layout';
 import MainPage from './content/MainPage/MainPage';
+import { Provider } from 'react-redux';
+import store from './store/store';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -18,15 +20,17 @@ export const DataContext = createContext()
 
 
 root.render(
-  <DataContext.Provider value={data}>
-    <BrowserRouter basename={`${url[1]}/`}>
-      <Routes>
-        <Route path="/" element={<Layout/>}>
-          <Route index element={<MainPage/>}/>
-        </Route>
-      </Routes>
-    </BrowserRouter >
-  </DataContext.Provider>
+  <Provider store={store}>
+    <DataContext.Provider value={data}>
+      <BrowserRouter basename={`${url[1]}/`}>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<MainPage />} />
+          </Route>
+        </Routes>
+      </BrowserRouter >
+    </DataContext.Provider>
+  </Provider>
 );
 
 

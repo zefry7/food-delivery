@@ -1,3 +1,4 @@
+import { useDispatch } from 'react-redux';
 import { SwiperSlide } from 'swiper/react';
 
 
@@ -10,18 +11,36 @@ import { SwiperSlide } from 'swiper/react';
 // }
 
 
-const slideComplex = (value, index, key) => {
+const SlideComplex = (value, index, key) => {
+    const dispath = useDispatch()
+        
     return (
-        <SwiperSlide>
-            <p className='menu__complex-text'><span>{value.name}</span>{value.kcal}</p>
+        <SwiperSlide key={index} onClick={() => dispath({type: "edit", value: value?.kcal})}>
+            <input type="radio" name="complex"/>
+            <p className='menu__complex-text'><span>{value.name}</span>{value.kcal} kcal</p>
         </SwiperSlide>
     )
 }
 
 const slideMenu = (value, index, key) => {
     return (
-        <SwiperSlide data-index={index + 1 < 10 ? "0" + (index + 1) : index + 1}>
-            {value}
+        <SwiperSlide data-index={index + 1 < 10 ? "0" + (index + 1) : index + 1} key={index}>
+            <div className="menu__center-item">
+                <div className="menu__center-item-img">
+                    <img src={value?.img?.src} alt={value?.img?.alt} />
+                </div>
+                <div className="menu__center-item-text">
+                    <p className="menu__center-item-type">{value?.type}</p>
+                    <p className="menu__center-item-name">{value?.name}</p>
+                    <div className="menu__center-item-info">
+                        <p className="menu__center-item-protein">Protein - {value?.protein} g</p>
+                        <p className="menu__center-item-fat">Fat - {value?.fat} g</p>
+                        <p className="menu__center-item-carbo">Carbohydrates - {value?.carbo} g</p>
+                        <p className="menu__center-item-energy">Energy - {value?.energy} kcal</p>
+                        <p className="menu__center-item-weight">Total weight: {value?.weight} g</p>
+                    </div>
+                </div>
+            </div>
         </SwiperSlide>
     )
 }
@@ -29,7 +48,7 @@ const slideMenu = (value, index, key) => {
 
 const slideViews = {
     // setting*Name*: slide*Name*
-    "settingComplex": slideComplex,
+    "settingComplex": SlideComplex,
     "settingMenu": slideMenu
 }
 

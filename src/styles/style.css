@@ -339,6 +339,14 @@ select {
 .menu__complex {
   margin-bottom: 40px;
 }
+.menu__complex input {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  position: absolute;
+}
 .menu__complex-text {
   font-size: 12px;
   display: flex;
@@ -359,10 +367,10 @@ select {
   justify-content: space-between;
   gap: 27px;
 }
-.menu__complex .swiper-wrapper .swiper-slide:first-child {
+.menu__complex .swiper-wrapper .swiper-slide:has(input:checked) {
   background-color: var(--green-c);
 }
-.menu__complex .swiper-wrapper .swiper-slide:first-child .menu__complex-text {
+.menu__complex .swiper-wrapper .swiper-slide:has(input:checked) .menu__complex-text {
   text-decoration: underline;
   color: var(--white-c);
 }
@@ -434,8 +442,7 @@ select {
 }
 .menu__center .swiper {
   margin-bottom: 14px;
-  height: 356px;
-  position: relative;
+  height: 366px;
 }
 .menu__center .swiper::before {
   content: "";
@@ -463,7 +470,7 @@ select {
   align-items: flex-end;
 }
 .menu__center .swiper-slide {
-  height: 347px;
+  height: 357px;
   width: 218px;
   border-radius: 28px;
   background-color: var(--white-c);
@@ -484,6 +491,27 @@ select {
   font-family: "MB";
   background-color: var(--orange-c);
   color: var(--white-c);
+}
+.menu__center-item-text {
+  padding-left: 15px;
+  padding-right: 30px;
+}
+.menu__center-item-type {
+  margin-bottom: 10px;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-family: "MN";
+  color: var(--green-c);
+}
+.menu__center-item-name {
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-family: "MN";
+}
+.menu__center-item-info {
+  font-size: 12px;
+  line-height: 160%;
+  font-family: "MR";
 }
 .menu__bottom {
   height: 80px;

@@ -72,31 +72,31 @@ export const data = {
         complex: [
             {
                 name: "Power",
-                kcal: "1800 kcal"
+                kcal: 1800
             },
             {
                 name: "Slim",
-                kcal: "1500 kcal"
+                kcal: 1500
             },
             {
                 name: "Balance",
-                kcal: "1300 kcal"
+                kcal: 1300
             },
             {
                 name: "Slim",
-                kcal: "1500 kcal"
+                kcal: 1500
             },
             {
                 name: "Balance",
-                kcal: "1300 kcal"
+                kcal: 1300
             },
             {
                 name: "Slim",
-                kcal: "1500 kcal"
+                kcal: 1500 
             },
             {
                 name: "Balance",
-                kcal: "1300 kcal"
+                kcal: 1300
             },
         ],
         mainBlock: {
@@ -109,11 +109,81 @@ export const data = {
                 "Saturday",
                 "Sunday"
             ],
+            menuList: [{
+                img: {
+                    src: "./img/Menu/item-1.png",
+                    alt: "Внешний вид блюда"
+                },
+                type: "Breakfast 1",
+                name: "Chicken fricassee with mushrooms and bulgur",
+                protein: "15",
+                fat: "7",
+                carbo: "24",
+                energy: "285",
+                weight: "345"
+
+            },
+            {
+                img: {
+                    src: "./img/Menu/item-2.png",
+                    alt: "Внешний вид блюда"
+                },
+                type: "Breakfast 2",
+                name: "Chicken fricassee with mushrooms and bulgur",
+                protein: "15",
+                fat: "7",
+                carbo: "24",
+                energy: "285",
+                weight: "345"
+
+            },
+            {
+                img: {
+                    src: "./img/Menu/item-3.png",
+                    alt: "Внешний вид блюда"
+                },
+                type: "Lunch",
+                name: "Chicken fricassee with mushrooms and bulgur",
+                protein: "15",
+                fat: "7",
+                carbo: "24",
+                energy: "285",
+                weight: "345"
+
+            },
+            {
+                img: {
+                    src: "./img/Menu/item-4.png",
+                    alt: "Внешний вид блюда"
+                },
+                type: "snack",
+                name: "Chicken fricassee with mushrooms and bulgur",
+                protein: "15",
+                fat: "7",
+                carbo: "24",
+                energy: "285",
+                weight: "345"
+
+            },
+            {
+                img: {
+                    src: "./img/Menu/item-5.png",
+                    alt: "Внешний вид блюда"
+                },
+                type: "Dinner",
+                name: "Chicken fricassee with mushrooms and bulgur",
+                protein: "15",
+                fat: "7",
+                carbo: "24",
+                energy: "285",
+                weight: "345"
+
+            }],
             description: "A balanced menu helps to maintain health and a slim figure, allows you to be cheerful and active throughout the week. While preparing our dishes, we use products from the best suppliers and always choose products that correspond to the concept of healthy nutrition. For example, lean beef, turkey and chicken, low-calorie sauces, pasta of hard varieties. Delivery is carried out every 2 days.",
             gd: ["from ", "$ gel/day"],
             composition: [
                 {
-                    img:{
+                    img: {
                         src: "./img/Menu/protein.svg",
                         alt: "Белки"
                     },
@@ -121,7 +191,7 @@ export const data = {
                     count: "0",
                 },
                 {
-                    img:{
+                    img: {
                         src: "./img/Menu/fat.svg",
                         alt: "жиры"
                     },
@@ -129,7 +199,7 @@ export const data = {
                     count: "0",
                 },
                 {
-                    img:{
+                    img: {
                         src: "./img/Menu/carbohydrates.svg",
                         alt: "углеводы"
                     },

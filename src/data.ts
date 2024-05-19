@@ -209,5 +209,60 @@ export const data = {
             ],
             button: "Order now"
         }
+    },
+    faq: {
+        title: "FAQ",
+        items: [
+            {
+                img: {
+                    src: "./img/FAQ/faq-item-1.svg",
+                    alt: "Изображение для оформления"
+                },
+                text: "Cashback"
+            },
+            {
+                img: {
+                    src: "./img/FAQ/faq-item-2.svg",
+                    alt: "Изображение для оформления"
+                },
+                text: "Weight loss"
+            },
+            {
+                img: {
+                    src: "./img/FAQ/faq-item-3.svg",
+                    alt: "Изображение для оформления"
+                },
+                text: "Products"
+            },
+            {
+                img: {
+                    src: "./img/FAQ/faq-item-4.svg",
+                    alt: "Изображение для оформления"
+                },
+                text: "Rates"
+            },
+            {
+                img: {
+                    src: "./img/FAQ/faq-item-5.svg",
+                    alt: "Изображение для оформления"
+                },
+                text: "Payment"
+            },
+            {
+                img: {
+                    src: "./img/FAQ/faq-item-6.svg",
+                    alt: "Изображение для оформления"
+                },
+                text: "Storage"
+            }
+        ],
+        question: [
+            {
+                title: "What is cashback?",
+                body: {
+                    text: "Make orders, take part in promotions, recommend us to friends or connect a family tariff. We will refund up to 50% of the order value."
+                }
+            }
+        ]
     }
 }

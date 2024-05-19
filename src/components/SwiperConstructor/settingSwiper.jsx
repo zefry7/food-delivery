@@ -14,10 +14,16 @@ const settingMenu = {
     centeredSlides: "true"
 }
 
+const settingFaq = {
+    slidesPerView: 'auto',
+    spaceBetween: "21",
+}
+
 
 const settingSwiper = {
     "settingComplex": settingComplex,
-    "settingMenu": settingMenu
+    "settingMenu": settingMenu,
+    "settingFaq": settingFaq 
 }
 
 export default settingSwiper;

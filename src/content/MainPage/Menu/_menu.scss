@@ -1,6 +1,7 @@
 .menu {
     &__content {
         @extend .padding-content;
+        padding-bottom: 100px;
     }
 
     &__title {
@@ -221,7 +222,6 @@
     }
 
     &__bottom {
-        height: 80px;
         padding: 10px 15px;
         border-radius: 15px;
         display: flex;

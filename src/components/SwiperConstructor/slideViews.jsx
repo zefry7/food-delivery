@@ -13,16 +13,16 @@ import { SwiperSlide } from 'swiper/react';
 
 const SlideComplex = (value, index, key) => {
     const dispath = useDispatch()
-        
+
     return (
-        <SwiperSlide key={index} onClick={() => dispath({type: "edit", value: value?.kcal})}>
-            <input type="radio" name="complex"/>
+        <SwiperSlide key={index} onClick={() => dispath({ type: "edit", value: value?.kcal })}>
+            <input type="radio" name="complex" />
             <p className='menu__complex-text'><span>{value.name}</span>{value.kcal} kcal</p>
         </SwiperSlide>
     )
 }
 
-const slideMenu = (value, index, key) => {
+const SlideMenu = (value, index, key) => {
     return (
         <SwiperSlide data-index={index + 1 < 10 ? "0" + (index + 1) : index + 1} key={index}>
             <div className="menu__center-item">
@@ -45,11 +45,24 @@ const slideMenu = (value, index, key) => {
     )
 }
 
+const SlideFaq = (value, index, key) => {
+    return (
+        <SwiperSlide key={index}>
+            <div className="faq__item">
+                <div className="faq__item-img">
+                    <img src={value?.img?.src} alt={value?.img?.alt} />
+                </div>
+                <p className="faq__item-text">{value?.text}</p>
+            </div>
+        </SwiperSlide>
+    )
+}
 
 const slideViews = {
     // setting*Name*: slide*Name*
     "settingComplex": SlideComplex,
-    "settingMenu": slideMenu
+    "settingMenu": SlideMenu,
+    "settingFaq": SlideFaq
 }
 
 export default slideViews;

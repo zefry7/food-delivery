@@ -12,14 +12,18 @@ function Faq() {
             <div className="faq__block-question">
                 {data?.question?.map((v, i) => (
                     <div className="faq__question">
-                        <h3 className="faq__question-title">{v?.title}</h3>
-                        <div className="faq__question-body">
-                            <p className="faq__question-text">{v?.body?.text}</p>
+                        <input type="checkbox" name="question" className="faq__question-input"/>
+                        <div className="faq__question-content">
+                            <h3 className="faq__question-title">{v?.title}</h3>                      
+                            <div className="faq__question-body">
+                                <p className="faq__question-text">{v?.body?.text}</p>
+                            </div>
+                            <hr />
                         </div>
-                        <hr />
                     </div>
                 ))}
             </div>
+            
         </div>
     </section>
 }

@@ -48,6 +48,7 @@ const SlideMenu = (value, index, key) => {
 const SlideFaq = (value, index, key) => {
     return (
         <SwiperSlide key={index}>
+            <input type="radio" name="faq-type" className='faq__item-input' />
             <div className="faq__item">
                 <div className="faq__item-img">
                     <img src={value?.img?.src} alt={value?.img?.alt} />

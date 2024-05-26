@@ -262,7 +262,59 @@ export const data = {
                 body: {
                     text: "Make orders, take part in promotions, recommend us to friends or connect a family tariff. We will refund up to 50% of the order value."
                 }
+            },
+            {
+                title: "How to get cashback?",
+                body: {
+                    text: "Make orders, take part in promotions, recommend us to friends or connect a family tariff. We will refund up to 50% of the order value."
+                }
+            },
+            {
+                title: "Why can I only spend part of the cashback?",
+                body: {
+                    text: "Make orders, take part in promotions, recommend us to friends or connect a family tariff. We will refund up to 50% of the order value."
+                }
+            },            {
+                title: "Where can I see how many bonus rubles I have in my account?",
+                body: {
+                    text: "Make orders, take part in promotions, recommend us to friends or connect a family tariff. We will refund up to 50% of the order value."
+                }
+            },
+            {
+                title: "What can I spend cashback on?",
+                body: {
+                    text: "Make orders, take part in promotions, recommend us to friends or connect a family tariff. We will refund up to 50% of the order value."
+                }
             }
         ]
+    },
+    feedback: {
+        title: "LET'S GET IN TOUCH",
+        text: "Make orders, take part in promotions, recommend us to friends or connect ",
+        form: {
+            name: {
+                placeholder: "Your name"
+            },
+            tel: {
+                placeholder: "Your phone number"
+            },
+            email: {
+                placeholder: "Your E-mail"
+            }
+        },
+        button: {
+            text: "Make your choice"
+        },
+        hrefTg: {
+            img: {
+                src: "./img/Feedback/icon-tg.svg",
+                alt: "Иконка Telegram"
+            },
+            href: ""
+        },
+        decor: {
+            src: "./img/Feedback/decor-1.png",
+            alt: "Изображение для оформления"
+        }
     }
 }

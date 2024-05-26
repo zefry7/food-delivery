@@ -13,6 +13,19 @@
             &-slide {
                 width: 182px;
                 height: 165px;
+                border-radius: 28px;
+                position: relative;
+                transition: all 0.1s linear;
+
+                &:hover:has(.faq__item-input:not(:checked)) {
+                    box-shadow: 0px 0px 12px 3px rgba(0, 0, 0, 0.13);
+                }
+
+                .faq__item-input:checked + .faq__item {
+                    box-shadow: 0px 0px 12px 3px var(--green-c);
+                    background-color: var(--green-c);
+                }
+
             }
         }
     }
@@ -30,12 +43,17 @@
         flex-direction: column;
         align-items: center;
         background-color: var(--grey-bg-2);
+        transition: transform 0.1s linear;
         cursor: pointer;
-        &:hover {
-            box-shadow: 0px 0px 12px 3px rgba(0, 0, 0, 0.13);
-            .faq__item-text {
-                color: var(--green-c);
-            }
+
+        &-input {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            cursor: pointer;
         }
         &-img {
             height: 55px;
@@ -54,18 +72,48 @@
     &__block-question {
     }
     &__question {
+        position: relative;
+
+        &:has(input:checked) {
+            .faq__question-text {
+                line-height: 120%;
+                opacity: 1;
+            }
+            .faq__question-title {
+                margin-bottom: 15px;
+                color: var(--green-c);
+            }
+
+        }
+
+        &-input {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            cursor: pointer;
+        }
+        &-content {
+
+        }
         &-title {
-            margin-bottom: 15px;
+            margin-bottom: 0;
             font-size: 24px;
             line-height: 120%;
             font-family: "MB";
+            transition: all 0.1s linear;
         }
         &-body {
+            overflow: hidden;
         }
         &-text {
+            line-height: 0%;
+            opacity: 0;
             font-size: 20px;
-            line-height: 120%;
             font-family: "MR";
+            transition: all 0.1s linear;
         }
 
         hr {

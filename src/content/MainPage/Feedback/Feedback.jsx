@@ -17,7 +17,7 @@ function Feedback() {
                     <input type="text" className="feedback__form-name" placeholder={data?.form?.name?.placeholder} />
                     <input type="tel" className="feedback__form-tel" placeholder={data?.form?.tel?.placeholder} />
                     <input type="email" className="feedback__form-email" placeholder={data?.form?.email?.placeholder} />
-                    <MyButton text={data?.button?.text} />
+                    <MyButton class="feedback__form-button" text={data?.button?.text} />
                     <a href="" className="feedback__href-tg">
                         <img src={data?.hrefTg?.img?.src} alt={data?.hrefTg?.img?.alt} />
                     </a>

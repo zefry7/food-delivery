@@ -92,7 +92,7 @@ export const data = {
             },
             {
                 name: "Slim",
-                kcal: 1500 
+                kcal: 1500
             },
             {
                 name: "Balance",
@@ -210,6 +210,46 @@ export const data = {
             button: "Order now"
         }
     },
+    advantage: {
+        title: "Our advantages",
+        list: [
+            {
+                img: {
+                    src: "./img/Advantage/item-1.svg",
+                    alt: "Изображение для оформления"
+                },
+                text: ["We'll deliver it free of charge ", "In a convenient 2-hour interval"]
+            },
+            {
+                img: {
+                    src: "./img/Advantage/item-2.svg",
+                    alt: "Изображение для оформления"
+                },
+                text: ["We’ll calculate calories ", "It will be easy for you to control your diet"]
+            },
+            {
+                img: {
+                    src: "./img/Advantage/item-3.svg",
+                    alt: "Изображение для оформления"
+                },
+                text: ["We'll help you to save up to 20 hours ", "of free time a week for you"]
+            },
+            {
+                img: {
+                    src: "./img/Advantage/item-4.svg",
+                    alt: "Изображение для оформления"
+                },
+                text: ["Everything is ready, just warm it up ", "We’ll bring you ready-made dishes"]
+            },
+            {
+                img: {
+                    src: "./img/Advantage/item-5.svg",
+                    alt: "Изображение для оформления"
+                },
+                text: ["Lorem ipsum dolor sit amet consectetur. ", "Quisque sed nisi turpis enim. Amet blandit ut."]
+            },
+        ]
+    },
     faq: {
         title: "FAQ",
         items: [
@@ -274,7 +314,7 @@ export const data = {
                 body: {
                     text: "Make orders, take part in promotions, recommend us to friends or connect a family tariff. We will refund up to 50% of the order value."
                 }
-            },            {
+            }, {
                 title: "Where can I see how many bonus rubles I have in my account?",
                 body: {
                     text: "Make orders, take part in promotions, recommend us to friends or connect a family tariff. We will refund up to 50% of the order value."

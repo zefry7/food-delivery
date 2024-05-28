@@ -599,6 +599,48 @@ select {
   color: var(--white-c);
 }
 
+.advantage {
+  padding-bottom: 67px;
+}
+.advantage__title {
+  margin-bottom: 40px;
+  font-size: 32px;
+  line-height: 120%;
+  text-transform: uppercase;
+  font-family: "MB";
+}
+.advantage__list {
+  display: flex;
+  justify-content: space-between;
+}
+.advantage__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 11px;
+  width: 183px;
+}
+.advantage__item-img {
+  height: 83px;
+  width: 83px;
+  border-radius: 50%;
+  background-color: var(--green-c);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.advantage__item-text {
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  line-height: 120%;
+  text-align: center;
+  font-family: "MR";
+}
+.advantage__item-text span {
+  font-family: "MB";
+}
+
 .faq__content .swiper {
   margin-bottom: 40px;
   height: 200px;
@@ -755,6 +797,10 @@ select {
 .feedback__form-email {
   grid-column: 1/3;
 }
+.feedback__form-button:hover {
+  background-color: var(--green-c);
+  color: var(--white-c);
+}
 .feedback__href-tg {
   width: 40%;
   display: flex;
@@ -781,7 +827,7 @@ select {
   width: 100%;
 }
 .feedback__href-tg:hover::after {
-  margin-left: 18px;
+  margin-left: 10px;
   width: 100%;
   opacity: 1;
   transition: all 0.2s linear 0.2s;
@@ -829,52 +875,52 @@ body {
 }
 
 @media (min-width: 1440px) {
-  .padding-content, .header__content, .intro, .menu__content, .faq__content, .feedback {
+  .padding-content, .header__content, .intro, .menu__content, .advantage, .faq__content, .feedback {
     padding-right: 8.3333333333vw;
   }
 }
 @media screen and (max-width: 1439px) and (min-width: 1280px) {
-  .padding-content, .header__content, .intro, .menu__content, .faq__content, .feedback {
+  .padding-content, .header__content, .intro, .menu__content, .advantage, .faq__content, .feedback {
     padding-right: calc(70px + 50 * (100vw - 1280px) / (1440 - 1280));
   }
 }
 @media screen and (max-width: 1279px) and (min-width: 768px) {
-  .padding-content, .header__content, .intro, .menu__content, .faq__content, .feedback {
+  .padding-content, .header__content, .intro, .menu__content, .advantage, .faq__content, .feedback {
     padding-right: calc(20px + 50 * (100vw - 768px) / (1280 - 768));
   }
 }
 @media screen and (max-width: 767px) and (min-width: 320px) {
-  .padding-content, .header__content, .intro, .menu__content, .faq__content, .feedback {
+  .padding-content, .header__content, .intro, .menu__content, .advantage, .faq__content, .feedback {
     padding-right: calc(20px + 0 * (100vw - 320px) / (768 - 320));
   }
 }
 @media (max-width: 375px) {
-  .padding-content, .header__content, .intro, .menu__content, .faq__content, .feedback {
+  .padding-content, .header__content, .intro, .menu__content, .advantage, .faq__content, .feedback {
     padding-right: 20px;
   }
 }
 @media (min-width: 1440px) {
-  .padding-content, .header__content, .intro, .menu__content, .faq__content, .feedback {
+  .padding-content, .header__content, .intro, .menu__content, .advantage, .faq__content, .feedback {
     padding-left: 8.3333333333vw;
   }
 }
 @media screen and (max-width: 1439px) and (min-width: 1280px) {
-  .padding-content, .header__content, .intro, .menu__content, .faq__content, .feedback {
+  .padding-content, .header__content, .intro, .menu__content, .advantage, .faq__content, .feedback {
     padding-left: calc(70px + 50 * (100vw - 1280px) / (1440 - 1280));
   }
 }
 @media screen and (max-width: 1279px) and (min-width: 768px) {
-  .padding-content, .header__content, .intro, .menu__content, .faq__content, .feedback {
+  .padding-content, .header__content, .intro, .menu__content, .advantage, .faq__content, .feedback {
     padding-left: calc(20px + 50 * (100vw - 768px) / (1280 - 768));
   }
 }
 @media screen and (max-width: 767px) and (min-width: 320px) {
-  .padding-content, .header__content, .intro, .menu__content, .faq__content, .feedback {
+  .padding-content, .header__content, .intro, .menu__content, .advantage, .faq__content, .feedback {
     padding-left: calc(20px + 0 * (100vw - 320px) / (768 - 320));
   }
 }
 @media (max-width: 375px) {
-  .padding-content, .header__content, .intro, .menu__content, .faq__content, .feedback {
+  .padding-content, .header__content, .intro, .menu__content, .advantage, .faq__content, .feedback {
     padding-left: 20px;
   }
 }/*# sourceMappingURL=style.css.map */

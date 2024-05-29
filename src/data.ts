@@ -250,6 +250,23 @@ export const data = {
             },
         ]
     },
+    promotion: { 
+        title: "1 day at the price of 23$",
+        text: "Make orders, take part in promotions, recommend us to friends or connect recommend us to friends or connect",
+        button: {
+            text: "Sing up"
+        },
+        decor: [
+            {
+                src: "./img/Promotion/decor-1.png",
+                alt: "Изображение для оформления"
+            },
+            {
+                src: "./img/Promotion/decor-2.png",
+                alt: "Изображение для оформления"
+            }
+        ]
+    },
     faq: {
         title: "FAQ",
         items: [

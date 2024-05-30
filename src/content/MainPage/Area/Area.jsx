@@ -10,7 +10,7 @@ function Area() {
             <h2 className="area__title">{data?.title}</h2>
             <div className="area__map-wrapper">
                 <YMaps>
-                    <Map defaultState={{ center: [30, 10], zoom: 2}} height="100%" width="100%" className="area__map" >
+                    <Map defaultState={{ center: [50, 60], zoom: 3}} height="100%" width="100%" className="area__map" >
                     </Map>
                 </YMaps>
             </div>

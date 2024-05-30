@@ -5,6 +5,7 @@
     &__content {
         @include adap(padding-top, 54, 54, 40, 40, 26);
         @include adap(padding-left, 102, 102, 52, 52, 21);
+        @include adap(padding-right, 102, 102, 52, 52, 21);
         @include adap(border-radius, 55, 55, 39, 39, 21);
         @include adap(height, 440);
         background-color: var(--green-c);
@@ -25,7 +26,7 @@
         @include adap(margin-bottom, 20, 20, 18, 18, 16);
         @include adap(font-size, 25, 25, 20, 20, 16);
         font-family: "MR";
-        line-height: 200%;
+        line-height: 120%;
         color: var(--black-c);
     }
     &__button {

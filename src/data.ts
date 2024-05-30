@@ -210,6 +210,9 @@ export const data = {
             button: "Order now"
         }
     },
+    area: {
+        title: "Delivery areas"
+    },
     advantage: {
         title: "Our advantages",
         list: [

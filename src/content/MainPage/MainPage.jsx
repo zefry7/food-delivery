@@ -5,11 +5,13 @@ import Faq from "./Faq/Faq";
 import Feedback from "./Feedback/Feedback";
 import Advantage from "./Advantage/Advantage";
 import Promotion from "./Promotion/Promotion";
+import Area from "./Area/Area";
 
 function MainPage() {
     return <>
         <Intro />
         <Menu />
+        <Area />
         <Advantage />
         <Promotion />
         <Faq />

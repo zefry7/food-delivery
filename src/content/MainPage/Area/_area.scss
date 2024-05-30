@@ -1,0 +1,23 @@
+.area {
+    &__content {
+        @extend .padding-content;
+        padding-bottom: 100px;
+    }
+    &__title {
+        margin-bottom: 40px;
+        font-size: 32px;
+        font-family: "MB";
+        text-transform: uppercase;
+    }
+    &__map-wrapper {
+
+    }
+    &__map {
+        width: 100%;
+        height: 468px;
+    }
+}
+
+.ymaps-2-1-79-inner-panes {
+    border-radius: 22px;
+}

@@ -1,9 +1,8 @@
 .my-button {
-    height: 55px;
-    width: 202px;
-    font-size: 16px;
-    border-radius: 32px;
-    font-size: 16px;
+    @include adap(width, 202);
+    @include adap(height, 55);
+    @include adap(font-size, 16);
+    @include adap(border-radius, 32);
     font-family: "MB";
     background-color: var(--orange-c);
     color: var(--white-c);

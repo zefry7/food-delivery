@@ -1,10 +1,10 @@
 import React from "react";
-import { Header } from "../import_ts";
+import { Header } from "./Header/Header";
 import { Outlet } from "react-router-dom";
 
 function Layout() {
     return <>
-        <Header />
+        {/* <Header /> */}
         <Outlet/>
     </>
 }

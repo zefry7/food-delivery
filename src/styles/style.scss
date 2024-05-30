@@ -23,10 +23,11 @@ img {
 #root {
     height: 100%;
     min-width: 375px;
+    overflow-x: hidden;
 }
 
 html {
-    scrollbar-gutter: stable;
+    scrollbar-gutter: auto;
 }
 
 body {
@@ -38,6 +39,6 @@ body {
 }
 
 .padding-content {
-    @include adap(padding-right, 120, 70, 20);
-    @include adap(padding-left, 120, 70, 20);
+    @include adap(padding-right, 120, 70, 70, 20);
+    @include adap(padding-left, 120, 70, 70, 20);
 }

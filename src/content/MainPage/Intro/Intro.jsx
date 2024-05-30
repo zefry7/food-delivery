@@ -19,13 +19,13 @@ function Intro() {
             <div className="intro__img">
                 <img src={data?.img?.src} alt={data?.img?.alt} />
             </div>
-            <div className="intro__decor">
+            {/* <div className="intro__decor">
                 {data?.decor.map((v, i) => (
                     <div className="intro__decor-img rellax" key={i} data-rellax-speed={3}>
                         <img src={v?.src} alt={v?.alt} />
                     </div>
                 ))}
-            </div>
+            </div> */}
         </div>
     </section>
 }

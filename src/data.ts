@@ -253,7 +253,7 @@ export const data = {
             },
         ]
     },
-    promotion: { 
+    promotion: {
         title: "1 day at the price of 23$",
         text: "Make orders, take part in promotions, recommend us to friends or connect recommend us to friends or connect",
         button: {
@@ -374,6 +374,35 @@ export const data = {
         },
         decor: {
             src: "./img/Feedback/decor-1.png",
+            alt: "Изображение для оформления"
+        }
+    },
+    footer: {
+        logo: {
+            src: "./img/Footer/logo-white.svg",
+            alt: "Логотип"
+        },
+        links: ["Menu", "Delivery", "FAQ", "Contacts"],
+        messages: [
+            {
+                src: "./img/Footer/tg-icon.svg",
+                alt: "Иконка Telegram"
+            },
+            {
+                src: "./img/Footer/inst-icon.svg",
+                alt: "Иконка Instagram"
+            },
+            {
+                src: "./img/Footer/fb-icon.svg",
+                alt: "Иконка Facebook"
+            }
+        ],
+        info: ["City, street",
+            "999999999 (9:00 - 18:00)",
+            "info@email.com"
+        ],
+        decor: {
+            src: "./img/Footer/plate.png",
             alt: "Изображение для оформления"
         }
     }

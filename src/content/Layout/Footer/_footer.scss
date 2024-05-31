@@ -1,0 +1,147 @@
+.footer {
+    position: relative;
+    &__content {
+        @extend .padding-content;
+        @include adap(padding-top, 63, 63, 63, 45, 30);
+        @include adap(padding-bottom, 100, 100, 100, 100, 50);
+        background-color: var(--green-c);
+        display: flex;
+        justify-content: space-between;
+
+        @media (max-width: 767px) {
+            flex-direction: column;
+        }
+    }
+    &__left-block {
+        display: grid;
+        grid-template: repeat(2, max-content)/ repeat(2, max-content);
+        @include adap(column-gap, 118, 118, 70, 40);
+
+        @media (max-width: 767px) {
+            grid-template: repeat(3, max-content)/ repeat(1, max-content);
+            @include adap(row-gap, 40);
+            @include adap(margin-bottom, 48);
+        }
+    }
+    &__logo {
+        transition: opacity 0.1s linear;
+        cursor: pointer;
+        &:hover {
+            opacity: 0.5;
+        }
+        img {
+            @include adap(height, 61);
+        }
+    }
+    &__links {    
+        grid-area: 1 / 2 / 3 / 2;
+        display: flex;
+        flex-direction: column;
+        @include adap(gap, 18);
+        color: var(--white-c);
+
+        @media (max-width: 767px) {
+            grid-area: 3 / 1 / 3 / 1;
+        }
+
+        &-item {
+            @include adap(font-size, 16);
+            line-height: 120%;
+            font-family: "MN";
+            cursor: pointer;
+            transition: opacity 0.1s linear;
+            &:hover {
+                opacity: 0.5;
+            }
+        }   
+    }
+    &__messages {
+        display: flex;
+        align-items: end;
+        @include adap(gap, 25);
+        &-item {
+            transition: opacity 0.1s linear;
+            cursor: pointer;
+            &:hover {
+                opacity: 0.5;
+            }
+
+            img {
+                @include adap(height, 22);
+            }
+        }
+    }
+    &__address {    
+        @include adap(margin-right, 213, 140);
+        @media (max-width: 767px) {
+            margin-right: 0;
+        }
+        display: flex;
+        flex-direction: column;
+        @include adap(gap, 15);
+        &-link {
+            @include adap(font-size, 16);
+            line-height: 150%;
+            display: flex;
+            align-items: center;
+            font-family: "MB";
+            color: var(--white-c);
+
+            &:hover {
+                text-decoration: underline;
+                @include adap(text-decoration-thickness, 2);
+                color: var(--white-c);
+            }
+
+            &::before {
+                content: "";
+                display: inline-block;
+                margin-right: 17px;
+                height: 24px;
+                width: 24px;
+            }
+        }
+
+        & .footer__address-link:nth-child(1) {
+            &::before {
+                background: url("./img/Footer/address-icon.svg") center/ 100% 100% no-repeat;
+            }
+        }
+
+        & .footer__address-link:nth-child(2) {
+            &::before {
+                background: url("./img/Footer/phone-icon.svg") center/ 100% 100% no-repeat;
+            }
+        }
+
+        & .footer__address-link:nth-child(3) {
+            &::before {
+                background: url("./img/Footer/email-icon.svg") center/ 100% 100% no-repeat;
+            }
+        }
+    }
+    &__decor {
+        position: absolute;
+        @include adap(top, -120);
+        @include adap(right, -190, -260, -300);
+        @media (max-width: 767px) {
+            display: none;
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            @include adap(top, -40);
+            @include adap(left, 31);
+            z-index: -1;
+            display: inline-block;
+            @include adap(width, 471);
+            @include adap(height, 428);
+            background: url("./img/Footer/circle-line.png") center/ 100% 100% no-repeat;
+        }
+
+        img {
+            width: 100%;
+            @include adap(height, 380);
+        }
+    }
+}

@@ -1,29 +1,27 @@
 .promotion {
+    @include adap(height, 320);
+    @include adap(padding-top, 21);
     @extend .padding-content;
-    padding-top: 21px;
-    padding-bottom: 31px;
     background-color: var(--green-c);
     position: relative;
     &__content {
-        width: 400px;
+        @include adap(width, 400, 400, 330, 330, 280);
     }
     &__title {
-        margin-bottom: 22px;
-        font-size: 40px;
+        @include adap(width, 400, 400, 330, 310, 250);
+        @include adap(font-size, 40, 40, 32, 32, 24);
+        @include adap(margin-bottom, 22);
         line-height: 120%;
         text-transform: uppercase;
         font-family: "MB";
         color: var(--white-c);
     }
     &__text {
-        margin-bottom: 16px;
-        font-size: 20px;
+        @include adap(margin-bottom, 21);
+        @include adap(font-size, 20, 20, 17, 17, 14);
         line-height: 120%;
         font-family: "MR";
         color: var(--white-c);
-    }
-    &__button {
-        height: 62px;
     }
     &__decor {
         position: absolute;
@@ -35,21 +33,28 @@
             position: absolute;
             img {
                 max-width: 100%;
+                width: 100%;
                 height: auto;
             }
         }
 
         &-item:nth-child(1) {
-            top: -10px;
-            left: 509px;
-            width: 476px;
+            @include adap(top, -10, -10, -10, 30, 220);
+            @include adap(left, 566, 500, 400, 360, 125);
+            @include adap(width, 476, 476, 476, 440, 258);
             transform: rotate(-22.69deg);
         }
 
         &-item:nth-child(2) {
-            top: -41px;
-            right: -192px;
-            width: 738px;
+            @include adap(top, -41, -41, -20, 80, 258);
+            @include adap(left, 894, 820, 710, 1000, -106);
+            @include adap(width, 738, 738, 738, 500, 413);
+        }
+
+        @media (max-width: 768px) {
+            &-item:nth-child(1) {
+                z-index: 2;
+            }
         }
     }
 }

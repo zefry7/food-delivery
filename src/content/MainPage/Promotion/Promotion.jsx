@@ -3,7 +3,7 @@ import MyButton from "../../../components/MyButton/MyButton";
 import { DataContext } from "../../..";
 
 function Promotion() {
-    const data = useContext(DataContext).promotion
+    const data = useContext(DataContext)?.promotion
 
     return <section className="promotion">
         <div className="promotion__content">

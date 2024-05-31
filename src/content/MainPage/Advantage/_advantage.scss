@@ -1,44 +1,57 @@
 .advantage {
     @extend .padding-content;
-    padding-bottom: 67px;
-    &__content {
-        
-    }
+    @include adap(padding-bottom, 67, 67, 58, 58, 50);
     &__title {
-        margin-bottom: 40px;
-        font-size: 32px;
+        @include adap(font-size, 32, 32, 28, 28, 24);
+        @include adap(margin-bottom, 40, 40, 31, 31, 22);
         line-height: 120%;
         text-transform: uppercase;
         font-family: "MB";
     }
     &__list {
+        @include adap(row-gap, 25);
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
     }
     &__item {
+        @include adap(width, 183, 183, 160, 160, 131);
+        @include adap(gap, 11);
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 11px;
-        width: 183px;
         &-img {
-            height: 83px;
-            width: 83px;
+            @include adap(height, 83);
+            @include adap(width, 83);
             border-radius: 50%;
             background-color: var(--green-c);
             display: flex;
             align-items: center;
             justify-content: center;
+            cursor: pointer;
+            transition: box-shadow 0.1s linear;
+            &:hover {
+                box-shadow: 0px 0px 1.8vw 0.6vw rgba(142, 192, 56, 0.51);
+            }
+
+            img { 
+                @include adap(height, 50);
+                @include adap(width, 50);
+            }
         }
         &-text {
+            @include adap(font-size, 16, 16, 15, 14, 14);
+            @include adap(width, 183, 120);
             display: flex;
             flex-direction: column;
-            font-size: 16px;
+            align-items: center;
             line-height: 120%;
             text-align: center;
             font-family: "MR";
             span {
+                @include adap(width, 183, 131);
                 font-family: "MB";
+                display: inline-block;
             }
         }
     }

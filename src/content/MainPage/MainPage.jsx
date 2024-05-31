@@ -12,9 +12,9 @@ function MainPage() {
         <Intro />
         {/* <Menu /> */}
         <Area />
-        {/* <Advantage />
+        <Advantage />
         <Promotion />
-        <Faq />
+        {/* <Faq />
         <Feedback /> */}
     </>
 }

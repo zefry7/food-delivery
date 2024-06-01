@@ -14,10 +14,10 @@ function Feedback() {
             </div>
             <div className="feedback__block-form">
                 <form action="" className="feedback__form">
-                    <input type="text" className="feedback__form-name" placeholder={data?.form?.name?.placeholder} />
-                    <input type="tel" className="feedback__form-tel" placeholder={data?.form?.tel?.placeholder} />
-                    <input type="email" className="feedback__form-email" placeholder={data?.form?.email?.placeholder} />
-                    <MyButton class="feedback__form-button" text={data?.button?.text} />
+                    <input type="text" className="feedback__form-name" placeholder={data?.form?.name?.placeholder} title={data?.form?.name?.placeholder} required/>
+                    <input type="tel" className="feedback__form-tel" placeholder={data?.form?.tel?.placeholder} title={data?.form?.tel?.placeholder} required/>
+                    <input type="email" className="feedback__form-email" placeholder={data?.form?.email?.placeholder} title={data?.form?.email?.placeholder} required/>
+                    <MyButton class="feedback__form-button" text={data?.button?.text} type={"submit"}/>
                     <a href="" className="feedback__href-tg">
                         <img src={data?.hrefTg?.img?.src} alt={data?.hrefTg?.img?.alt} />
                     </a>

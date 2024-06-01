@@ -2,7 +2,6 @@ import React, { useContext } from "react";
 import { DataContext } from "../../..";
 
 function Header() {
-
     const data = useContext(DataContext).header
 
     return <header className="header">

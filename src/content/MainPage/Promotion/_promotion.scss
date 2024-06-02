@@ -1,5 +1,5 @@
 .promotion {
-    @include adap(margin-bottom, 100);
+    @include adap(margin-bottom, 100, 100, 100, 150, 200);
     @include adap(height, 320);
     @include adap(padding-top, 21);
     @extend .padding-content;

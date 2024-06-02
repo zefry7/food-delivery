@@ -2,27 +2,29 @@
     &__content {
         @extend .padding-content;
         .swiper {
-            margin-bottom: 40px;
-            height: 200px;
+            @include adap(margin-bottom, 40);
             overflow: visible;
             &-wrapper {
-                height: 182px;
                 justify-content: space-between;
                 align-items: center;
+                & .swiper-slide:last-child {
+                    margin-right: 0;
+                }
             }
             &-slide {
-                width: 182px;
-                height: 165px;
-                border-radius: 28px;
+                @include adap(margin-right, 20);
+                @include adap(height, 165, 165, 165, 142, 120);
+                @include adap(width, 182, 182, 182, 155, 131);
+                @include adap(border-radius, 28);
                 position: relative;
                 transition: all 0.1s linear;
 
                 &:hover:has(.faq__item-input:not(:checked)) {
-                    box-shadow: 0px 0px 12px 3px rgba(0, 0, 0, 0.13);
+                    box-shadow: 0px 0px 0.8vw 0.2vw rgba(0, 0, 0, 0.13);
                 }
 
                 .faq__item-input:checked + .faq__item {
-                    box-shadow: 0px 0px 12px 3px var(--green-c);
+                    box-shadow: 0px 0px 0.8vw 0.2vw var(--green-c);
                     background-color: var(--green-c);
                 }
 
@@ -30,15 +32,15 @@
         }
     }
     &__title {
-        margin-bottom: 40px;
-        font-size: 32px;
+        @include adap(margin-bottom, 40);
+        @include adap(font-size, 32, 32, 28, 28, 24);
         font-family: "MB";
     }
     &__item {
+        @include adap(gap, 22, 22, 22, 16, 10);
+        @include adap(padding-top, 43, 43, 43, 40, 37);
+        @include adap(border-radius, 28);
         width: 100%;
-        padding-top: 43px;
-        border-radius: 28px;
-        gap: 22px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -56,20 +58,21 @@
             cursor: pointer;
         }
         &-img {
-            height: 55px;
-            width: 55px;
+            @include adap(height, 55, 55, 55, 47, 38);
+            @include adap(width, 55, 55, 55, 47, 38);
             img { 
                 width: 100%;
                 height: auto; 
             }
         }
         &-text {
-            font-size: 16px;
+            @include adap(font-size, 16);
             font-family: "MB";
             cursor: pointer;
         }
     }
     &__block-question {
+        transition: all 0.3s linear;
     }
     &__question {
         position: relative;
@@ -80,7 +83,7 @@
                 opacity: 1;
             }
             .faq__question-title {
-                margin-bottom: 15px;
+                @include adap(margin-bottom, 15);
                 color: var(--green-c);
             }
 
@@ -95,12 +98,9 @@
             opacity: 0;
             cursor: pointer;
         }
-        &-content {
-
-        }
         &-title {
+            @include adap(font-size, 24, 24, 24, 21, 18);
             margin-bottom: 0;
-            font-size: 24px;
             line-height: 120%;
             font-family: "MB";
             transition: all 0.1s linear;
@@ -109,16 +109,17 @@
             overflow: hidden;
         }
         &-text {
+            @include adap(font-size, 20, 20, 17, 14, 14);
             line-height: 0%;
             opacity: 0;
-            font-size: 20px;
             font-family: "MR";
             transition: all 0.1s linear;
         }
 
         hr {
-            margin: 35px 0;
-            height: 1px;
+            @include adap(margin-top, 35, 35, 26, 26, 17);
+            @include adap(margin-bottom, 35, 35, 26, 26, 17);
+            @include adap(height, 1);
             background-color: var(--grey-bg-3);
         }
     }

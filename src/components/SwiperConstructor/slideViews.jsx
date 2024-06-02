@@ -1,4 +1,4 @@
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { SwiperSlide } from 'swiper/react';
 
 
@@ -46,11 +46,38 @@ const SlideMenu = (value, index, key) => {
 }
 
 const SlideFaq = (value, index, key) => {
+    const dispath = useDispatch()
+    const themeFaq = useSelector(state => state.faq.themeFaq)
+
+    function ttt(e) {
+        let el = document.getElementsByClassName("faq__block-question")[0]
+        let listQuestion = document.querySelectorAll("input.faq__question-input:checked")
+        if(listQuestion.length > 0) {
+            console.log("123");
+            setTimeout(() => {
+                el.style.opacity = 0;
+            }, 300)
+            setTimeout(() => {
+                el.style.opacity = 1;
+                dispath({type: "changeTheme", value: e.target.getAttribute("data-index")})
+            }, 800)
+        } else {
+            el.style.opacity = 0;
+            setTimeout(() => {
+                el.style.opacity = 1;
+                dispath({type: "changeTheme", value: e.target.getAttribute("data-index")})
+            }, 500)
+        }
+        for(let x of listQuestion) {
+            x.checked = false;
+        }
+    }
+
     return (
         <SwiperSlide key={index}>
             {index == 0 
-                ? <input type="radio" name="faq-type" className='faq__item-input' defaultChecked />
-                : <input type="radio" name="faq-type" className='faq__item-input' />
+                ? <input type="radio" name="faq-type" className='faq__item-input' data-index={index} defaultChecked onChange={(e) => ttt(e)}/>
+                : <input type="radio" name="faq-type" className='faq__item-input' data-index={index} onChange={(e) => ttt(e)}/>
             }
             <div className="faq__item">
                 <div className="faq__item-img">

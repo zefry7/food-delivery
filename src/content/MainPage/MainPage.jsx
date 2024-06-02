@@ -14,7 +14,7 @@ function MainPage() {
         <Area />
         <Advantage />
         <Promotion />
-        {/* <Faq /> */}
+        <Faq />
         <Feedback />
     </>
 }

@@ -16,7 +16,6 @@ const settingMenu = {
 
 const settingFaq = {
     slidesPerView: 'auto',
-    spaceBetween: "21",
 }
 
 

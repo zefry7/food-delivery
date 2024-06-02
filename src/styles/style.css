@@ -2600,17 +2600,17 @@ select {
 }
 @media screen and (max-width: 1023px) and (min-width: 768px) {
   .promotion {
-    margin-bottom: calc(100px + 0 * (100vw - 768px) / (1024 - 768));
+    margin-bottom: calc(150px + -50 * (100vw - 768px) / (1024 - 768));
   }
 }
 @media screen and (max-width: 767px) and (min-width: 320px) {
   .promotion {
-    margin-bottom: calc(100px + 0 * (100vw - 320px) / (768 - 320));
+    margin-bottom: calc(200px + -50 * (100vw - 320px) / (768 - 320));
   }
 }
 @media (max-width: 320px) {
   .promotion {
-    margin-bottom: 100px;
+    margin-bottom: 200px;
   }
 }
 @media (min-width: 1440px) {
@@ -3069,45 +3069,337 @@ select {
 }
 
 .faq__content .swiper {
-  margin-bottom: 40px;
-  height: 200px;
   overflow: visible;
 }
+@media (min-width: 1440px) {
+  .faq__content .swiper {
+    margin-bottom: 2.7777777778vw;
+  }
+}
+@media screen and (max-width: 1439px) and (min-width: 1280px) {
+  .faq__content .swiper {
+    margin-bottom: calc(40px + 0 * (100vw - 1280px) / (1440 - 1280));
+  }
+}
+@media screen and (max-width: 1279px) and (min-width: 1024px) {
+  .faq__content .swiper {
+    margin-bottom: calc(40px + 0 * (100vw - 1024px) / (1280 - 1024));
+  }
+}
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  .faq__content .swiper {
+    margin-bottom: calc(40px + 0 * (100vw - 768px) / (1024 - 768));
+  }
+}
+@media screen and (max-width: 767px) and (min-width: 320px) {
+  .faq__content .swiper {
+    margin-bottom: calc(40px + 0 * (100vw - 320px) / (768 - 320));
+  }
+}
+@media (max-width: 320px) {
+  .faq__content .swiper {
+    margin-bottom: 40px;
+  }
+}
 .faq__content .swiper-wrapper {
-  height: 182px;
   justify-content: space-between;
   align-items: center;
 }
+.faq__content .swiper-wrapper .swiper-slide:last-child {
+  margin-right: 0;
+}
 .faq__content .swiper-slide {
-  width: 182px;
-  height: 165px;
-  border-radius: 28px;
   position: relative;
   transition: all 0.1s linear;
 }
+@media (min-width: 1440px) {
+  .faq__content .swiper-slide {
+    margin-right: 1.3888888889vw;
+  }
+}
+@media screen and (max-width: 1439px) and (min-width: 1280px) {
+  .faq__content .swiper-slide {
+    margin-right: calc(20px + 0 * (100vw - 1280px) / (1440 - 1280));
+  }
+}
+@media screen and (max-width: 1279px) and (min-width: 1024px) {
+  .faq__content .swiper-slide {
+    margin-right: calc(20px + 0 * (100vw - 1024px) / (1280 - 1024));
+  }
+}
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  .faq__content .swiper-slide {
+    margin-right: calc(20px + 0 * (100vw - 768px) / (1024 - 768));
+  }
+}
+@media screen and (max-width: 767px) and (min-width: 320px) {
+  .faq__content .swiper-slide {
+    margin-right: calc(20px + 0 * (100vw - 320px) / (768 - 320));
+  }
+}
+@media (max-width: 320px) {
+  .faq__content .swiper-slide {
+    margin-right: 20px;
+  }
+}
+@media (min-width: 1440px) {
+  .faq__content .swiper-slide {
+    height: 11.4583333333vw;
+  }
+}
+@media screen and (max-width: 1439px) and (min-width: 1280px) {
+  .faq__content .swiper-slide {
+    height: calc(165px + 0 * (100vw - 1280px) / (1440 - 1280));
+  }
+}
+@media screen and (max-width: 1279px) and (min-width: 1024px) {
+  .faq__content .swiper-slide {
+    height: calc(165px + 0 * (100vw - 1024px) / (1280 - 1024));
+  }
+}
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  .faq__content .swiper-slide {
+    height: calc(142px + 23 * (100vw - 768px) / (1024 - 768));
+  }
+}
+@media screen and (max-width: 767px) and (min-width: 320px) {
+  .faq__content .swiper-slide {
+    height: calc(120px + 22 * (100vw - 320px) / (768 - 320));
+  }
+}
+@media (max-width: 320px) {
+  .faq__content .swiper-slide {
+    height: 120px;
+  }
+}
+@media (min-width: 1440px) {
+  .faq__content .swiper-slide {
+    width: 12.6388888889vw;
+  }
+}
+@media screen and (max-width: 1439px) and (min-width: 1280px) {
+  .faq__content .swiper-slide {
+    width: calc(182px + 0 * (100vw - 1280px) / (1440 - 1280));
+  }
+}
+@media screen and (max-width: 1279px) and (min-width: 1024px) {
+  .faq__content .swiper-slide {
+    width: calc(182px + 0 * (100vw - 1024px) / (1280 - 1024));
+  }
+}
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  .faq__content .swiper-slide {
+    width: calc(155px + 27 * (100vw - 768px) / (1024 - 768));
+  }
+}
+@media screen and (max-width: 767px) and (min-width: 320px) {
+  .faq__content .swiper-slide {
+    width: calc(131px + 24 * (100vw - 320px) / (768 - 320));
+  }
+}
+@media (max-width: 320px) {
+  .faq__content .swiper-slide {
+    width: 131px;
+  }
+}
+@media (min-width: 1440px) {
+  .faq__content .swiper-slide {
+    border-radius: 1.9444444444vw;
+  }
+}
+@media screen and (max-width: 1439px) and (min-width: 1280px) {
+  .faq__content .swiper-slide {
+    border-radius: calc(28px + 0 * (100vw - 1280px) / (1440 - 1280));
+  }
+}
+@media screen and (max-width: 1279px) and (min-width: 1024px) {
+  .faq__content .swiper-slide {
+    border-radius: calc(28px + 0 * (100vw - 1024px) / (1280 - 1024));
+  }
+}
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  .faq__content .swiper-slide {
+    border-radius: calc(28px + 0 * (100vw - 768px) / (1024 - 768));
+  }
+}
+@media screen and (max-width: 767px) and (min-width: 320px) {
+  .faq__content .swiper-slide {
+    border-radius: calc(28px + 0 * (100vw - 320px) / (768 - 320));
+  }
+}
+@media (max-width: 320px) {
+  .faq__content .swiper-slide {
+    border-radius: 28px;
+  }
+}
 .faq__content .swiper-slide:hover:has(.faq__item-input:not(:checked)) {
-  box-shadow: 0px 0px 12px 3px rgba(0, 0, 0, 0.13);
+  box-shadow: 0px 0px 0.8vw 0.2vw rgba(0, 0, 0, 0.13);
 }
 .faq__content .swiper-slide .faq__item-input:checked + .faq__item {
-  box-shadow: 0px 0px 12px 3px var(--green-c);
+  box-shadow: 0px 0px 0.8vw 0.2vw var(--green-c);
   background-color: var(--green-c);
 }
 .faq__title {
-  margin-bottom: 40px;
-  font-size: 32px;
   font-family: "MB";
+}
+@media (min-width: 1440px) {
+  .faq__title {
+    margin-bottom: 2.7777777778vw;
+  }
+}
+@media screen and (max-width: 1439px) and (min-width: 1280px) {
+  .faq__title {
+    margin-bottom: calc(40px + 0 * (100vw - 1280px) / (1440 - 1280));
+  }
+}
+@media screen and (max-width: 1279px) and (min-width: 1024px) {
+  .faq__title {
+    margin-bottom: calc(40px + 0 * (100vw - 1024px) / (1280 - 1024));
+  }
+}
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  .faq__title {
+    margin-bottom: calc(40px + 0 * (100vw - 768px) / (1024 - 768));
+  }
+}
+@media screen and (max-width: 767px) and (min-width: 320px) {
+  .faq__title {
+    margin-bottom: calc(40px + 0 * (100vw - 320px) / (768 - 320));
+  }
+}
+@media (max-width: 320px) {
+  .faq__title {
+    margin-bottom: 40px;
+  }
+}
+@media (min-width: 1440px) {
+  .faq__title {
+    font-size: 2.2222222222vw;
+  }
+}
+@media screen and (max-width: 1439px) and (min-width: 1280px) {
+  .faq__title {
+    font-size: calc(32px + 0 * (100vw - 1280px) / (1440 - 1280));
+  }
+}
+@media screen and (max-width: 1279px) and (min-width: 1024px) {
+  .faq__title {
+    font-size: calc(28px + 4 * (100vw - 1024px) / (1280 - 1024));
+  }
+}
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  .faq__title {
+    font-size: calc(28px + 0 * (100vw - 768px) / (1024 - 768));
+  }
+}
+@media screen and (max-width: 767px) and (min-width: 320px) {
+  .faq__title {
+    font-size: calc(24px + 4 * (100vw - 320px) / (768 - 320));
+  }
+}
+@media (max-width: 320px) {
+  .faq__title {
+    font-size: 24px;
+  }
 }
 .faq__item {
   width: 100%;
-  padding-top: 43px;
-  border-radius: 28px;
-  gap: 22px;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: var(--grey-bg-2);
   transition: transform 0.1s linear;
   cursor: pointer;
+}
+@media (min-width: 1440px) {
+  .faq__item {
+    gap: 1.5277777778vw;
+  }
+}
+@media screen and (max-width: 1439px) and (min-width: 1280px) {
+  .faq__item {
+    gap: calc(22px + 0 * (100vw - 1280px) / (1440 - 1280));
+  }
+}
+@media screen and (max-width: 1279px) and (min-width: 1024px) {
+  .faq__item {
+    gap: calc(22px + 0 * (100vw - 1024px) / (1280 - 1024));
+  }
+}
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  .faq__item {
+    gap: calc(16px + 6 * (100vw - 768px) / (1024 - 768));
+  }
+}
+@media screen and (max-width: 767px) and (min-width: 320px) {
+  .faq__item {
+    gap: calc(10px + 6 * (100vw - 320px) / (768 - 320));
+  }
+}
+@media (max-width: 320px) {
+  .faq__item {
+    gap: 10px;
+  }
+}
+@media (min-width: 1440px) {
+  .faq__item {
+    padding-top: 2.9861111111vw;
+  }
+}
+@media screen and (max-width: 1439px) and (min-width: 1280px) {
+  .faq__item {
+    padding-top: calc(43px + 0 * (100vw - 1280px) / (1440 - 1280));
+  }
+}
+@media screen and (max-width: 1279px) and (min-width: 1024px) {
+  .faq__item {
+    padding-top: calc(43px + 0 * (100vw - 1024px) / (1280 - 1024));
+  }
+}
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  .faq__item {
+    padding-top: calc(40px + 3 * (100vw - 768px) / (1024 - 768));
+  }
+}
+@media screen and (max-width: 767px) and (min-width: 320px) {
+  .faq__item {
+    padding-top: calc(37px + 3 * (100vw - 320px) / (768 - 320));
+  }
+}
+@media (max-width: 320px) {
+  .faq__item {
+    padding-top: 37px;
+  }
+}
+@media (min-width: 1440px) {
+  .faq__item {
+    border-radius: 1.9444444444vw;
+  }
+}
+@media screen and (max-width: 1439px) and (min-width: 1280px) {
+  .faq__item {
+    border-radius: calc(28px + 0 * (100vw - 1280px) / (1440 - 1280));
+  }
+}
+@media screen and (max-width: 1279px) and (min-width: 1024px) {
+  .faq__item {
+    border-radius: calc(28px + 0 * (100vw - 1024px) / (1280 - 1024));
+  }
+}
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  .faq__item {
+    border-radius: calc(28px + 0 * (100vw - 768px) / (1024 - 768));
+  }
+}
+@media screen and (max-width: 767px) and (min-width: 320px) {
+  .faq__item {
+    border-radius: calc(28px + 0 * (100vw - 320px) / (768 - 320));
+  }
+}
+@media (max-width: 320px) {
+  .faq__item {
+    border-radius: 28px;
+  }
 }
 .faq__item-input {
   height: 100%;
@@ -3118,18 +3410,106 @@ select {
   opacity: 0;
   cursor: pointer;
 }
-.faq__item-img {
-  height: 55px;
-  width: 55px;
+@media (min-width: 1440px) {
+  .faq__item-img {
+    height: 3.8194444444vw;
+  }
+}
+@media screen and (max-width: 1439px) and (min-width: 1280px) {
+  .faq__item-img {
+    height: calc(55px + 0 * (100vw - 1280px) / (1440 - 1280));
+  }
+}
+@media screen and (max-width: 1279px) and (min-width: 1024px) {
+  .faq__item-img {
+    height: calc(55px + 0 * (100vw - 1024px) / (1280 - 1024));
+  }
+}
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  .faq__item-img {
+    height: calc(47px + 8 * (100vw - 768px) / (1024 - 768));
+  }
+}
+@media screen and (max-width: 767px) and (min-width: 320px) {
+  .faq__item-img {
+    height: calc(38px + 9 * (100vw - 320px) / (768 - 320));
+  }
+}
+@media (max-width: 320px) {
+  .faq__item-img {
+    height: 38px;
+  }
+}
+@media (min-width: 1440px) {
+  .faq__item-img {
+    width: 3.8194444444vw;
+  }
+}
+@media screen and (max-width: 1439px) and (min-width: 1280px) {
+  .faq__item-img {
+    width: calc(55px + 0 * (100vw - 1280px) / (1440 - 1280));
+  }
+}
+@media screen and (max-width: 1279px) and (min-width: 1024px) {
+  .faq__item-img {
+    width: calc(55px + 0 * (100vw - 1024px) / (1280 - 1024));
+  }
+}
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  .faq__item-img {
+    width: calc(47px + 8 * (100vw - 768px) / (1024 - 768));
+  }
+}
+@media screen and (max-width: 767px) and (min-width: 320px) {
+  .faq__item-img {
+    width: calc(38px + 9 * (100vw - 320px) / (768 - 320));
+  }
+}
+@media (max-width: 320px) {
+  .faq__item-img {
+    width: 38px;
+  }
 }
 .faq__item-img img {
   width: 100%;
   height: auto;
 }
 .faq__item-text {
-  font-size: 16px;
   font-family: "MB";
   cursor: pointer;
+}
+@media (min-width: 1440px) {
+  .faq__item-text {
+    font-size: 1.1111111111vw;
+  }
+}
+@media screen and (max-width: 1439px) and (min-width: 1280px) {
+  .faq__item-text {
+    font-size: calc(16px + 0 * (100vw - 1280px) / (1440 - 1280));
+  }
+}
+@media screen and (max-width: 1279px) and (min-width: 1024px) {
+  .faq__item-text {
+    font-size: calc(16px + 0 * (100vw - 1024px) / (1280 - 1024));
+  }
+}
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  .faq__item-text {
+    font-size: calc(16px + 0 * (100vw - 768px) / (1024 - 768));
+  }
+}
+@media screen and (max-width: 767px) and (min-width: 320px) {
+  .faq__item-text {
+    font-size: calc(16px + 0 * (100vw - 320px) / (768 - 320));
+  }
+}
+@media (max-width: 320px) {
+  .faq__item-text {
+    font-size: 16px;
+  }
+}
+.faq__block-question {
+  transition: all 0.3s linear;
 }
 .faq__question {
   position: relative;
@@ -3139,8 +3519,37 @@ select {
   opacity: 1;
 }
 .faq__question:has(input:checked) .faq__question-title {
-  margin-bottom: 15px;
   color: var(--green-c);
+}
+@media (min-width: 1440px) {
+  .faq__question:has(input:checked) .faq__question-title {
+    margin-bottom: 1.0416666667vw;
+  }
+}
+@media screen and (max-width: 1439px) and (min-width: 1280px) {
+  .faq__question:has(input:checked) .faq__question-title {
+    margin-bottom: calc(15px + 0 * (100vw - 1280px) / (1440 - 1280));
+  }
+}
+@media screen and (max-width: 1279px) and (min-width: 1024px) {
+  .faq__question:has(input:checked) .faq__question-title {
+    margin-bottom: calc(15px + 0 * (100vw - 1024px) / (1280 - 1024));
+  }
+}
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  .faq__question:has(input:checked) .faq__question-title {
+    margin-bottom: calc(15px + 0 * (100vw - 768px) / (1024 - 768));
+  }
+}
+@media screen and (max-width: 767px) and (min-width: 320px) {
+  .faq__question:has(input:checked) .faq__question-title {
+    margin-bottom: calc(15px + 0 * (100vw - 320px) / (768 - 320));
+  }
+}
+@media (max-width: 320px) {
+  .faq__question:has(input:checked) .faq__question-title {
+    margin-bottom: 15px;
+  }
 }
 .faq__question-input {
   position: absolute;
@@ -3153,10 +3562,39 @@ select {
 }
 .faq__question-title {
   margin-bottom: 0;
-  font-size: 24px;
   line-height: 120%;
   font-family: "MB";
   transition: all 0.1s linear;
+}
+@media (min-width: 1440px) {
+  .faq__question-title {
+    font-size: 1.6666666667vw;
+  }
+}
+@media screen and (max-width: 1439px) and (min-width: 1280px) {
+  .faq__question-title {
+    font-size: calc(24px + 0 * (100vw - 1280px) / (1440 - 1280));
+  }
+}
+@media screen and (max-width: 1279px) and (min-width: 1024px) {
+  .faq__question-title {
+    font-size: calc(24px + 0 * (100vw - 1024px) / (1280 - 1024));
+  }
+}
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  .faq__question-title {
+    font-size: calc(21px + 3 * (100vw - 768px) / (1024 - 768));
+  }
+}
+@media screen and (max-width: 767px) and (min-width: 320px) {
+  .faq__question-title {
+    font-size: calc(18px + 3 * (100vw - 320px) / (768 - 320));
+  }
+}
+@media (max-width: 320px) {
+  .faq__question-title {
+    font-size: 18px;
+  }
 }
 .faq__question-body {
   overflow: hidden;
@@ -3164,14 +3602,131 @@ select {
 .faq__question-text {
   line-height: 0%;
   opacity: 0;
-  font-size: 20px;
   font-family: "MR";
   transition: all 0.1s linear;
 }
+@media (min-width: 1440px) {
+  .faq__question-text {
+    font-size: 1.3888888889vw;
+  }
+}
+@media screen and (max-width: 1439px) and (min-width: 1280px) {
+  .faq__question-text {
+    font-size: calc(20px + 0 * (100vw - 1280px) / (1440 - 1280));
+  }
+}
+@media screen and (max-width: 1279px) and (min-width: 1024px) {
+  .faq__question-text {
+    font-size: calc(17px + 3 * (100vw - 1024px) / (1280 - 1024));
+  }
+}
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  .faq__question-text {
+    font-size: calc(14px + 3 * (100vw - 768px) / (1024 - 768));
+  }
+}
+@media screen and (max-width: 767px) and (min-width: 320px) {
+  .faq__question-text {
+    font-size: calc(14px + 0 * (100vw - 320px) / (768 - 320));
+  }
+}
+@media (max-width: 320px) {
+  .faq__question-text {
+    font-size: 14px;
+  }
+}
 .faq__question hr {
-  margin: 35px 0;
-  height: 1px;
   background-color: var(--grey-bg-3);
+}
+@media (min-width: 1440px) {
+  .faq__question hr {
+    margin-top: 2.4305555556vw;
+  }
+}
+@media screen and (max-width: 1439px) and (min-width: 1280px) {
+  .faq__question hr {
+    margin-top: calc(35px + 0 * (100vw - 1280px) / (1440 - 1280));
+  }
+}
+@media screen and (max-width: 1279px) and (min-width: 1024px) {
+  .faq__question hr {
+    margin-top: calc(26px + 9 * (100vw - 1024px) / (1280 - 1024));
+  }
+}
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  .faq__question hr {
+    margin-top: calc(26px + 0 * (100vw - 768px) / (1024 - 768));
+  }
+}
+@media screen and (max-width: 767px) and (min-width: 320px) {
+  .faq__question hr {
+    margin-top: calc(17px + 9 * (100vw - 320px) / (768 - 320));
+  }
+}
+@media (max-width: 320px) {
+  .faq__question hr {
+    margin-top: 17px;
+  }
+}
+@media (min-width: 1440px) {
+  .faq__question hr {
+    margin-bottom: 2.4305555556vw;
+  }
+}
+@media screen and (max-width: 1439px) and (min-width: 1280px) {
+  .faq__question hr {
+    margin-bottom: calc(35px + 0 * (100vw - 1280px) / (1440 - 1280));
+  }
+}
+@media screen and (max-width: 1279px) and (min-width: 1024px) {
+  .faq__question hr {
+    margin-bottom: calc(26px + 9 * (100vw - 1024px) / (1280 - 1024));
+  }
+}
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  .faq__question hr {
+    margin-bottom: calc(26px + 0 * (100vw - 768px) / (1024 - 768));
+  }
+}
+@media screen and (max-width: 767px) and (min-width: 320px) {
+  .faq__question hr {
+    margin-bottom: calc(17px + 9 * (100vw - 320px) / (768 - 320));
+  }
+}
+@media (max-width: 320px) {
+  .faq__question hr {
+    margin-bottom: 17px;
+  }
+}
+@media (min-width: 1440px) {
+  .faq__question hr {
+    height: 0.0694444444vw;
+  }
+}
+@media screen and (max-width: 1439px) and (min-width: 1280px) {
+  .faq__question hr {
+    height: calc(1px + 0 * (100vw - 1280px) / (1440 - 1280));
+  }
+}
+@media screen and (max-width: 1279px) and (min-width: 1024px) {
+  .faq__question hr {
+    height: calc(1px + 0 * (100vw - 1024px) / (1280 - 1024));
+  }
+}
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  .faq__question hr {
+    height: calc(1px + 0 * (100vw - 768px) / (1024 - 768));
+  }
+}
+@media screen and (max-width: 767px) and (min-width: 320px) {
+  .faq__question hr {
+    height: calc(1px + 0 * (100vw - 320px) / (768 - 320));
+  }
+}
+@media (max-width: 320px) {
+  .faq__question hr {
+    height: 1px;
+  }
 }
 
 .feedback {

@@ -1,6 +1,6 @@
 .header {
+    @include adap(height, 100, 100, 100, 80, 60);
     width: 100%;
-    height: 100px;
     position: sticky;
     top: 0px;
     z-index: 10;
@@ -13,31 +13,91 @@
         align-items: center;
     }
     &__menu {
+        width: 100%;
         display: flex;
         align-items: center;
     }
+    &__menu-button {
+        @include adap(margin-right, 20, 20, 20, 20, 10);
+        @include adap(height, 24);
+        @include adap(width, 24);
+        position: relative;
+        z-index: 3;
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+        @media (max-width: 768px) {
+            display: flex;
+        }
+        span {
+            width: 100%;
+            @include adap(height, 2);
+            background-color: black;
+        }
+    }
     &__logo {
-        margin-right: 57px;
+        @include adap(margin-right, 57, 45, 40);
+        position: relative;
+        z-index: 3;
+        @media (max-width: 768px) {
+            margin-right: auto;
+        }
         cursor: pointer;
         img {
-            max-width: 100%;
+            @include adap(width, 183, 183, 143, 143, 103);
             height: auto;
         }
     }
     &__nav {
-        margin-right: 137px;
+        margin-right: auto;
+    }
+    &__burger-menu-content {
+        width: 100%;
+        display: flex;
+        align-items: center;
+
+        @media (max-width: 768px) {
+            display: none;
+        }
+    }
+    &__menu-button_active {
+        @include adap(padding-top, 100);
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: var(--white-c);
+        width: 100%;
+        height: 100svh;
+        @include adap(gap, 30);
+        overflow-y: scroll;
+        .header__links-row {
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .header__nav {
+            margin-right: 0;
+        }
+        
+        .header__tel {
+            display: flex;
+            margin-right: 0;
+        }
     }
     &__links-row {
         display: flex;
         align-items: center;
-        gap: 70px;
+        @include adap(gap, 70, 60, 40, 30);
 
         .header__link:first-child {
             @extend .header__link_show;
         }
     }
     &__link {
-        font-size: 16px;
+        @include adap(font-size, 16);
         font-family: "MN";
         cursor: pointer;
         &:hover {
@@ -49,36 +109,41 @@
         text-decoration: underline;
     }
     &__tel {
-        margin-right: 37px;
-        width: 118px;
+        @include adap(margin-right, 37, 37, 24, 15);
+        @include adap(width, 118);
         display: flex;
         align-items: center;
-        gap: 4px;
+        @include adap(gap, 4);
+
+        @media (max-width: 1024px) {
+            display: none;
+        }
+
         &::before {
             content: "";
             display: inline-block;
-            min-width: 24px;
-            height: 24px;
+            @include adap(min-width, 24);
+            @include adap(height, 24);
             background: url("./img/Header/tel.svg") center/ 100% no-repeat;
         }
-
-
         a {
-            font-size: 15px;
+            @include adap(font-size, 15);
             font-family: "MB";
         }
+
+        
     }
     &__lang {
-        margin-right: 50px;
-        width: 47px;
-        font-size: 16px;
+        @include adap(margin-right, 50, 15);
+        @include adap(min-width, 47);
+        @include adap(font-size, 16);
         font-family: "MB";
         position: relative;
         &::after {
             content: "";
             display: inline-block;
-            width: 17px;
-            height: 10px;
+            @include adap(width, 17);
+            @include adap(height, 10);
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
@@ -89,7 +154,6 @@
         select {
             position: relative;
             z-index: 3;
-            margin-right: 5px;
             text-transform: uppercase;
             width: 100%;
             background-color: inherit;
@@ -97,28 +161,38 @@
         }
     }
     &__sing-in {
-        padding-left: 5px;
-        height: 35px;
-        width: 140px;
-        border-radius: 32px;
+        @include adap(padding-left, 4);
+        @include adap(height, 35);
+        @include adap(min-width, 140, 140, 140, 120);
+        @include adap(border-radius, 32);
         display: flex;
         align-items: center;
-        gap: 20px;
+        @include adap(gap, 20, 20, 20, 10);
+        position: relative;
+        z-index: 3;
         background-color: var(--orange-c);
         cursor: pointer;
         &:hover {
             background-color: var(--green-c);
         }
         span {
-            font-size: 16px;
+            @include adap(font-size, 16);
             text-transform: uppercase;
             font-family: "MB";
             color: var(--white-c);
         }
+
+        @media (max-width: 425px) {
+            @include adap(padding-right, 4);
+            min-width: max-content;
+            span {
+                display: none;
+            }
+        }
     }
     &__account-img {
         img {
-            max-width: 100%;
+            @include adap(width, 28);
             height: auto;
         }
     }

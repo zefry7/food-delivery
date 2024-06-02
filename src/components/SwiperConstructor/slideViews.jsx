@@ -49,7 +49,7 @@ const SlideFaq = (value, index, key) => {
     const dispath = useDispatch()
     const themeFaq = useSelector(state => state.faq.themeFaq)
 
-    function ttt(e) {
+    function animationOpacity(e) {
         let el = document.getElementsByClassName("faq__block-question")[0]
         let listQuestion = document.querySelectorAll("input.faq__question-input:checked")
         if(listQuestion.length > 0) {
@@ -76,8 +76,8 @@ const SlideFaq = (value, index, key) => {
     return (
         <SwiperSlide key={index}>
             {index == 0 
-                ? <input type="radio" name="faq-type" className='faq__item-input' data-index={index} defaultChecked onChange={(e) => ttt(e)}/>
-                : <input type="radio" name="faq-type" className='faq__item-input' data-index={index} onChange={(e) => ttt(e)}/>
+                ? <input type="radio" name="faq-type" className='faq__item-input' data-index={index} defaultChecked onChange={(e) => animationOpacity(e)}/>
+                : <input type="radio" name="faq-type" className='faq__item-input' data-index={index} onChange={(e) => animationOpacity(e)}/>
             }
             <div className="faq__item">
                 <div className="faq__item-img">

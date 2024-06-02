@@ -106,9 +106,10 @@
             transition: all 0.1s linear;
         }
         &-body {
+            @include adap(margin-bottom, 35, 35, 26, 26, 17);            
             overflow: hidden;
         }
-        &-text {
+        &-text {            
             @include adap(font-size, 20, 20, 17, 14, 14);
             line-height: 0%;
             opacity: 0;
@@ -117,10 +118,9 @@
         }
 
         hr {
-            @include adap(margin-top, 35, 35, 26, 26, 17);
             @include adap(margin-bottom, 35, 35, 26, 26, 17);
-            @include adap(height, 1);
-            background-color: var(--grey-bg-3);
+            border: solid var(--grey-bg-3);
+            @include adap(border-width, 0.5);
         }
     }
 }

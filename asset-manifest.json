@@ -1,13 +1,33 @@
 {
   "files": {
-    "main.css": "/furniture-restoration/static/css/main.e41de3db.css",
-    "main.js": "/furniture-restoration/static/js/main.117dbbbb.js",
+    "main.css": "/furniture-restoration/static/css/main.7991ebbb.css",
+    "main.js": "/furniture-restoration/static/js/main.b9edc1b6.js",
+    "static/media/Montserrat-Bold.eot": "/furniture-restoration/static/media/Montserrat-Bold.bea823a1a24bcdf65760.eot",
+    "static/media/Montserrat-Bold.ttf": "/furniture-restoration/static/media/Montserrat-Bold.09aa44bfee794bd5211e.ttf",
+    "static/media/Montserrat-Medium.eot": "/furniture-restoration/static/media/Montserrat-Medium.e65378b57457fa7fd4b6.eot",
+    "static/media/Montserrat-Regular.eot": "/furniture-restoration/static/media/Montserrat-Regular.8a8585b953ff7f1d9e02.eot",
+    "static/media/Montserrat-Medium.ttf": "/furniture-restoration/static/media/Montserrat-Medium.6a5b01115543f1cab3ed.ttf",
+    "static/media/Montserrat-Regular.ttf": "/furniture-restoration/static/media/Montserrat-Regular.e4a49fd341ee7dfe85d6.ttf",
+    "static/media/Montserrat-Bold.woff": "/furniture-restoration/static/media/Montserrat-Bold.fdec1a8704afeefc6527.woff",
+    "static/media/Montserrat-Medium.woff": "/furniture-restoration/static/media/Montserrat-Medium.dbfb1111e2a0efa7925a.woff",
+    "static/media/Montserrat-Regular.woff": "/furniture-restoration/static/media/Montserrat-Regular.0dea8d0860451ddab7d4.woff",
+    "static/media/Montserrat-Bold.woff2": "/furniture-restoration/static/media/Montserrat-Bold.6aab475a7e27a6f02aed.woff2",
+    "static/media/Montserrat-Medium.woff2": "/furniture-restoration/static/media/Montserrat-Medium.e1c5f6afb157b4dce636.woff2",
+    "static/media/Montserrat-Regular.woff2": "/furniture-restoration/static/media/Montserrat-Regular.df7b9b6f89ccf3a354d3.woff2",
+    "static/media/circle-line.png": "/furniture-restoration/static/media/circle-line.4be5c05cde43300317c7.png",
+    "static/media/address-icon.svg": "/furniture-restoration/static/media/address-icon.dc7fd74c3a2f82b2db7d.svg",
+    "static/media/menu.svg": "/furniture-restoration/static/media/menu.c189263b075c9953eb98.svg",
+    "static/media/phone-icon.svg": "/furniture-restoration/static/media/phone-icon.f110e10484884e6263e5.svg",
+    "static/media/tel.svg": "/furniture-restoration/static/media/tel.9f211015631f13750736.svg",
+    "static/media/email-icon.svg": "/furniture-restoration/static/media/email-icon.7b7a0a19ec019eb32835.svg",
+    "static/media/arrow.svg": "/furniture-restoration/static/media/arrow.7f2f27049bb9fd1ae495.svg",
+    "static/media/arrow-bottom.svg": "/furniture-restoration/static/media/arrow-bottom.c07b61f7a01f25b40951.svg",
     "index.html": "/furniture-restoration/index.html",
-    "main.e41de3db.css.map": "/furniture-restoration/static/css/main.e41de3db.css.map",
-    "main.117dbbbb.js.map": "/furniture-restoration/static/js/main.117dbbbb.js.map"
+    "main.7991ebbb.css.map": "/furniture-restoration/static/css/main.7991ebbb.css.map",
+    "main.b9edc1b6.js.map": "/furniture-restoration/static/js/main.b9edc1b6.js.map"
   },
   "entrypoints": [
-    "static/css/main.e41de3db.css",
-    "static/js/main.117dbbbb.js"
+    "static/css/main.7991ebbb.css",
+    "static/js/main.b9edc1b6.js"
   ]
 }

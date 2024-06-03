@@ -10,7 +10,7 @@ import Area from "./Area/Area";
 function MainPage() {
     return <>
         <Intro />
-        {/* <Menu /> */}
+        <Menu />
         <Area />
         <Advantage />
         <Promotion />

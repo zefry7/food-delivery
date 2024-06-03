@@ -1,11 +1,7 @@
 //настройки для свайперов
 
 const settingComplex = {
-    breakpoints: {
-        1440: {
-            slidesPerView: 'auto'
-        }
-    }
+    slidesPerView: 'auto'
 }
 
 const settingMenu = {

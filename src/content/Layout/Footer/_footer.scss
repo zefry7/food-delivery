@@ -1,10 +1,12 @@
 .footer {
     position: relative;
+    background-color: var(--green-c);
     &__content {
+        max-width: 1440px;
+        margin: 0 auto;
         @extend .padding-content;
         @include adap(padding-top, 63, 63, 63, 45, 30);
         @include adap(padding-bottom, 100, 100, 100, 100, 50);
-        background-color: var(--green-c);
         display: flex;
         justify-content: space-between;
 

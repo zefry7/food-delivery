@@ -1,4 +1,6 @@
 .area {
+    max-width: 1440px;
+    margin: 0 auto;
     &__content {
         @extend .padding-content;
         @include adap(padding-bottom, 100);

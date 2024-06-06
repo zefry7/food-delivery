@@ -61,10 +61,10 @@ function Menu() {
                                 {typeMenu}
                                 {data?.mainBlock?.gd[1]}
                             </p>
+                            <p className="menu__bottom-total">
+                                Total: <span>{countKcal.current} kcal</span>
+                            </p>
                         </div>
-                        <p className="menu__bottom-total">
-                            Total: <span>{countKcal.current} kcal</span>
-                        </p>
                         <ul className="menu__bottom-composition">
                             {data?.mainBlock?.composition?.map((v, i) => (
                                 <li className="menu__bottom-item" key={i}>

@@ -180,7 +180,7 @@ export const data = {
 
             }],
             description: "A balanced menu helps to maintain health and a slim figure, allows you to be cheerful and active throughout the week. While preparing our dishes, we use products from the best suppliers and always choose products that correspond to the concept of healthy nutrition. For example, lean beef, turkey and chicken, low-calorie sauces, pasta of hard varieties. Delivery is carried out every 2 days.",
-            gd: ["from ", "$ gel/day"],
+            gd: ["from ", "$/day"],
             composition: [
                 {
                     img: {
@@ -192,20 +192,20 @@ export const data = {
                 },
                 {
                     img: {
+                        src: "./img/Menu/carbohydrates.svg",
+                        alt: "углеводы"
+                    },
+                    label: "Carbohydrates",
+                    count: "0",
+                },
+                {
+                    img: {
                         src: "./img/Menu/fat.svg",
                         alt: "жиры"
                     },
                     label: "Fat",
                     count: "0",
                 },
-                {
-                    img: {
-                        src: "./img/Menu/carbohydrates.svg",
-                        alt: "углеводы"
-                    },
-                    label: "Carbohydrates",
-                    count: "0",
-                }
             ],
             button: "Order now"
         }

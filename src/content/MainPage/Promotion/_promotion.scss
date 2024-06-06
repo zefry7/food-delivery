@@ -6,6 +6,8 @@
     background-color: var(--green-c);
     position: relative;
     &__content {
+        max-width: 1440px;
+        margin: 0 auto;
         @include adap(width, 400, 400, 330, 330, 280);
     }
     &__title {

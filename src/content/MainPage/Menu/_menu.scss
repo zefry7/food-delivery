@@ -1,4 +1,6 @@
 .menu {
+    max-width: 1440px;
+    margin: 0 auto;
     &__content {
         padding-bottom: 100px;
     }
@@ -196,6 +198,9 @@
 
             &-wrapper {
                 align-items: flex-end;
+                & * {
+                    cursor: pointer;
+                }
             }
             &-slide {
                 height: 357px;
@@ -259,24 +264,34 @@
     }
 
     &__bottom {
-        padding: 10px 15px;
+        @include adap(padding-top, 10, 10, 18, 18, 18);
+        @include adap(padding-bottom, 10, 10, 14, 14, 14);
+        @include adap(padding-left, 15, 15, 18, 20, 20);
+        @include adap(padding-right, 15, 15, 18, 20, 20);
         border-radius: 15px;
         display: flex;
         align-items: center;
         background-color: var(--white-c);
+
+        @media (max-width: 1080px) {
+            flex-direction: column; 
+            gap: 10px;
+        }
         &-gd {
-            margin-right: 16px;
-            border-radius: 10px;
-            width: 207px;
-            padding: 6px 11px;
-            background-color: var(--orange-c);
-            cursor: pointer;
-            &:hover {
-                background-color: var(--green-c);  
+            display: flex;
+            align-items: center;
+            
+            @media (max-width: 1080px) {
+                flex-direction: column;
+                gap: 8px;
             }
         }
         &-gd-text {
-            width: 100%;
+            margin-right: 16px;
+            border-radius: 10px;
+            width: 210px;
+            padding: 6px 11px;
+            background-color: var(--orange-c);
             font-size: 20px;
             line-height: 120%;
             font-family: "MB";
@@ -287,55 +302,96 @@
             align-items: center;
             color: var(--white-c);
             cursor: pointer;
+            transition: background-color 0.1s linear;
+            &:hover {
+                background-color: var(--green-c);  
+            }
             &::before {
                 content: "";
                 height: 48px;
                 min-width: 48px;
                 margin-right: 8px;
                 display: inline-block;
-                background: url("./img/Menu/menu.svg") center/ 100% no-repeat;
+                background: url("./img/Menu/menu.svg") center/ 100% 100% no-repeat;
             }
             &::after {
                 content: "";
                 height: 20px;
                 min-width: 13px;
+                margin-left: 8px;
                 display: inline-block;
-                background: url("./img/Menu/arrow.svg") center/ 100% no-repeat;
+                background: url("./img/Menu/arrow.svg") center/ 100% 100% no-repeat;
+            }
+            @media (max-width: 1080px) {
+                background-color: transparent;
+                color: var(--green-c);
+                width: max-content;
+                margin-right: 0;
+                padding: 0;
+                &::before,
+                &::after {
+                    display: none;
+                }
             }
         }
         &-total {
             margin-right: 22px;
-            width: 151px;
+            width: 90px;
             font-size: 20px;
             line-height: 120%;
             display: flex;
             flex-direction: column;
             font-family: "MR";
+            @media (max-width: 1080px) {
+                flex-direction: row;
+                justify-content: space-between;
+                margin-right: 0;
+                gap: 5px;
+                width: max-content;
+            }
         }
         &-composition {
             margin-right: auto;
-            gap: 30px;
+            @include adap(gap, 30, 20, 20, 24, 22);
             display: flex;
+            @media (max-width: 1080px) {
+                margin-right: 0;
+            }
         }
         &-item {
             display: flex;
             align-items: center;
+            @media (max-width: 1080px) {
+                flex-direction: column;
+            }
         }
         &-img {
             margin-right: 6px;
+            @media (max-width: 1080px) {
+                margin-right: 0;
+            }
+            img {
+                height: 35px;
+                width: 35px;
+            }
         }
         &-text {
-            font-size: 16px;
+            @include adap(font-size, 16, 16, 14, 14, 14);
             line-height: 120%;
             display: flex;
             flex-direction: column;
             font-family: "MN";
+            @media (max-width: 1080px) {
+                align-items: center;
+            }
             span {
-                font-size: 26px;
+                @include adap(font-size, 26, 26, 20, 20, 20);
+                line-height: 120%;
                 font-family: "MB";
             }
         }
         &-button {
+            margin-left: 10px;
             &:hover {
                 background-color: var(--green-c);  
                 color: var(--white-c);

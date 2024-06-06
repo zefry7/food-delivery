@@ -13,7 +13,7 @@ $DESKTOP: 1280;
 
 @mixin adap($prop, $dm, $d : $dm, $tl: $d, $t : $tl, $m : $t) {
     @media (min-width: #{$MAX-WIDTH + px}) {
-        #{$prop}: calc($dm/$MAX-WIDTH * 100vw);
+        #{$prop}: #{$dm + px};
     }
 
     @media screen and (max-width: #{$MAX-WIDTH - 1 + px}) and (min-width: #{$DESKTOP + px}) {

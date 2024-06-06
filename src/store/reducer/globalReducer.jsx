@@ -1,5 +1,5 @@
 const defaultValue = {
-    sizeWindow: 0, 
+    sizeWindow: window.innerWidth, 
 }
 
 const reduceGlobal = (state = defaultValue, action) => {

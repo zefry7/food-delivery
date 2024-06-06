@@ -8,6 +8,7 @@
     color: var(--white-c);
     position: relative;
     z-index: 5;
+    transition: background-color .1s linear, color .1s linear;
     &:hover {
         background-color: var(--white-c);
         color: var(--green-c);    

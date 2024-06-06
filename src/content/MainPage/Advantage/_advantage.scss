@@ -1,6 +1,8 @@
 .advantage {
     @extend .padding-content;
     @include adap(padding-bottom, 67, 67, 58, 58, 50);
+    max-width: 1440px;
+    margin: 0 auto;
     &__title {
         @include adap(font-size, 32, 32, 28, 28, 24);
         @include adap(margin-bottom, 40, 40, 31, 31, 22);

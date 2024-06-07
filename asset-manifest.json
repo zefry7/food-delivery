@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/food-delivery/static/css/main.96d27976.css",
-    "main.js": "/food-delivery/static/js/main.b9edc1b6.js",
+    "main.css": "/food-delivery/static/css/main.189be1ea.css",
+    "main.js": "/food-delivery/static/js/main.f30f8fab.js",
     "static/media/Montserrat-Bold.eot": "/food-delivery/static/media/Montserrat-Bold.bea823a1a24bcdf65760.eot",
     "static/media/Montserrat-Bold.ttf": "/food-delivery/static/media/Montserrat-Bold.09aa44bfee794bd5211e.ttf",
     "static/media/Montserrat-Medium.eot": "/food-delivery/static/media/Montserrat-Medium.e65378b57457fa7fd4b6.eot",
@@ -23,11 +23,11 @@
     "static/media/arrow.svg": "/food-delivery/static/media/arrow.7f2f27049bb9fd1ae495.svg",
     "static/media/arrow-bottom.svg": "/food-delivery/static/media/arrow-bottom.c07b61f7a01f25b40951.svg",
     "index.html": "/food-delivery/index.html",
-    "main.96d27976.css.map": "/food-delivery/static/css/main.96d27976.css.map",
-    "main.b9edc1b6.js.map": "/food-delivery/static/js/main.b9edc1b6.js.map"
+    "main.189be1ea.css.map": "/food-delivery/static/css/main.189be1ea.css.map",
+    "main.f30f8fab.js.map": "/food-delivery/static/js/main.f30f8fab.js.map"
   },
   "entrypoints": [
-    "static/css/main.96d27976.css",
-    "static/js/main.b9edc1b6.js"
+    "static/css/main.189be1ea.css",
+    "static/js/main.f30f8fab.js"
   ]
 }

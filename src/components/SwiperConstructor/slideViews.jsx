@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { SwiperSlide } from 'swiper/react';
 
@@ -14,10 +15,16 @@ import { SwiperSlide } from 'swiper/react';
 const SlideComplex = (value, index, key) => {
     const dispath = useDispatch()
 
+    useEffect(() => {
+        if (index == 0) {
+            dispath({ type: "edit", value: value?.kcal })
+        }
+    }, [])
+
     return (
         <SwiperSlide key={index} onClick={() => dispath({ type: "edit", value: value?.kcal })}>
-            <input type="radio" name="complex" />
-            <p className='menu__complex-text'><span>{value.name}</span>{value.kcal} kcal</p>
+            <input type="radio" name="complex" defaultChecked={index == 0 ? true : false} />
+            <p className='menu__complex-text'><span>{value.kcal} kcal</span></p>
         </SwiperSlide>
     )
 }
@@ -52,32 +59,32 @@ const SlideFaq = (value, index, key) => {
     function animationOpacity(e) {
         let el = document.getElementsByClassName("faq__block-question")[0]
         let listQuestion = document.querySelectorAll("input.faq__question-input:checked")
-        if(listQuestion.length > 0) {
+        if (listQuestion.length > 0) {
             console.log("123");
             setTimeout(() => {
                 el.style.opacity = 0;
             }, 300)
             setTimeout(() => {
                 el.style.opacity = 1;
-                dispath({type: "changeTheme", value: e.target.getAttribute("data-index")})
+                dispath({ type: "changeTheme", value: e.target.getAttribute("data-index") })
             }, 800)
         } else {
             el.style.opacity = 0;
             setTimeout(() => {
                 el.style.opacity = 1;
-                dispath({type: "changeTheme", value: e.target.getAttribute("data-index")})
+                dispath({ type: "changeTheme", value: e.target.getAttribute("data-index") })
             }, 500)
         }
-        for(let x of listQuestion) {
+        for (let x of listQuestion) {
             x.checked = false;
         }
     }
 
     return (
         <SwiperSlide key={index}>
-            {index == 0 
-                ? <input type="radio" name="faq-type" className='faq__item-input' data-index={index} defaultChecked onChange={(e) => animationOpacity(e)}/>
-                : <input type="radio" name="faq-type" className='faq__item-input' data-index={index} onChange={(e) => animationOpacity(e)}/>
+            {index == 0
+                ? <input type="radio" name="faq-type" className='faq__item-input' data-index={index} defaultChecked onChange={(e) => animationOpacity(e)} />
+                : <input type="radio" name="faq-type" className='faq__item-input' data-index={index} onChange={(e) => animationOpacity(e)} />
             }
             <div className="faq__item">
                 <div className="faq__item-img">

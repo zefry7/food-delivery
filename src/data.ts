@@ -8,19 +8,19 @@ export const data = {
         links: [
             {
                 text: "Menu",
-                href: ""
+                section: "menu"
             },
             {
                 text: "Delivery",
-                href: ""
+                section: "area"
             },
             {
                 text: "FAQ",
-                href: ""
+                section: "faq"
             },
             {
                 text: "Contacts",
-                href: ""
+                section: "footer"
             }
         ],
         tel: "000000000",
@@ -71,32 +71,22 @@ export const data = {
         title: "Our menu",
         complex: [
             {
-                name: "Power",
+                kcal: 1300
+            },
+            {
+                kcal: 1500
+            },
+            {
                 kcal: 1800
             },
             {
-                name: "Slim",
-                kcal: 1500
+                kcal: 2000
             },
             {
-                name: "Balance",
-                kcal: 1300
+                kcal: 2300
             },
             {
-                name: "Slim",
-                kcal: 1500
-            },
-            {
-                name: "Balance",
-                kcal: 1300
-            },
-            {
-                name: "Slim",
-                kcal: 1500
-            },
-            {
-                name: "Balance",
-                kcal: 1300
+                kcal: 2500
             },
         ],
         mainBlock: {

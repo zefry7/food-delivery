@@ -5,7 +5,7 @@ import { DataContext } from "../../..";
 function Area() {
     const data = useContext(DataContext).area
 
-    return <section className="area">
+    return <section className="area" id="area">
         <div className="area__content">
             <h2 className="area__title">{data?.title}</h2>
             <div className="area__map-wrapper">

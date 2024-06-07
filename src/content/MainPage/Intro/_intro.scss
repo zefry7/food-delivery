@@ -1,6 +1,6 @@
 .intro {
     @extend .padding-content;
-    @include adap(padding-top, 40, 40, 29, 29, 18);
+    @include adap(padding-top, 140, 140, 129, 129, 78);
     @include adap(padding-bottom, 135, 135, 135, 150, 171);
     max-width: 1440px;
     margin: 0 auto;

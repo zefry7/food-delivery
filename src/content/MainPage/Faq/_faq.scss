@@ -1,6 +1,7 @@
 .faq {
     max-width: 1440px;
     margin: 0 auto;
+    overflow: hidden;
     &__content {
         @extend .padding-content;
         .swiper {

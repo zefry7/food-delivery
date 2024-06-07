@@ -23,7 +23,7 @@ function Faq() {
             ))
         }, [themeFaq])
 
-    return <section className="faq">
+    return <section className="faq" id="faq">
         <div className="faq__content">
             <h2 className="faq__title">{data.title}</h2>
             <SwiperConstructor setting="settingFaq" data={data.items} />

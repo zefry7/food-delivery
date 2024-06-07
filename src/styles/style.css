@@ -114,6 +114,14 @@ select {
           appearance: none;
 }
 
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .my-button, .feedback__form-button {
   font-family: "MB";
   background-color: var(--orange-c);
@@ -258,8 +266,8 @@ select {
 
 .header {
   width: 100%;
-  position: sticky;
-  top: 0px;
+  position: fixed;
+  top: 0;
   z-index: 10;
   background-color: rgba(255, 255, 255, 0.8);
   -webkit-backdrop-filter: blur(20px);
@@ -683,7 +691,7 @@ select {
 .header__link:hover {
   text-decoration: underline;
 }
-.header__link_show, .header__links-row .header__link:first-child {
+.header__link_show {
   color: var(--green-c);
   text-decoration: underline;
 }
@@ -2172,32 +2180,32 @@ select {
 }
 @media (min-width: 1440px) {
   .intro {
-    padding-top: 40px;
+    padding-top: 140px;
   }
 }
 @media screen and (max-width: 1439px) and (min-width: 1280px) {
   .intro {
-    padding-top: calc(40px + 0 * (100vw - 1280px) / (1440 - 1280));
+    padding-top: calc(140px + 0 * (100vw - 1280px) / (1440 - 1280));
   }
 }
 @media screen and (max-width: 1279px) and (min-width: 1024px) {
   .intro {
-    padding-top: calc(29px + 11 * (100vw - 1024px) / (1280 - 1024));
+    padding-top: calc(129px + 11 * (100vw - 1024px) / (1280 - 1024));
   }
 }
 @media screen and (max-width: 1023px) and (min-width: 768px) {
   .intro {
-    padding-top: calc(29px + 0 * (100vw - 768px) / (1024 - 768));
+    padding-top: calc(129px + 0 * (100vw - 768px) / (1024 - 768));
   }
 }
 @media screen and (max-width: 767px) and (min-width: 320px) {
   .intro {
-    padding-top: calc(18px + 11 * (100vw - 320px) / (768 - 320));
+    padding-top: calc(78px + 51 * (100vw - 320px) / (768 - 320));
   }
 }
 @media (max-width: 320px) {
   .intro {
-    padding-top: 18px;
+    padding-top: 78px;
   }
 }
 @media (min-width: 1440px) {
@@ -3273,6 +3281,7 @@ select {
 }
 .menu__top {
   margin-bottom: 27px;
+  animation: show 0.2s linear;
 }
 .menu__line-week {
   display: flex;
@@ -5229,6 +5238,7 @@ select {
 .faq {
   max-width: 1440px;
   margin: 0 auto;
+  overflow: hidden;
 }
 .faq__content .swiper {
   overflow: visible;
@@ -6959,7 +6969,7 @@ img {
 #root {
   margin: 0 auto;
   min-width: 320px;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 html {
@@ -6967,6 +6977,7 @@ html {
 }
 
 body {
+  height: auto;
   width: 100%;
   background-color: var(--bg-main);
 }

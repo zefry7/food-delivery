@@ -3,6 +3,7 @@ import SwiperConstructor from "../../../components/SwiperConstructor/SwiperConst
 import { DataContext } from "../../..";
 import MyButton from "../../../components/MyButton/MyButton";
 import { useDispatch, useSelector } from "react-redux";
+import { sectionInFocus } from "../../../styles/mixins/functionality";
 
 function Menu() {
     const dispath = useDispatch()
@@ -30,7 +31,7 @@ function Menu() {
     }, [typeMenu])
 
 
-    return <section className="menu">
+    return <section className="menu" id="menu">
         <div className="menu__content">
             <h2 className="menu__title">{data?.title}</h2>
             <div className="menu__complex">
@@ -49,7 +50,7 @@ function Menu() {
                         </div>
                     </div>
                     <div className="menu__center">
-                        <SwiperConstructor setting={"settingMenu"} data={listDish} />
+                        <SwiperConstructor setting={"settingMenu"} data={listDish} className="menu__center-swiper"/>
                         <p className="menu__center-description">
                             {data?.mainBlock?.description}
                         </p>

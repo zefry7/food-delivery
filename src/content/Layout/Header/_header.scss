@@ -1,8 +1,8 @@
 .header {
     @include adap(height, 100, 100, 100, 80, 60);
     width: 100%;
-    position: sticky;
-    top: 0px;
+    position: fixed;
+    top: 0;
     z-index: 10;
     background-color: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(20px);
@@ -93,10 +93,6 @@
         display: flex;
         align-items: center;
         @include adap(gap, 70, 60, 40, 30);
-
-        .header__link:first-child {
-            @extend .header__link_show;
-        }
     }
     &__link {
         @include adap(font-size, 16);

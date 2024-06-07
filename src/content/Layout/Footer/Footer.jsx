@@ -5,7 +5,7 @@ function Footer() {
     const data = useContext(DataContext)?.footer;
 
 
-    return <section className="footer">
+    return <section className="footer" id="footer">
         <div className="footer__content">
             <div className="footer__left-block">
                 <div className="footer__logo">

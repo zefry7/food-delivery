@@ -9,17 +9,25 @@ function Menu() {
     const dispath = useDispatch()
     const data = useContext(DataContext)?.menu
     const countKcal = useRef(0)
+    const countList = useRef([0, 0, 0])
+    const countPrice = useRef(0)
     const [listDish, setListDish] = useState(null)
     const typeMenu = useSelector(state => state.menu.typeMenu)
     const sizeWindow = useSelector(state => state.global.sizeWindow)
 
     useEffect(() => {
         countKcal.current = 0
+        countPrice.current = 0
+        countList.current = [0, 0, 0]
         async function getListData() {
             await new Promise((resolve) => {
                 let a = data?.mainBlock?.menuList.map((v) => {
                     if (parseInt(v?.weight) + countKcal.current <= typeMenu) {
                         countKcal.current += parseInt(v?.weight)
+                        countList.current[0] += parseInt(v?.protein)
+                        countList.current[1] += parseInt(v?.carbo)
+                        countList.current[2] += parseInt(v?.fat)
+                        countPrice.current += parseInt(v?.price)
                         return v
                     }
                     return null
@@ -30,6 +38,18 @@ function Menu() {
         getListData()
     }, [typeMenu])
 
+    function switchComposition(str) {
+        switch (str) {
+            case "Protein":
+                return countList.current[0]
+            case "Carbohydrates":
+                return countList.current[1]
+            case "Fat":
+                return countList.current[2]
+            default:
+                break;
+        }
+    }
 
     return <section className="menu" id="menu">
         <div className="menu__content">
@@ -50,7 +70,11 @@ function Menu() {
                         </div>
                     </div>
                     <div className="menu__center">
-                        <SwiperConstructor setting={"settingMenu"} data={listDish} className="menu__center-swiper"/>
+                        <div className="menu__center-swiper">
+                            <div className="menu__center-arrow-prev"></div>
+                            <SwiperConstructor setting={"settingMenu"} data={listDish} />
+                            <div className="menu__center-arrow-next"></div>
+                        </div>
                         <p className="menu__center-description">
                             {data?.mainBlock?.description}
                         </p>
@@ -59,7 +83,7 @@ function Menu() {
                         <div className="menu__bottom-gd">
                             <p className="menu__bottom-gd-text">
                                 {data?.mainBlock?.gd[0]}
-                                {typeMenu}
+                                {countPrice.current}
                                 {data?.mainBlock?.gd[1]}
                             </p>
                             <p className="menu__bottom-total">
@@ -73,7 +97,7 @@ function Menu() {
                                         <img src={v?.img?.src} alt={v?.img?.alt} />
                                     </div>
                                     <p className="menu__bottom-text">
-                                        <span>0</span>
+                                        <span>{switchComposition(v?.label)}</span>
                                         {v?.label}
                                     </p>
                                 </li>

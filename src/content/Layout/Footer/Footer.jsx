@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { DataContext } from "../../..";
+import { moveToSection } from "../../../styles/mixins/functionality";
 
 function Footer() {
     const data = useContext(DataContext)?.footer;
@@ -9,11 +10,11 @@ function Footer() {
         <div className="footer__content">
             <div className="footer__left-block">
                 <div className="footer__logo">
-                    <img src={data?.logo?.src} alt={data?.logo?.alt} />
+                    <img src={data?.logo?.src} alt={data?.logo?.alt} onClick={(e) => {moveToSection(e)}} />
                 </div>
                 <ul className="footer__links">
                     {data?.links.map((v, i) => (
-                        <li className="footer__links-item" key={i}>{v}</li>
+                        <li className="footer__links-item" key={i} data-section={v?.section} onClick={(e) => moveToSection(e)}>{v?.text}</li>
                     ))}
                 </ul>
                 <ul className="footer__messages">

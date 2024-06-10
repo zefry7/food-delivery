@@ -110,8 +110,8 @@ export const data = {
                 fat: "7",
                 carbo: "24",
                 energy: "285",
-                weight: "345"
-
+                weight: "345",
+                price: "7"
             },
             {
                 img: {
@@ -124,8 +124,8 @@ export const data = {
                 fat: "7",
                 carbo: "24",
                 energy: "285",
-                weight: "345"
-
+                weight: "345",
+                price: "7"
             },
             {
                 img: {
@@ -138,8 +138,8 @@ export const data = {
                 fat: "7",
                 carbo: "24",
                 energy: "285",
-                weight: "345"
-
+                weight: "345",
+                price: "7"
             },
             {
                 img: {
@@ -152,7 +152,8 @@ export const data = {
                 fat: "7",
                 carbo: "24",
                 energy: "285",
-                weight: "345"
+                weight: "345",
+                price: "7"
 
             },
             {
@@ -166,7 +167,8 @@ export const data = {
                 fat: "7",
                 carbo: "24",
                 energy: "285",
-                weight: "345"
+                weight: "345",
+                price: "7"
 
             }],
             description: "A balanced menu helps to maintain health and a slim figure, allows you to be cheerful and active throughout the week. While preparing our dishes, we use products from the best suppliers and always choose products that correspond to the concept of healthy nutrition. For example, lean beef, turkey and chicken, low-calorie sauces, pasta of hard varieties. Delivery is carried out every 2 days.",
@@ -372,7 +374,24 @@ export const data = {
             src: "./img/Footer/logo-white.svg",
             alt: "Логотип"
         },
-        links: ["Menu", "Delivery", "FAQ", "Contacts"],
+        links: [
+            {
+                text: "Menu",
+                section: "menu"
+            },
+            {
+                text: "Delivery",
+                section: "area"
+            },
+            {
+                text: "FAQ",
+                section: "faq"
+            },
+            {
+                text: "Contacts",
+                section: "footer"
+            }
+        ],
         messages: [
             {
                 src: "./img/Footer/tg-icon.svg",

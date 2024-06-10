@@ -24,7 +24,7 @@ const SlideComplex = (value, index, key) => {
     return (
         <SwiperSlide key={index} onClick={() => dispath({ type: "edit", value: value?.kcal })}>
             <input type="radio" name="complex" defaultChecked={index == 0 ? true : false} />
-            <p className='menu__complex-text'><span>{value.kcal} kcal</span></p>
+            <p className='menu__complex-text'>{value.kcal} kcal</p>
         </SwiperSlide>
     )
 }

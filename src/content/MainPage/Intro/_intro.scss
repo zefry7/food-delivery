@@ -1,7 +1,7 @@
 .intro {
     @extend .padding-content;
     @include adap(padding-top, 140, 140, 129, 129, 78);
-    @include adap(padding-bottom, 135, 135, 135, 150, 171);
+    @include adap(padding-bottom, 135, 135, 135, 150, 190);
     max-width: 1440px;
     margin: 0 auto;
     &__content {
@@ -52,35 +52,45 @@
         height: 100%;
         &-img {
             position: absolute;
-            transition: transform 0.1s linear;
+            height: auto;
+            z-index: 4;
             img {
+                position: absolute;
+                transition: left 0.3s linear, top 0.3s linear;
                 width: 100%;
                 height: auto;
             }
         }
 
         & .intro__decor-img:nth-child(1) {
-            top: -121px;
-            left: 384px;
-            width: 350px;
+            @include adap(top, -121, -100, -100, -100, 130);
+            @include adap(left, 384, 384, 260, 450, 150);
+            @include adap(width, 350, 350, 350, 350, 200);
+            img {
+                @media (max-width: 768px) {
+                    transform: rotateZ(80deg);
+                    transform-origin: 50% 50%;
+                }
+            }
+
         }
 
         & .intro__decor-img:nth-child(2) {
-            top: 300px;
-            left: -90px;
-            width: 250px;
+            @include adap(top, 300);
+            @include adap(left, -90, -90, -90, -90, -300);
+            @include adap(width, 250);
         }
 
         & .intro__decor-img:nth-child(3) {
-            bottom: -60px;
-            left: 480px;
-            width: 130px;
+            @include adap(top, 350, 350, 350, 350, 390);
+            @include adap(left, 470, 420, 380, 220, -15);
+            @include adap(width, 130, 130, 130, 130, 70);
         }
 
         & .intro__decor-img:nth-child(4) {
-            top: 293px;
-            right: -97px;
-            width: 300px;
+            @include adap(top, 293, 340, 340, 400, 480);
+            @include adap(left, 994, 900, 680, 550, 180);
+            @include adap(width, 300, 300, 300, 250, 170);
         }
 
     }

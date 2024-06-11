@@ -48,7 +48,7 @@ export const data = {
             {
                 src: "./img/Intro/decor-2.png",
                 alt: "Декорация",
-                dataSpeed: "0.06"
+                dataSpeed: "0.05"
             },
             {
                 src: "./img/Intro/decor-3.png",
@@ -63,7 +63,7 @@ export const data = {
             {
                 src: "./img/Intro/decor-5.png",
                 alt: "Декорация",
-                dataSpeed: "0.06"
+                dataSpeed: "0.05"
             }
         ]
     },

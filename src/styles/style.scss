@@ -45,3 +45,7 @@ body {
     @include adap(padding-right, 120, 70, 70, 20);
     @include adap(padding-left, 120, 70, 70, 20);
 }
+
+section {
+    opacity: 0;
+}

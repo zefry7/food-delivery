@@ -1,14 +1,14 @@
 import React, { useContext, useEffect } from "react";
 import MyButton from "../../../components/MyButton/MyButton"
 import { DataContext } from "../../..";
+import { parallaxElement } from "../../../styles/mixins/functionality";
 
 function Intro() {
     const data = useContext(DataContext).intro
 
     useEffect(() => {
-
+        parallaxElement("rellax", "intro", 0.05)
     }, [])
-
 
 
     return <section className="intro">
@@ -19,13 +19,13 @@ function Intro() {
             <div className="intro__img">
                 <img src={data?.img?.src} alt={data?.img?.alt} />
             </div>
-            {/* <div className="intro__decor">
+            <div className="intro__decor">
                 {data?.decor.map((v, i) => (
-                    <div className="intro__decor-img rellax" key={i} data-rellax-speed={3}>
-                        <img src={v?.src} alt={v?.alt} />
+                    <div className="intro__decor-img" key={i}>
+                        <img src={v?.src} alt={v?.alt} className="rellax" data-speed={v?.dataSpeed}/>
                     </div>
                 ))}
-            </div> */}
+            </div>
         </div>
     </section>
 }

@@ -7,7 +7,7 @@
     background-color: var(--orange-c);
     color: var(--white-c);
     position: relative;
-    z-index: 5;
+    z-index: 3;
     transition: background-color .1s linear, color .1s linear;
     &:hover {
         background-color: var(--white-c);

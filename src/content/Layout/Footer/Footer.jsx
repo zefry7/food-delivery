@@ -6,7 +6,7 @@ function Footer() {
     const data = useContext(DataContext)?.footer;
 
 
-    return <section className="footer" id="footer">
+    return <footer className="footer" id="footer">
         <div className="footer__content">
             <div className="footer__left-block">
                 <div className="footer__logo">
@@ -36,7 +36,7 @@ function Footer() {
         <div className="footer__decor">
             <img src={data?.decor?.src} alt={data?.decor?.alt} />
         </div>
-    </section>
+    </footer>
 }
 
 export default Footer;

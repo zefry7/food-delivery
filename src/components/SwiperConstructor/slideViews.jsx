@@ -60,7 +60,6 @@ const SlideFaq = (value, index, key) => {
         let el = document.getElementsByClassName("faq__block-question")[0]
         let listQuestion = document.querySelectorAll("input.faq__question-input:checked")
         if (listQuestion.length > 0) {
-            console.log("123");
             setTimeout(() => {
                 el.style.opacity = 0;
             }, 300)
@@ -87,9 +86,7 @@ const SlideFaq = (value, index, key) => {
                 : <input type="radio" name="faq-type" className='faq__item-input' data-index={index} onChange={(e) => animationOpacity(e)} />
             }
             <div className="faq__item">
-                <div className="faq__item-img">
-                    <img src={value?.img?.src} alt={value?.img?.alt} />
-                </div>
+                <div className="faq__item-img"></div>
                 <p className="faq__item-text">{value?.text}</p>
             </div>
         </SwiperSlide>

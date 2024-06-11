@@ -11,7 +11,7 @@ function Intro() {
     }, [])
 
 
-    return <section className="intro">
+    return <section className="intro show-block">
         <div className="intro__content">
             <h1 className="intro__title">{data?.title}</h1>
             <p className="intro__subtitle">{data?.subtitle}</p>

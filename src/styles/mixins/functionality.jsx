@@ -31,13 +31,16 @@ export function parallaxElement(classElement, wrapperClass, k) {
     let decorList = document.getElementsByClassName(classElement)
 
     root.addEventListener("mousemove", (e) => {
-        const parallaxLeftOffset = root.getBoundingClientRect().left;
-        const parallaxTopOffset = root.getBoundingClientRect().top;
-        const coordX = e.clientX - parallaxLeftOffset - 0.5 * root.offsetWidth;
-        const coordY = e.clientY - parallaxTopOffset - 0.5 * root.offsetHeight;
+        let sizeWindow = window.innerWidth
+        if (sizeWindow > 768) {
+            const parallaxLeftOffset = root.getBoundingClientRect().left;
+            const parallaxTopOffset = root.getBoundingClientRect().top;
+            const coordX = e.clientX - parallaxLeftOffset - 0.5 * root.offsetWidth;
+            const coordY = e.clientY - parallaxTopOffset - 0.5 * root.offsetHeight;
 
-        for (let decor of decorList) {
-            decor.setAttribute('style', `left: ${coordX.toFixed(2) * decor.getAttribute("data-speed")}px; top: ${coordY.toFixed(2) * decor.getAttribute("data-speed")}px;`)
+            for (let decor of decorList) {
+                decor.setAttribute('style', `left: ${coordX.toFixed(2) * decor.getAttribute("data-speed")}px; top: ${coordY.toFixed(2) * decor.getAttribute("data-speed")}px;`)
+            }
         }
     })
 

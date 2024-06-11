@@ -266,10 +266,6 @@ export const data = {
         title: "FAQ",
         items: [
             {
-                img: {
-                    src: "./img/FAQ/faq-item-1.svg",
-                    alt: "Изображение для оформления"
-                },
                 text: "Cashback"
             },
             {

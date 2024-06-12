@@ -2,11 +2,10 @@ import React, { useContext, useEffect, useRef, useState } from "react";
 import SwiperConstructor from "../../../components/SwiperConstructor/SwiperConstructor";
 import { DataContext } from "../../..";
 import MyButton from "../../../components/MyButton/MyButton";
-import { useDispatch, useSelector } from "react-redux";
-import { sectionInFocus } from "../../../styles/mixins/functionality";
+import { useSelector } from "react-redux";
+import { parallaxElement } from "../../../styles/mixins/functionality";
 
 function Menu() {
-    const dispath = useDispatch()
     const data = useContext(DataContext)?.menu
     const countKcal = useRef(0)
     const countList = useRef([0, 0, 0])
@@ -37,6 +36,10 @@ function Menu() {
         }
         getListData()
     }, [typeMenu])
+
+    useEffect(() => {
+        parallaxElement("menu-rellax", "menu")
+    }, [])
 
     function switchComposition(str) {
         switch (str) {
@@ -106,6 +109,13 @@ function Menu() {
                         <MyButton text={data?.mainBlock?.button} class={"menu__bottom-button"} />
                     </div>
                 </div>
+            </div>
+            <div className="menu__decor">
+                {data?.decor?.map((v, i) => (
+                    <div className="menu__decor-img" key={i}>
+                        <img src={v?.src} alt={v?.alt} className="menu-rellax" data-speed={v?.dataSpeed} />
+                    </div>
+                ))}
             </div>
         </div>
     </section>

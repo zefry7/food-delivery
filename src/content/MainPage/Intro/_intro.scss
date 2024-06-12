@@ -48,21 +48,17 @@
         position: absolute;
         top: 0;
         left: 0;
-        width: 100%;
-        height: 100%;
+        z-index: 4;
         &-img {
             position: absolute;
             height: auto;
-            z-index: 4;
             img {
-                position: absolute;
-                transition: left 0.3s linear, top 0.3s linear;
                 width: 100%;
                 height: auto;
             }
         }
 
-        & .intro__decor-img:nth-child(1) {
+        &-img:nth-child(1) {
             @include adap(top, -121, -100, -100, -100, 130);
             @include adap(left, 384, 384, 260, 450, 150);
             @include adap(width, 350, 350, 350, 350, 200);
@@ -75,19 +71,19 @@
 
         }
 
-        & .intro__decor-img:nth-child(2) {
+        &-img:nth-child(2) {
             @include adap(top, 300);
             @include adap(left, -90, -90, -90, -90, -300);
             @include adap(width, 250);
         }
 
-        & .intro__decor-img:nth-child(3) {
+        &-img:nth-child(3) {
             @include adap(top, 350, 350, 350, 350, 390);
             @include adap(left, 470, 420, 380, 220, -15);
             @include adap(width, 130, 130, 130, 130, 70);
         }
 
-        & .intro__decor-img:nth-child(4) {
+        &-img:nth-child(4) {
             @include adap(top, 293, 340, 340, 400, 480);
             @include adap(left, 994, 900, 680, 550, 180);
             @include adap(width, 300, 300, 300, 250, 170);

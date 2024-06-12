@@ -41,27 +41,27 @@ export const data = {
             href: ""
         },
         img: {
-            src: "./img/Intro/decor-1.png",
+            src: "./img/Intro/decor-1.webp",
             alt: "Декорация"
         },
         decor: [
             {
-                src: "./img/Intro/decor-2.png",
+                src: "./img/Intro/decor-2.webp",
                 alt: "Декорация",
                 dataSpeed: "0.05"
             },
             {
-                src: "./img/Intro/decor-3.png",
+                src: "./img/Intro/decor-3.webp",
                 alt: "Декорация",
-                dataSpeed: "0.03"
+                dataSpeed: "0.06"
             },
             {
-                src: "./img/Intro/decor-4.png",
+                src: "./img/Intro/decor-4.webp",
                 alt: "Декорация",
-                dataSpeed: "0.03"
+                dataSpeed: "0.06"
             },
             {
-                src: "./img/Intro/decor-5.png",
+                src: "./img/Intro/decor-5.webp",
                 alt: "Декорация",
                 dataSpeed: "0.05"
             }
@@ -101,7 +101,7 @@ export const data = {
             ],
             menuList: [{
                 img: {
-                    src: "./img/Menu/item-1.png",
+                    src: "./img/Menu/item-1.webp",
                     alt: "Внешний вид блюда"
                 },
                 type: "Breakfast 1",
@@ -115,7 +115,7 @@ export const data = {
             },
             {
                 img: {
-                    src: "./img/Menu/item-2.png",
+                    src: "./img/Menu/item-2.webp",
                     alt: "Внешний вид блюда"
                 },
                 type: "Breakfast 2",
@@ -129,7 +129,7 @@ export const data = {
             },
             {
                 img: {
-                    src: "./img/Menu/item-3.png",
+                    src: "./img/Menu/item-3.webp",
                     alt: "Внешний вид блюда"
                 },
                 type: "Lunch",
@@ -143,7 +143,7 @@ export const data = {
             },
             {
                 img: {
-                    src: "./img/Menu/item-4.png",
+                    src: "./img/Menu/item-4.webp",
                     alt: "Внешний вид блюда"
                 },
                 type: "snack",
@@ -158,7 +158,7 @@ export const data = {
             },
             {
                 img: {
-                    src: "./img/Menu/item-5.png",
+                    src: "./img/Menu/item-5.webp",
                     alt: "Внешний вид блюда"
                 },
                 type: "Dinner",
@@ -200,7 +200,19 @@ export const data = {
                 },
             ],
             button: "Order now"
-        }
+        },
+        decor: [
+            {
+                src: "./img/Menu/decor-1.webp",
+                alt: "Декорация",
+                dataSpeed: "0.05"
+            },
+            {
+                src: "./img/Menu/decor-2.webp",
+                alt: "Декорация",
+                dataSpeed: "0.03"
+            },
+        ]
     },
     area: {
         title: "Delivery areas"
@@ -253,12 +265,14 @@ export const data = {
         },
         decor: [
             {
-                src: "./img/Promotion/decor-1.png",
-                alt: "Изображение для оформления"
+                src: "./img/Promotion/decor-1.webp",
+                alt: "Изображение для оформления",
+                dataSpeed: "0.03"
             },
             {
-                src: "./img/Promotion/decor-2.png",
-                alt: "Изображение для оформления"
+                src: "./img/Promotion/decor-2.webp",
+                alt: "Изображение для оформления",
+                dataSpeed: "0.06"
             }
         ]
     },
@@ -360,10 +374,18 @@ export const data = {
             },
             href: ""
         },
-        decor: {
-            src: "./img/Feedback/decor-1.png",
-            alt: "Изображение для оформления"
-        }
+        decor: [
+            {
+                src: "./img/Feedback/decor-1.webp",
+                alt: "Изображение для оформления",
+                dataSpeed: "0.02"
+            },
+            {
+                src: "./img/Feedback/decor-2.webp",
+                alt: "Изображение для оформления",
+                dataSpeed: "0.06"
+            },
+        ]
     },
     footer: {
         logo: {

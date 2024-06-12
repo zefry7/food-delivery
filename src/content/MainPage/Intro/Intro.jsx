@@ -7,7 +7,7 @@ function Intro() {
     const data = useContext(DataContext).intro
 
     useEffect(() => {
-        parallaxElement("rellax", "intro", 0.05)
+        parallaxElement("intro-rellax", "intro")
     }, [])
 
 
@@ -22,7 +22,7 @@ function Intro() {
             <div className="intro__decor">
                 {data?.decor.map((v, i) => (
                     <div className="intro__decor-img" key={i}>
-                        <img src={v?.src} alt={v?.alt} className="rellax" data-speed={v?.dataSpeed}/>
+                        <img src={v?.src} alt={v?.alt} className="intro-rellax" data-speed={v?.dataSpeed}/>
                     </div>
                 ))}
             </div>

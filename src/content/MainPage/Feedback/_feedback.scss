@@ -150,18 +150,39 @@
     &__decor {
         position: absolute;
         top: 0;
-        @include adap(left, -60, -200, -430);
-        transition: left 0.1s linear;
-        @media (max-width: 1024px) {
-            @include adap(top, 0, 0, -50, -10, 50);
-            left: 45%;
-            transform: translateX(-50%);
+        left: 0;
+        z-index: -1;
+        &-img {
+            position: absolute;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
         }
-        @media (max-width: 425px) {
-            left: 40%;
-        }
-        img {
+
+        &-img:nth-child(1) {
+            top: 0;
+            @include adap(left, -60, -200, -430);
             @include adap(width, 575, 575, 575, 500, 424);
+            @media (max-width: 1024px) {
+                @include adap(top, 0, 0, -50, -10, 50);
+                @include adap(left, 200, 200, 200, 110, -90);
+            }
+            @media (max-width: 425px) {
+
+            }
+            img {
+                
+            }
+        }
+        &-img:nth-child(2) {
+            @include adap(top, -80);
+            @include adap(left, 1120, 1010, 750);
+            @include adap(width, 280);
+            @media (max-width: 1024px) {
+                display: none;
+            }
         }
     }
 }

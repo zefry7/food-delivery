@@ -2,13 +2,13 @@
     @include adap(margin-bottom, 100, 100, 100, 150, 200);
     @include adap(height, 320);
     @include adap(padding-top, 21);
-    @extend .padding-content;
     background-color: var(--green-c);
-    position: relative;
     &__content {
+        @extend .padding-content;
         max-width: 1440px;
+        width: 100%;
         margin: 0 auto;
-        @include adap(width, 400, 400, 330, 330, 280);
+        position: relative;
     }
     &__title {
         @include adap(width, 400, 400, 330, 310, 250);
@@ -22,6 +22,7 @@
     &__text {
         @include adap(margin-bottom, 21);
         @include adap(font-size, 20, 20, 17, 17, 14);
+        @include adap(width, 400, 400, 330, 330, 280);
         line-height: 120%;
         font-family: "MR";
         color: var(--white-c);
@@ -43,15 +44,19 @@
 
         &-item:nth-child(1) {
             @include adap(top, -10, -10, -10, 30, 220);
-            @include adap(left, 566, 500, 400, 360, 125);
+            @include adap(left, 566, 500, 360, 300, 80);
             @include adap(width, 476, 476, 476, 440, 258);
             transform: rotate(-22.69deg);
         }
 
         &-item:nth-child(2) {
-            @include adap(top, -41, -41, -20, 80, 258);
-            @include adap(left, 894, 820, 710, 1000, -106);
-            @include adap(width, 738, 738, 738, 500, 413);
+            @include adap(top, -10, -10, -10, 80, 200);
+            @include adap(left, 950, 870, 730, 900, -300);
+            @include adap(width, 738, 738, 738, 550, 413);
+            @media (max-width: 544px) {
+                @include adap(left, -110);
+                @include adap(top, 240);
+            }
         }
 
         @media (max-width: 768px) {

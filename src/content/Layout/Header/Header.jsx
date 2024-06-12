@@ -10,14 +10,18 @@ function Header() {
     function clickMenu(e) {
         e.stopPropagation()
         let burgerContent = document.getElementsByClassName("header__burger-menu-content")[0]
-        burgerContent.classList.toggle("header__menu-button_active")
+        let burgerButton = document.getElementsByClassName("header__menu-button")[0]
+        burgerContent.classList.toggle("header__burger-menu-content_active")
+        burgerButton.classList.toggle("header__menu-button_active")
         document.body.classList.toggle("scroll-lock")
     }
 
     useEffect(() => {
         if (sizeWindow > 768) {
             let burgerContent = document.getElementsByClassName("header__burger-menu-content")[0]
-            burgerContent.classList.remove("header__menu-button_active")
+            let burgerButton = document.getElementsByClassName("header__menu-button")[0]
+            burgerContent.classList.remove("header__burger-menu-content_active")
+            burgerButton.classList.remove("header__menu-button_active")
             document.body.classList.remove("scroll-lock")
         }
     }, [sizeWindow])

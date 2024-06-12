@@ -26,7 +26,7 @@ export function sectionInFocus() {
     }
 }
 
-export function parallaxElement(classElement, wrapperClass, k) {
+export function parallaxElement(classElement, wrapperClass) {
     let root = document.getElementsByClassName(wrapperClass)[0]
     let decorList = document.getElementsByClassName(classElement)
 
@@ -39,7 +39,7 @@ export function parallaxElement(classElement, wrapperClass, k) {
             const coordY = e.clientY - parallaxTopOffset - 0.5 * root.offsetHeight;
 
             for (let decor of decorList) {
-                decor.setAttribute('style', `left: ${coordX.toFixed(2) * decor.getAttribute("data-speed")}px; top: ${coordY.toFixed(2) * decor.getAttribute("data-speed")}px;`)
+                decor.setAttribute('style', `position: absolute; left: ${coordX.toFixed(2) * decor.getAttribute("data-speed")}px; top: ${coordY.toFixed(2) * decor.getAttribute("data-speed")}px;`)
             }
         }
     })

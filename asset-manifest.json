@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/food-delivery/static/css/main.28bccf0b.css",
-    "main.js": "/food-delivery/static/js/main.bf4f800e.js",
+    "main.css": "/food-delivery/static/css/main.b5dc6ffe.css",
+    "main.js": "/food-delivery/static/js/main.72be281f.js",
     "static/media/Montserrat-Bold.eot": "/food-delivery/static/media/Montserrat-Bold.bea823a1a24bcdf65760.eot",
     "static/media/Montserrat-Bold.ttf": "/food-delivery/static/media/Montserrat-Bold.09aa44bfee794bd5211e.ttf",
     "static/media/Montserrat-Medium.eot": "/food-delivery/static/media/Montserrat-Medium.e65378b57457fa7fd4b6.eot",
@@ -14,7 +14,7 @@
     "static/media/Montserrat-Bold.woff2": "/food-delivery/static/media/Montserrat-Bold.6aab475a7e27a6f02aed.woff2",
     "static/media/Montserrat-Medium.woff2": "/food-delivery/static/media/Montserrat-Medium.e1c5f6afb157b4dce636.woff2",
     "static/media/Montserrat-Regular.woff2": "/food-delivery/static/media/Montserrat-Regular.df7b9b6f89ccf3a354d3.woff2",
-    "static/media/circle-line.png": "/food-delivery/static/media/circle-line.4be5c05cde43300317c7.png",
+    "static/media/circle-line.webp": "/food-delivery/static/media/circle-line.97e4a18bc925902a0d78.webp",
     "static/media/faq-item-4.svg": "/food-delivery/static/media/faq-item-4.6d152885fb558702dc95.svg",
     "static/media/faq-item-4-active.svg": "/food-delivery/static/media/faq-item-4-active.922f9287640dd18e6c02.svg",
     "static/media/faq-item-2-active.svg": "/food-delivery/static/media/faq-item-2-active.fee26332312b102362e2.svg",
@@ -36,11 +36,11 @@
     "static/media/arrow.svg": "/food-delivery/static/media/arrow.7f2f27049bb9fd1ae495.svg",
     "static/media/arrow-bottom.svg": "/food-delivery/static/media/arrow-bottom.c07b61f7a01f25b40951.svg",
     "index.html": "/food-delivery/index.html",
-    "main.28bccf0b.css.map": "/food-delivery/static/css/main.28bccf0b.css.map",
-    "main.bf4f800e.js.map": "/food-delivery/static/js/main.bf4f800e.js.map"
+    "main.b5dc6ffe.css.map": "/food-delivery/static/css/main.b5dc6ffe.css.map",
+    "main.72be281f.js.map": "/food-delivery/static/js/main.72be281f.js.map"
   },
   "entrypoints": [
-    "static/css/main.28bccf0b.css",
-    "static/js/main.bf4f800e.js"
+    "static/css/main.b5dc6ffe.css",
+    "static/js/main.72be281f.js"
   ]
 }

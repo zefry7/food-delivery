@@ -16,12 +16,12 @@ function Intro() {
             <p className="intro__subtitle">{data?.subtitle}</p>
             <MyButton class="intro__button" text={data?.button?.text} />
             <div className="intro__img">
-                <img src={data?.img?.src} alt={data?.img?.alt} loading="lazy"/>
+                <img src={data?.img?.src} alt={data?.img?.alt} />
             </div>
             <div className="intro__decor">
                 {data?.decor?.map((v, i) => (
                     <div className="intro__decor-img" key={i}>
-                        <img src={v?.src} alt={v?.alt} className="intro-rellax" data-speed={v?.dataSpeed} loading="lazy"/>
+                        <img src={v?.src} alt={v?.alt} className="intro-rellax" data-speed={v?.dataSpeed}/>
                     </div>
                 ))}
             </div>

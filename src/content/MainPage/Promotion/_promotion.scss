@@ -43,20 +43,16 @@
         }
 
         &-item:nth-child(1) {
-            @include adap(top, -10, -10, -10, 30, 220);
-            @include adap(left, 566, 500, 360, 300, 80);
+            @include adap(top, -30, -30, -30, 30, 210);
+            @include adap(left, 566, 500, 420, 360, 120);
             @include adap(width, 476, 476, 476, 440, 258);
             transform: rotate(-22.69deg);
         }
 
         &-item:nth-child(2) {
-            @include adap(top, -10, -10, -10, 80, 200);
-            @include adap(left, 950, 870, 730, 900, -300);
+            @include adap(top, -10, -10, -10, 50, 240);
+            @include adap(left, 900, 840, 700, 720, -140);
             @include adap(width, 738, 738, 738, 550, 413);
-            @media (max-width: 544px) {
-                @include adap(left, -110);
-                @include adap(top, 240);
-            }
         }
 
         @media (max-width: 768px) {

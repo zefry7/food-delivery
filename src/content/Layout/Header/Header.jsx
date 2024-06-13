@@ -40,7 +40,7 @@ function Header() {
                     <span></span>
                 </div>
                 <div className="header__logo" onClick={(e) => {moveToSection(e)}}>
-                    <img src={data?.logo?.src} alt={data?.logo?.alt} />
+                    <img src={data?.logo?.src} alt={data?.logo?.alt} loading="lazy"/>
                 </div>
                 <div className="header__burger-menu-content">
                     <nav className="header__nav">
@@ -70,7 +70,7 @@ function Header() {
                 </div>
                 <div className="header__sing-in">
                     <div className="header__account-img">
-                        <img src={data?.account?.img?.src} alt={data?.account?.img?.alt} />
+                        <img src={data?.account?.img?.src} alt={data?.account?.img?.alt} loading="lazy"/>
                     </div>
                     <span>{data?.account?.text}</span>
                 </div>

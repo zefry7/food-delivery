@@ -24,14 +24,14 @@ function Feedback() {
                     <input type="email" className="feedback__form-email" placeholder={data?.form?.email?.placeholder} title={data?.form?.email?.placeholder} aria-label={data?.form?.email?.placeholder} required />
                     <MyButton class="feedback__form-button" text={data?.button?.text} type={"submit"} />
                     <a href="" className="feedback__href-tg">
-                        <img src={data?.hrefTg?.img?.src} alt={data?.hrefTg?.img?.alt} />
+                        <img src={data?.hrefTg?.img?.src} alt={data?.hrefTg?.img?.alt} loading="lazy"/>
                     </a>
                 </form>
             </div>
             <div className="feedback__decor">
                 {data?.decor?.map((v, i) => (
                     <div className="feedback__decor-img" key={i}>
-                        <img src={v?.src} alt={v?.alt} className="feedback-rellax" data-speed={v?.dataSpeed} />
+                        <img src={v?.src} alt={v?.alt} className="feedback-rellax" data-speed={v?.dataSpeed} loading="lazy"/>
                     </div>
                 ))}
             </div>

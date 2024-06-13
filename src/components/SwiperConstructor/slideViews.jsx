@@ -23,7 +23,7 @@ const SlideComplex = (value, index, key) => {
 
     return (
         <SwiperSlide key={index} onClick={() => dispath({ type: "edit", value: value?.kcal })}>
-            <input type="radio" name="complex" defaultChecked={index == 0 ? true : false} />
+            <input type="radio" name="complex" defaultChecked={index == 0 ? true : false} onClick={(e) => e.target.blur()}/>
             <p className='menu__complex-text'>{value.kcal} kcal</p>
         </SwiperSlide>
     )
@@ -34,7 +34,7 @@ const SlideMenu = (value, index, key) => {
         <SwiperSlide data-index={index + 1 < 10 ? "0" + (index + 1) : index + 1} key={index}>
             <div className="menu__center-item">
                 <div className="menu__center-item-img">
-                    <img src={value?.img?.src} alt={value?.img?.alt} />
+                    <img src={value?.img?.src} alt={value?.img?.alt} loading="lazy"/>
                 </div>
                 <div className="menu__center-item-text">
                     <p className="menu__center-item-type">{value?.type}</p>
@@ -54,8 +54,7 @@ const SlideMenu = (value, index, key) => {
 
 const SlideFaq = (value, index, key) => {
     const dispath = useDispatch()
-    const themeFaq = useSelector(state => state.faq.themeFaq)
-
+    
     function animationOpacity(e) {
         let el = document.getElementsByClassName("faq__block-question")[0]
         let listQuestion = document.querySelectorAll("input.faq__question-input:checked")
@@ -82,8 +81,8 @@ const SlideFaq = (value, index, key) => {
     return (
         <SwiperSlide key={index}>
             {index == 0
-                ? <input type="radio" name="faq-type" className='faq__item-input' data-index={index} defaultChecked onChange={(e) => animationOpacity(e)} />
-                : <input type="radio" name="faq-type" className='faq__item-input' data-index={index} onChange={(e) => animationOpacity(e)} />
+                ? <input type="radio" name="faq-type" className='faq__item-input' data-index={index} defaultChecked onChange={(e) => animationOpacity(e)} onClick={(e) => e.target.blur()}/>
+                : <input type="radio" name="faq-type" className='faq__item-input' data-index={index} onChange={(e) => animationOpacity(e)} onClick={(e) => e.target.blur()}/>
             }
             <div className="faq__item">
                 <div className="faq__item-img"></div>

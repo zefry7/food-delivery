@@ -78,6 +78,7 @@ function Menu() {
                             <SwiperConstructor setting={"settingMenu"} data={listDish} />
                             <div className="menu__center-arrow-next"></div>
                         </div>
+                        <div className="menu__center-pagination"></div>
                         <p className="menu__center-description">
                             {data?.mainBlock?.description}
                         </p>

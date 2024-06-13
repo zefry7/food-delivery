@@ -10,7 +10,7 @@ function Footer() {
         <div className="footer__content">
             <div className="footer__left-block">
                 <div className="footer__logo">
-                    <img src={data?.logo?.src} alt={data?.logo?.alt} onClick={(e) => {moveToSection(e)}} />
+                    <img src={data?.logo?.src} alt={data?.logo?.alt} onClick={(e) => {moveToSection(e)}} loading="lazy"/>
                 </div>
                 <ul className="footer__links">
                     {data?.links.map((v, i) => (
@@ -20,7 +20,7 @@ function Footer() {
                 <ul className="footer__messages">
                     {data?.messages.map((v, i) => (
                         <li className="footer__messages-item" key={i}>
-                            <img src={v?.src} alt={v?.alt} />
+                            <img src={v?.src} alt={v?.alt} loading="lazy"/>
                         </li>
                     ))}
                 </ul>
@@ -34,7 +34,7 @@ function Footer() {
             </div>
         </div>
         <div className="footer__decor">
-            <img src={data?.decor?.src} alt={data?.decor?.alt} />
+            <img src={data?.decor?.src} alt={data?.decor?.alt} loading="lazy"/>
         </div>
     </footer>
 }

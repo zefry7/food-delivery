@@ -18,8 +18,8 @@ function Promotion() {
             <MyButton class="promotion__button" text={data?.button?.text} />
             <div className="promotion__decor">
                 {data?.decor.map((v, i) => (
-                    <div className="promotion__decor-item">
-                        <img src={v?.src} alt={v?.alt} data-speed={v?.dataSpeed} className="promotion-rellax" />
+                    <div className="promotion__decor-item" key={i}>
+                        <img src={v?.src} alt={v?.alt} data-speed={v?.dataSpeed} className="promotion-rellax" loading="lazy"/>
                     </div>
                 ))}
             </div>

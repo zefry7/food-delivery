@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { YMaps, Map, SearchControl } from '@pbe/react-yandex-maps';
+import { YMaps, Map } from '@pbe/react-yandex-maps';
 import { DataContext } from "../../..";
 
 function Area() {

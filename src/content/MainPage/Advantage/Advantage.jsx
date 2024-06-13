@@ -12,7 +12,7 @@ function Advantage() {
                 {data.list.map((v, i) => (
                     <li className="advantage__item" key={i}>
                         <div className="advantage__item-img">
-                            <img src={v?.img?.src} alt={v?.img?.alt} />
+                            <img src={v?.img?.src} alt={v?.img?.alt} loading="lazy"/>
                         </div>
                         <p className="advantage__item-text">
                             <span>{v?.text[0]}</span>

@@ -3,7 +3,7 @@ import { YMaps, Map } from '@pbe/react-yandex-maps';
 import { DataContext } from "../../..";
 
 function Area() {
-    const data = useContext(DataContext).area
+    const data = useContext(DataContext)?.area
 
     return <section className="area" id="area">
         <div className="area__content">

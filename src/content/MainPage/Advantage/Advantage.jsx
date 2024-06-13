@@ -9,7 +9,7 @@ function Advantage() {
         <div className="advantage__content">
             <h2 className="advantage__title">{data?.title}</h2>
             <ul className="advantage__list">
-                {data.list.map((v, i) => (
+                {data?.list?.map((v, i) => (
                     <li className="advantage__item" key={i}>
                         <div className="advantage__item-img">
                             <img src={v?.img?.src} alt={v?.img?.alt} loading="lazy"/>

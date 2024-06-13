@@ -1,37 +1,43 @@
 export function moveToSection(e) {
     e.stopPropagation()
-    let target = e.currentTarget
-    let el = document?.getElementById(target.getAttribute("data-section"))
+    const target = e.currentTarget
+    const el = document?.getElementById(target.getAttribute("data-section"))
+
     window.scrollTo({
         top: el?.offsetTop - 120,
         behavior: "smooth"
     })
 }
 
-export function sectionInFocus() {
-    let listLink = document.getElementsByClassName("header__link")
+export function sectionInFocus(classLink, nameAttrSection, classInFocus) {
+    const listLink = document.getElementsByClassName(classLink)
+
     for (let link of listLink) {
         window.addEventListener("scroll", () => {
-            let el = document.getElementById(link.getAttribute("data-section"))
-            if (el.offsetTop - window.scrollY < window.innerHeight / 2 && window.scrollY < el.offsetTop + el.offsetHeight / 2) {
-                link.classList.add("header__link_show")
-            }
-            else if (link.getAttribute("data-section") == "footer" && window.scrollY > document.body.offsetHeight - window.innerHeight - 120) {
-                link.classList.add("header__link_show")
-            }
-            else {
-                link.classList.remove("header__link_show")
+            const el = document.getElementById(link.getAttribute(nameAttrSection))
+
+            if (el) {
+                if (el.offsetTop - window.scrollY < window.innerHeight / 2 && window.scrollY < el.offsetTop + el.offsetHeight / 2) {
+                    link.classList.add(classInFocus)
+                }
+                else if (link.getAttribute(nameAttrSection) == "footer" && window.scrollY > document.body.offsetHeight - window.innerHeight - 120) {
+                    link.classList.add(classInFocus)
+                }
+                else {
+                    link.classList.remove(classInFocus)
+                }
             }
         })
     }
 }
 
 export function parallaxElement(classElement, wrapperClass) {
-    let root = document.getElementsByClassName(wrapperClass)[0]
-    let decorList = document.getElementsByClassName(classElement)
+    const root = document.getElementsByClassName(wrapperClass)[0]
+    const decorList = document.getElementsByClassName(classElement)
 
     root.addEventListener("mousemove", (e) => {
-        let sizeWindow = window.innerWidth
+        const sizeWindow = window.innerWidth
+
         if (sizeWindow > 768) {
             const parallaxLeftOffset = root.getBoundingClientRect().left;
             const parallaxTopOffset = root.getBoundingClientRect().top;

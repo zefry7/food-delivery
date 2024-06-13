@@ -50,6 +50,7 @@ html, body {
   font-style: 100%;
   line-height: 1;
   font-style: 14px;
+  text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -8330,7 +8331,6 @@ body {
     padding-left: 20px;
   }
 }
-
 section {
   opacity: 0;
-}/*# sourceMappingURL=style.css.map */
+}

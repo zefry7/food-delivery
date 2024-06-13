@@ -1,5 +1,5 @@
-import { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useCallback, useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import { SwiperSlide } from 'swiper/react';
 
 
@@ -12,7 +12,7 @@ import { SwiperSlide } from 'swiper/react';
 // }
 
 
-const SlideComplex = (value, index, key) => {
+const SlideComplex = (value, index) => {
     const dispath = useDispatch()
 
     useEffect(() => {
@@ -23,13 +23,13 @@ const SlideComplex = (value, index, key) => {
 
     return (
         <SwiperSlide key={index} onClick={() => dispath({ type: "edit", value: value?.kcal })}>
-            <input type="radio" name="complex" defaultChecked={index == 0 ? true : false} onClick={(e) => e.target.blur()}/>
+            <input type="radio" name="complex" defaultChecked={index == 0 ? true : false} onClick={(e) => e.target.blur()} aria-label='Выбор калорийности' />
             <p className='menu__complex-text'>{value.kcal} kcal</p>
         </SwiperSlide>
     )
 }
 
-const SlideMenu = (value, index, key) => {
+const SlideMenu = (value, index) => {
     return (
         <SwiperSlide data-index={index + 1 < 10 ? "0" + (index + 1) : index + 1} key={index}>
             <div className="menu__center-item">
@@ -52,10 +52,10 @@ const SlideMenu = (value, index, key) => {
     )
 }
 
-const SlideFaq = (value, index, key) => {
+const SlideFaq = (value, index) => {
     const dispath = useDispatch()
     
-    function animationOpacity(e) {
+    const animationOpacity = useCallback((e) => {
         let el = document.getElementsByClassName("faq__block-question")[0]
         let listQuestion = document.querySelectorAll("input.faq__question-input:checked")
         if (listQuestion.length > 0) {
@@ -76,13 +76,13 @@ const SlideFaq = (value, index, key) => {
         for (let x of listQuestion) {
             x.checked = false;
         }
-    }
+    })
 
     return (
         <SwiperSlide key={index}>
             {index == 0
-                ? <input type="radio" name="faq-type" className='faq__item-input' data-index={index} defaultChecked onChange={(e) => animationOpacity(e)} onClick={(e) => e.target.blur()}/>
-                : <input type="radio" name="faq-type" className='faq__item-input' data-index={index} onChange={(e) => animationOpacity(e)} onClick={(e) => e.target.blur()}/>
+                ? <input type="radio" name="faq-type" className='faq__item-input' data-index={index} defaultChecked onChange={(e) => animationOpacity(e)} onClick={(e) => e.target.blur()} aria-label='Выбор темы вопроса'/>
+                : <input type="radio" name="faq-type" className='faq__item-input' data-index={index} onChange={(e) => animationOpacity(e)} onClick={(e) => e.target.blur()} aria-label='Выбор темы вопроса'/>
             }
             <div className="faq__item">
                 <div className="faq__item-img"></div>
@@ -93,7 +93,6 @@ const SlideFaq = (value, index, key) => {
 }
 
 const slideViews = {
-    // setting*Name*: slide*Name*
     "settingComplex": SlideComplex,
     "settingMenu": SlideMenu,
     "settingFaq": SlideFaq

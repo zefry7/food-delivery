@@ -1,6 +1,6 @@
 import React, { createContext } from 'react';
 import ReactDOM from 'react-dom/client';
-import "./styles/style.css"
+import "./styles/end-style.css"
 import { Route, Routes, BrowserRouter } from 'react-router-dom';
 import { data } from "./data";
 import Layout from './content/Layout/Layout';

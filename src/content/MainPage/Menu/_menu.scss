@@ -213,6 +213,10 @@
             @media (max-width: 425px) {
                 overflow: visible;
             } 
+            img {
+                max-width: 100%;
+                height: auto;
+            }
             &::before {
                 content: "";
                 height: 100%;

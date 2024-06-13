@@ -1,4 +1,3 @@
-import { createStore } from "redux";
 import reducerMenu from "./reducer/menuReducer";
 import { configureStore } from "@reduxjs/toolkit";
 import reduceFAQ from "./reducer/faqReducer";

@@ -6,9 +6,8 @@ import { useDispatch, useSelector } from "react-redux";
 
 function Layout() {
     const dispath = useDispatch()
-    const sizeWindow = useSelector(state => state.global.sizeWindow)
 
-    setTimeout(() => {
+    useEffect(() => {
         window.addEventListener("resize", () => {
             dispath({ type: "resize", value: window.innerWidth})
         })

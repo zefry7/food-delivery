@@ -10,7 +10,6 @@ function Intro() {
         parallaxElement("intro-rellax", "intro")
     }, [])
 
-
     return <section className="intro show-block">
         <div className="intro__content">
             <h1 className="intro__title">{data?.title}</h1>
@@ -20,7 +19,7 @@ function Intro() {
                 <img src={data?.img?.src} alt={data?.img?.alt} loading="lazy"/>
             </div>
             <div className="intro__decor">
-                {data?.decor.map((v, i) => (
+                {data?.decor?.map((v, i) => (
                     <div className="intro__decor-img" key={i}>
                         <img src={v?.src} alt={v?.alt} className="intro-rellax" data-speed={v?.dataSpeed} loading="lazy"/>
                     </div>

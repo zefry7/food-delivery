@@ -17,7 +17,7 @@ function Promotion() {
             <p className="promotion__text">{data?.text}</p>
             <MyButton class="promotion__button" text={data?.button?.text} />
             <div className="promotion__decor">
-                {data?.decor.map((v, i) => (
+                {data?.decor?.map((v, i) => (
                     <div className="promotion__decor-item" key={i}>
                         <img src={v?.src} alt={v?.alt} data-speed={v?.dataSpeed} className="promotion-rellax" loading="lazy"/>
                     </div>

@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useRef, useState } from "react";
+import React, { useCallback, useContext, useEffect, useRef, useState } from "react";
 import SwiperConstructor from "../../../components/SwiperConstructor/SwiperConstructor";
 import { DataContext } from "../../..";
 import MyButton from "../../../components/MyButton/MyButton";
@@ -11,16 +11,29 @@ function Menu() {
     const countList = useRef([0, 0, 0])
     const countPrice = useRef(0)
     const [listDish, setListDish] = useState(null)
-    const typeMenu = useSelector(state => state.menu.typeMenu)
-    const sizeWindow = useSelector(state => state.global.sizeWindow)
+    const typeMenu = useSelector(state => state?.menu?.typeMenu)
+    const sizeWindow = useSelector(state => state?.global?.sizeWindow)
+
+    const switchComposition = useCallback((str) => {
+        switch (str) {
+            case "Protein":
+                return countList.current[0]
+            case "Carbohydrates":
+                return countList.current[1]
+            case "Fat":
+                return countList.current[2]
+            default:
+                break;
+        }
+    }, [])
 
     useEffect(() => {
         countKcal.current = 0
         countPrice.current = 0
         countList.current = [0, 0, 0]
-        async function getListData() {
+        async function getList() {
             await new Promise((resolve) => {
-                let a = data?.mainBlock?.menuList.map((v) => {
+                let a = data?.mainBlock?.menuList?.map((v) => {
                     if (parseInt(v?.weight) + countKcal.current <= typeMenu) {
                         countKcal.current += parseInt(v?.weight)
                         countList.current[0] += parseInt(v?.protein)
@@ -34,25 +47,12 @@ function Menu() {
                 resolve(a)
             }).then(result => setListDish(result))
         }
-        getListData()
+        getList()
     }, [typeMenu])
 
     useEffect(() => {
         parallaxElement("menu-rellax", "menu")
     }, [])
-
-    function switchComposition(str) {
-        switch (str) {
-            case "Protein":
-                return countList.current[0]
-            case "Carbohydrates":
-                return countList.current[1]
-            case "Fat":
-                return countList.current[2]
-            default:
-                break;
-        }
-    }
 
     return <section className="menu" id="menu">
         <div className="menu__content">
@@ -64,10 +64,10 @@ function Menu() {
                 <div className="menu__main-block">
                     <div className="menu__top">
                         <div className="menu__line-week">
-                            {data?.mainBlock?.days.map((v, i) => (
+                            {data?.mainBlock?.days?.map((v, i) => (
                                 <div className="menu__day" key={i}>
-                                    <input type="radio" name="week" defaultChecked={i == 0 ? true : false} />
-                                    <p className="menu__day-text">{sizeWindow > 1024 ? v : v.slice(0, 2)}</p>
+                                    <input type="radio" name="week" defaultChecked={i == 0 ? true : false} aria-label="Выбор дня недели"/>
+                                    <p className="menu__day-text">{sizeWindow > 1024 ? v : v?.slice(0, 2)}</p>
                                 </div>
                             ))}
                         </div>

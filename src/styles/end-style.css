@@ -266,7 +266,7 @@ select {
 }
 
 .header {
-  width: 100%;
+  width: 100vw;
   position: fixed;
   top: 0;
   z-index: 10;
@@ -327,6 +327,7 @@ select {
   display: none;
   flex-direction: column;
   justify-content: space-between;
+  cursor: pointer;
 }
 @media (min-width: 1440px) {
   .header__menu-button {
@@ -8258,7 +8259,7 @@ img {
 }
 
 html {
-  scrollbar-gutter: auto;
+  scrollbar-gutter: stable;
 }
 
 body {

@@ -1,38 +1,32 @@
 import React, { useCallback, useContext, useEffect } from "react";
-// import "./header.scss";
 import { DataContext } from "../../..";
-import { moveToSection, sectionInFocus } from "../../../styles/mixins/functionality";
-import { useSelector } from "react-redux";
+import { moveToSection, sectionInFocus } from "../../../styles/script/functionality";
 
 function Header() {
+    let burgerContent, burgerButton
     const data = useContext(DataContext).header
-    const sizeWindow = useSelector(state => state.global.sizeWindow)
+    const matchMedia = window.matchMedia("(min-width: 768px)")
+
+    queueMicrotask(() => {
+        burgerContent = document.getElementsByClassName("header__burger-menu-content")[0]
+        burgerButton = document.getElementsByClassName("header__menu-button")[0]
+    })
 
     const clickMenu = useCallback((e) => {
         e.stopPropagation()
-        if (sizeWindow <= 768) {
-            let burgerContent = document.getElementsByClassName("header__burger-menu-content")[0]
-            let burgerButton = document.getElementsByClassName("header__menu-button")[0]
-            burgerContent.classList.toggle("header__burger-menu-content_active")
-            burgerButton.classList.toggle("header__menu-button_active")
-            document.body.classList.toggle("scroll-lock")
-        }
+        burgerContent.classList.toggle("header__burger-menu-content_active")
+        burgerButton.classList.toggle("header__menu-button_active")
+        document.body.classList.toggle("scroll-lock")
     }, [])
 
     useEffect(() => {
-        if (sizeWindow > 768) {
-            let burgerContent = document.getElementsByClassName("header__burger-menu-content")[0]
-            let burgerButton = document.getElementsByClassName("header__menu-button")[0]
+        matchMedia.addEventListener("change", () => {
             burgerContent.classList.remove("header__burger-menu-content_active")
             burgerButton.classList.remove("header__menu-button_active")
             document.body.classList.remove("scroll-lock")
-        }
-    }, [sizeWindow])
-
-    useEffect(() => {
+        })
         sectionInFocus("header__link", "data-section", "header__link_show")
     }, [])
-
 
     return <header className="header">
         <div className="header__content">
@@ -49,7 +43,7 @@ function Header() {
                     <nav className="header__nav">
                         <ul className="header__links-row">
                             {data?.links?.map((v, i) => (
-                                <li className="header__link" key={i} data-section={v?.section} onClick={(e) => { moveToSection(e); clickMenu(e); }}>
+                                <li className="header__link" id={"link-" + v?.section} key={i} data-section={v?.section} onClick={(e) => { moveToSection(e); clickMenu(e); }}>
                                     {v?.text}
                                 </li>
                             ))}

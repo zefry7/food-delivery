@@ -8,7 +8,7 @@ export const data = {
         links: [
             {
                 text: "Menu",
-                section: "menu"
+                section: "menu",
             },
             {
                 text: "Delivery",

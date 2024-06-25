@@ -12,12 +12,10 @@ export default function SwiperConstructor(props) {
 
   return (
     <Swiper
-      { ...settingSwiper[setting] }
+      {...settingSwiper[setting]}
       modules={[Navigation, Pagination]}
     >
-      {data?.map((v, i) => (
-        slideViews[setting](v, i)
-      ))} 
+      {props.children}
     </Swiper>
   );
 };

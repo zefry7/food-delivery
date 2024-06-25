@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { DataContext } from "../../..";
-import { moveToSection } from "../../../styles/mixins/functionality";
+import { moveToSection } from "../../../styles/script/functionality";
 
 function Footer() {
     const data = useContext(DataContext)?.footer;

@@ -10,21 +10,24 @@ import Area from "./Area/Area";
 function MainPage() {
 
     useEffect(() => {
+        const options = {
+            rootMargin: "0px",
+            threshold: 0.15
+        }
+
         const list = document.querySelectorAll("section")
-        window.addEventListener("load", () => {
-            for(let el of list) {
-                if(el.offsetTop - (window.innerHeight * 0.8)  < window.scrollY) {
-                    el.classList.add("show-block")
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entrie) => {
+                if (entrie.isIntersecting) {
+                    entrie.target.classList.add("show-block")
                 }
-            }
-        })
-        document.addEventListener("scroll", () => {
-            for(let el of list) {
-                if(el.offsetTop - (window.innerHeight * 0.8)  < window.scrollY) {
-                    el.classList.add("show-block")
-                }
-            }
-        })
+            })
+        }, options)
+
+        for (let sectionElement of list) {
+            observer.observe(sectionElement)
+        }
     }, [])
 
     return <>

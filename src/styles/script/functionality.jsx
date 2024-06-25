@@ -11,23 +11,25 @@ export function moveToSection(e) {
 
 export function sectionInFocus(classLink, nameAttrSection, classInFocus) {
     const listLink = document.getElementsByClassName(classLink)
+    
+    const options = {
+        rootMargin: '0px',
+        threshold: 0.65
+    }
 
-    for (let link of listLink) {
-        window.addEventListener("scroll", () => {
-            const el = document.getElementById(link.getAttribute(nameAttrSection))
-
-            if (el) {
-                if (el.offsetTop - window.scrollY < window.innerHeight / 2 && window.scrollY < el.offsetTop + el.offsetHeight / 2) {
-                    link.classList.add(classInFocus)
-                }
-                else if (link.getAttribute(nameAttrSection) == "footer" && window.scrollY > document.body.offsetHeight - window.innerHeight - 120) {
-                    link.classList.add(classInFocus)
-                }
-                else {
-                    link.classList.remove(classInFocus)
-                }
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+            const linkElement = document.getElementById("link-" + entry.target.id);
+            if (entry.isIntersecting) {
+                linkElement.classList.add(classInFocus)
+            } else {
+                linkElement.classList.remove(classInFocus)
             }
         })
+    }, options)
+
+    for (let link of listLink) {
+        observer.observe(document.getElementById(link.getAttribute(nameAttrSection)))
     }
 }
 

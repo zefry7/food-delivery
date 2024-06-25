@@ -2,8 +2,9 @@ import React, { useCallback, useContext, useEffect, useRef, useState } from "rea
 import SwiperConstructor from "../../../components/SwiperConstructor/SwiperConstructor";
 import { DataContext } from "../../..";
 import MyButton from "../../../components/MyButton/MyButton";
-import { useSelector } from "react-redux";
-import { parallaxElement } from "../../../styles/mixins/functionality";
+import { useDispatch, useSelector } from "react-redux";
+import { parallaxElement } from "../../../styles/script/functionality";
+import { SwiperSlide } from "swiper/react";
 
 function Menu() {
     const data = useContext(DataContext)?.menu
@@ -13,6 +14,7 @@ function Menu() {
     const [listDish, setListDish] = useState(null)
     const typeMenu = useSelector(state => state?.menu?.typeMenu)
     const sizeWindow = useSelector(state => state?.global?.sizeWindow)
+    const dispath = useDispatch()
 
     const switchComposition = useCallback((str) => {
         switch (str) {
@@ -48,17 +50,27 @@ function Menu() {
             }).then(result => setListDish(result))
         }
         getList()
-    }, [typeMenu])
+    }, [typeMenu, data?.mainBlock?.menuList])
 
     useEffect(() => {
         parallaxElement("menu-rellax", "menu")
-    }, [])
+        dispath({ type: "edit", value: data?.complex[0]?.kcal })
+    }, [dispath, data?.complex])
 
     return <section className="menu" id="menu">
         <div className="menu__content">
             <h2 className="menu__title">{data?.title}</h2>
             <div className="menu__complex">
-                <SwiperConstructor data={data?.complex} setting="settingComplex" />
+                <SwiperConstructor data={data?.complex} setting="settingComplex">
+                    <>
+                        {data?.complex?.map((value, index) => (
+                            <SwiperSlide key={index} onClick={() => dispath({ type: "edit", value: value?.kcal })}>
+                                <input type="radio" name="complex" defaultChecked={index === 0 ? true : false} onClick={(e) => e.target.blur()} aria-label='Выбор калорийности' />
+                                <p className='menu__complex-text'>{value.kcal} kcal</p>
+                            </SwiperSlide>
+                        ))}
+                    </>
+                </SwiperConstructor>
             </div>
             <div className="menu__wrapper-main-block">
                 <div className="menu__main-block">
@@ -66,7 +78,7 @@ function Menu() {
                         <div className="menu__line-week">
                             {data?.mainBlock?.days?.map((v, i) => (
                                 <div className="menu__day" key={i}>
-                                    <input type="radio" name="week" defaultChecked={i == 0 ? true : false} aria-label="Выбор дня недели"/>
+                                    <input type="radio" name="week" defaultChecked={i === 0 ? true : false} aria-label="Выбор дня недели" />
                                     <p className="menu__day-text">{sizeWindow > 1024 ? v : v?.slice(0, 2)}</p>
                                 </div>
                             ))}
@@ -75,7 +87,28 @@ function Menu() {
                     <div className="menu__center">
                         <div className="menu__center-swiper">
                             <div className="menu__center-arrow-prev"></div>
-                            <SwiperConstructor setting={"settingMenu"} data={listDish} />
+                            <SwiperConstructor setting={"settingMenu"} data={listDish}>
+                                {listDish?.map((value, index) => (
+                                <SwiperSlide data-index={index + 1 < 10 ? "0" + (index + 1) : index + 1} key={index}>
+                                    <div className="menu__center-item">
+                                        <div className="menu__center-item-img">
+                                            <img src={value?.img?.src} alt={value?.img?.alt} loading="lazy" />
+                                        </div>
+                                        <div className="menu__center-item-text">
+                                            <p className="menu__center-item-type">{value?.type}</p>
+                                            <p className="menu__center-item-name">{value?.name}</p>
+                                            <div className="menu__center-item-info">
+                                                <p className="menu__center-item-protein">Protein - {value?.protein} g</p>
+                                                <p className="menu__center-item-fat">Fat - {value?.fat} g</p>
+                                                <p className="menu__center-item-carbo">Carbohydrates - {value?.carbo} g</p>
+                                                <p className="menu__center-item-energy">Energy - {value?.energy} kcal</p>
+                                                <p className="menu__center-item-weight">Total weight: {value?.weight} g</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </SwiperSlide>
+                                ))}
+                            </SwiperConstructor>
                             <div className="menu__center-arrow-next"></div>
                         </div>
                         <div className="menu__center-pagination"></div>
@@ -119,7 +152,7 @@ function Menu() {
                 ))}
             </div>
         </div>
-    </section>
+    </section >
 }
 
 export default Menu;

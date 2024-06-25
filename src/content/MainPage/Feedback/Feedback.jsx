@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import MyButton from "../../../components/MyButton/MyButton";
 import { DataContext } from "../../..";
-import { parallaxElement } from "../../../styles/mixins/functionality";
+import { parallaxElement } from "../../../styles/script/functionality";
 
 function Feedback() {
     const data = useContext(DataContext)?.feedback;

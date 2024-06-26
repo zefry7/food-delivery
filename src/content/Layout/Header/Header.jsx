@@ -13,12 +13,12 @@ function Header() {
     })
 
     const clickMenu = useCallback((e) => {
-        matchMediaMax.addEventListener("change", () => {
-            e.stopPropagation()
-            burgerContent.classList.add("header__burger-menu-content_active")
-            burgerButton.classList.add("header__menu-button_active")
-            document.body.classList.add("scroll-lock")
-        })
+        e.stopPropagation()
+        if (matchMediaMax.dispatchEvent) {
+            burgerContent.classList.toggle("header__burger-menu-content_active")
+            burgerButton.classList.toggle("header__menu-button_active")
+            document.body.classList.toggle("scroll-lock")
+        }
     }, [])
 
     useEffect(() => {

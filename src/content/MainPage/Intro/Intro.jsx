@@ -10,6 +10,7 @@ function Intro() {
         parallaxElement("intro-rellax", "intro")
     }, [])
 
+
     return <section className="intro show-block">
         <div className="intro__content">
             <h1 className="intro__title">{data?.title}</h1>

@@ -5,22 +5,24 @@ import { moveToSection, sectionInFocus } from "../../../styles/script/functional
 function Header() {
     let burgerContent, burgerButton
     const data = useContext(DataContext).header
-    const matchMedia = window.matchMedia("(min-width: 768px)")
-
+    const matchMediaMin = window.matchMedia("(min-width: 768px)")
+    const matchMediaMax = window.matchMedia("(max-width: 768px)")
     queueMicrotask(() => {
         burgerContent = document.getElementsByClassName("header__burger-menu-content")[0]
         burgerButton = document.getElementsByClassName("header__menu-button")[0]
     })
 
     const clickMenu = useCallback((e) => {
-        e.stopPropagation()
-        burgerContent.classList.toggle("header__burger-menu-content_active")
-        burgerButton.classList.toggle("header__menu-button_active")
-        document.body.classList.toggle("scroll-lock")
+        matchMediaMax.addEventListener("change", () => {
+            e.stopPropagation()
+            burgerContent.classList.add("header__burger-menu-content_active")
+            burgerButton.classList.add("header__menu-button_active")
+            document.body.classList.add("scroll-lock")
+        })
     }, [])
 
     useEffect(() => {
-        matchMedia.addEventListener("change", () => {
+        matchMediaMin.addEventListener("change", () => {
             burgerContent.classList.remove("header__burger-menu-content_active")
             burgerButton.classList.remove("header__menu-button_active")
             document.body.classList.remove("scroll-lock")

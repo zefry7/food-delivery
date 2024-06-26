@@ -36,7 +36,7 @@ export function sectionInFocus(classLink, nameAttrSection, classInFocus) {
 export function parallaxElement(classElement, wrapperClass) {
     const root = document.getElementsByClassName(wrapperClass)[0]
     const decorList = document.getElementsByClassName(classElement)
-
+    
     root.addEventListener("mousemove", (e) => {
         const sizeWindow = window.innerWidth
 
@@ -45,7 +45,6 @@ export function parallaxElement(classElement, wrapperClass) {
             const parallaxTopOffset = root.getBoundingClientRect().top;
             const coordX = e.clientX - parallaxLeftOffset - 0.5 * root.offsetWidth;
             const coordY = e.clientY - parallaxTopOffset - 0.5 * root.offsetHeight;
-
             for (let decor of decorList) {
                 decor.setAttribute('style', `position: absolute; left: ${coordX.toFixed(2) * decor.getAttribute("data-speed")}px; top: ${coordY.toFixed(2) * decor.getAttribute("data-speed")}px;`)
             }

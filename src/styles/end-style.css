@@ -8272,6 +8272,13 @@ body {
   overflow: hidden;
 }
 
+.promotion-rellax,
+.feedback-rellax,
+.intro-rellax,
+.menu-rellax {
+  transition: left 0.2s ease-out, top 0.2s ease-out; 
+}
+
 @media (min-width: 1440px) {
   .padding-content, .header__content, .footer__content, .intro, .menu__title, .menu__complex, .menu__wrapper-main-block, .area__content, .advantage, .promotion__content, .faq__content, .feedback {
     padding-right: 120px;

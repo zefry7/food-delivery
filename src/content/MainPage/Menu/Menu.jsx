@@ -13,6 +13,7 @@ function Menu() {
     const countPrice = useRef(0)
     const [listDish, setListDish] = useState(null)
     const typeMenu = useSelector(state => state?.menu?.typeMenu)
+    const typeComplex = useSelector(state => state?.menu?.typeComplex)
     const sizeWindow = useSelector(state => state?.global?.sizeWindow)
     const dispath = useDispatch()
 
@@ -57,6 +58,21 @@ function Menu() {
         dispath({ type: "edit", value: data?.complex[0]?.kcal })
     }, [dispath, data?.complex])
 
+    useEffect(() => {
+        const listComplexButton = document.getElementsByClassName("menu__complex-text");
+        [...listComplexButton].forEach((v, i) => {
+            if (i == typeComplex)
+                v.classList.add("menu__complex-text_select")
+            else
+                v.classList.remove("menu__complex-text_select")
+        })
+    }, [typeComplex])
+
+    const selectComplex = useCallback((value, index) => {
+        dispath({ type: "complex", value: index }); 
+        dispath({ type: "edit", value: value?.kcal })
+    }, [])
+
     return <section className="menu" id="menu" aria-label="Секция с меню">
         <div className="menu__content">
             <h2 className="menu__title" aria-label="Меню блюд">{data?.title}</h2>
@@ -64,9 +80,9 @@ function Menu() {
                 <SwiperConstructor data={data?.complex} setting="settingComplex">
                     <>
                         {data?.complex?.map((value, index) => (
-                            <SwiperSlide key={index}>
-                                <p className='menu__complex-text'>{value.kcal} kcal
-                                    <input type="radio" name="complex" tabIndex={0} defaultChecked={index === 0 ? true : false} onClick={(e) => { dispath({ type: "edit", value: value?.kcal }) }} aria-label={`${value.kcal} калорий`} />
+                            <SwiperSlide key={index} >
+                                <p className='menu__complex-text' onClick={() => selectComplex(value, index)} onKeyDown={(e) => { if(e.keyCode == 13) { selectComplex(value, index) }}} role="button" tabIndex={0}>
+                                    {value.kcal} kcal
                                 </p>
                             </SwiperSlide>
                         ))}

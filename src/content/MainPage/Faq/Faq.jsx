@@ -1,4 +1,4 @@
-import React, { useCallback, useContext, useMemo } from "react";
+import React, { useCallback, useContext, useEffect, useMemo } from "react";
 import SwiperConstructor from "../../../components/SwiperConstructor/SwiperConstructor";
 import { DataContext } from "../../..";
 import { useDispatch, useSelector } from "react-redux";
@@ -33,13 +33,13 @@ function Faq() {
         let listQuestion = document.querySelectorAll("input.faq__question-input:checked")
         let time = 0
 
-        if(timerData) {
+        if (timerData) {
             console.log("123");
             clearTimeout(timerData)
             timerData = null
         }
 
-        if(timerEffect) {
+        if (timerEffect) {
             clearTimeout(timerEffect)
             timerEffect = null
         }
@@ -64,6 +64,19 @@ function Faq() {
         for (let x of listQuestion) {
             x.checked = false;
         }
+    }, [themeFaq])
+
+    const effectForSelectItem = useCallback((e) => {
+        const listComplexButton = document.getElementsByClassName("faq__item");
+        [...listComplexButton].forEach((v, i) => {
+            v.classList.remove("faq__item_select")
+        })
+        e.currentTarget.classList.add("faq__item_select")
+    }, [])
+
+
+    useEffect(() => {
+        document.getElementsByClassName("faq__item")[0].classList.add("faq__item_select")
     }, [])
 
     return <section className="faq" id="faq">
@@ -72,11 +85,10 @@ function Faq() {
             <SwiperConstructor setting="settingFaq">
                 {data?.items?.map((value, index) => (
                     <SwiperSlide key={index}>
-                        {index === 0
-                            ? <input type="radio" name="faq-type" className='faq__item-input' data-index={index} defaultChecked onChange={(e) => animationOpacity(e)} aria-label='Выбор темы вопроса' />
-                            : <input type="radio" name="faq-type" className='faq__item-input' data-index={index} onChange={(e) => animationOpacity(e)} aria-label='Выбор темы вопроса' />
-                        }
-                        <div className="faq__item">
+                        <div className="faq__item" data-index={index} aria-label='Выбор темы вопроса' tabIndex={0} role="button"
+                            onClick={(e) => { effectForSelectItem(e); animationOpacity(e) }}
+                            onKeyDown={(e) => { if(e.keyCode == 13) { effectForSelectItem(e); animationOpacity(e) } }}
+                        >
                             <div className="faq__item-img"></div>
                             <p className="faq__item-text">{value?.text}</p>
                         </div>

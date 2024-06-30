@@ -205,7 +205,7 @@ export const data = {
             {
                 src: "./img/Menu/decor-1.webp",
                 alt: "Декорация",
-                dataSpeed: "0.04"
+                dataSpeed: "0.02"
             },
             {
                 src: "./img/Menu/decor-2.webp",

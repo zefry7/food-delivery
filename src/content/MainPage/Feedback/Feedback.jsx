@@ -13,10 +13,20 @@ function Feedback() {
 
     const formSubmit = useCallback((e) => {
         e.preventDefault()
-        const form = new FormData(e.target)
-        console.log(form.get("name"));
-        // inputTel.value = inputTel.value.replace(new RegExp("[a-z]", "ig"), "")
+    }, [])
 
+    const changeInputTel = useCallback((e) => {
+        const reg = new RegExp("[0-9]", "")
+        if(e.target.value && !e.target.value[e.target.value.length - 1].match(reg)) {
+            e.target.value = e.target.value.slice(0, e.target.value.length - 1)
+        }
+    }, [])
+
+    const changeInputName = useCallback((e) => {
+        const reg = new RegExp("[a-zа-я]", "i")
+        if(e.target.value && !e.target.value[e.target.value.length - 1].match(reg)) {
+            e.target.value = e.target.value.slice(0, e.target.value.length - 1)
+        }
     }, [])
 
     return <section className="feedback">
@@ -27,8 +37,8 @@ function Feedback() {
             </div>
             <div className="feedback__block-form">
                 <form action="" className="feedback__form" onSubmit={(e) => formSubmit(e)}>
-                    <input type="text" className="feedback__form-name" name="name" minLength="3" maxLength="20" placeholder={data?.form?.name?.placeholder} aria-label={data?.form?.name?.placeholder} required />
-                    <input type="tel" className="feedback__form-tel" name="tel" maxLength="11" placeholder={data?.form?.tel?.placeholder} aria-label={data?.form?.tel?.placeholder} required />
+                    <input type="text" className="feedback__form-name" name="name" minLength="3" maxLength="20" onChange={changeInputName} placeholder={data?.form?.name?.placeholder} aria-label={data?.form?.name?.placeholder} required />
+                    <input type="tel" className="feedback__form-tel" name="tel" maxLength="11" onChange={changeInputTel} placeholder={data?.form?.tel?.placeholder} aria-label={data?.form?.tel?.placeholder} required />
                     <input type="email" className="feedback__form-email" name="email" placeholder={data?.form?.email?.placeholder} aria-label={data?.form?.email?.placeholder} required />
                     <MyButton class="feedback__form-button" text={data?.button?.text} type={"submit"} />
                     <a href="https://web.telegram.org/k/" className="feedback__href-tg">

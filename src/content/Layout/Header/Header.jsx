@@ -47,8 +47,8 @@ function Header() {
                     <nav className="header__nav" aria-label="Навигационное меню">
                         <ul className="header__links-row">
                             {data?.links?.map((v, i) => (
-                                <li className="header__link" id={"link-" + v?.section} tabIndex={0} key={i} data-section={v?.section} onClick={(e) => { moveToSection(e); clickMenu(e); }} role="button">
-                                    {v?.text}
+                                <li key={i}>
+                                    <button className="header__link" id={"link-" + v?.section} tabIndex={0} data-section={v?.section} onClick={(e) => { moveToSection(e); clickMenu(e); }}>{v?.text}</button>
                                 </li>
                             ))}
                         </ul>

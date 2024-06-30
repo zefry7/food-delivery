@@ -76,7 +76,7 @@ button::-moz-focus-inner {
 
 a, a:visited {
   text-decoration: none;
-  color: initial;
+  color: inherit;
   cursor: pointer;
 }
 
@@ -1667,6 +1667,7 @@ select {
 .footer__logo {
   transition: opacity 0.1s linear;
   cursor: pointer;
+  display: flex;
 }
 .footer__logo:hover {
   opacity: 0.5;
@@ -1747,6 +1748,7 @@ select {
   font-family: "MN";
   cursor: pointer;
   transition: opacity 0.1s linear;
+  color: var(--white-c);
 }
 @media (min-width: 1440px) {
   .footer__links-item {
@@ -1855,6 +1857,7 @@ select {
 .footer__address {
   display: flex;
   flex-direction: column;
+  color: var(--white-c);
 }
 @media (min-width: 1440px) {
   .footer__address {
@@ -1960,7 +1963,6 @@ select {
 }
 .footer__address-link:hover {
   text-decoration: underline;
-  color: var(--white-c);
 }
 @media (min-width: 1440px) {
   .footer__address-link:hover {

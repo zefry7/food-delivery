@@ -103,7 +103,7 @@ function Menu() {
                     </div>
                     <div className="menu__center">
                         <div className="menu__center-swiper">
-                            <button className="menu__center-arrow-prev" tabIndex={0}></button>
+                            <button className="menu__center-arrow-prev" tabIndex={0} aria-label="Перемещение списка блюд вправо"></button>
                             <SwiperConstructor setting={"settingMenu"} data={listDish} >
                                 {listDish?.map((value, index) => (
                                     <SwiperSlide data-index={index + 1 < 10 ? "0" + (index + 1) : index + 1} key={index}>
@@ -126,7 +126,7 @@ function Menu() {
                                     </SwiperSlide>
                                 ))}
                             </SwiperConstructor>
-                            <button className="menu__center-arrow-next" tabIndex={0}></button>
+                            <button className="menu__center-arrow-next" tabIndex={0} aria-label="Перемещение списка блюд влево"></button>
                         </div>
                         <div className="menu__center-pagination"></div>
                         <p className="menu__center-description">

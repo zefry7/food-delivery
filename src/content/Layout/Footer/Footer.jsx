@@ -9,17 +9,21 @@ function Footer() {
         <div className="footer__content">
             <div className="footer__left-block">
                 <button className="footer__logo" tabIndex={0} onClick={(e) => { moveToSection(e) }}>
-                    <img src={data?.logo?.src} alt={data?.logo?.alt}  loading="lazy" />
+                    <img src={data?.logo?.src} alt={data?.logo?.alt} loading="lazy" />
                 </button>
                 <ul className="footer__links">
                     {data?.links?.map((v, i) => (
-                        <li className="footer__links-item" key={i} data-section={v?.section} onClick={(e) => moveToSection(e)} tabIndex={0} role="button">{v?.text}</li>
+                        <li key={i}> 
+                            <button className="footer__links-item" data-section={v?.section} onClick={(e) => moveToSection(e)} tabIndex={0}>{v?.text}</button>
+                        </li>
                     ))}
                 </ul>
                 <ul className="footer__messages">
                     {data?.messages?.map((v, i) => (
-                        <li className="footer__messages-item" key={i} tabIndex={0} role="button">
-                            <img src={v?.src} alt={v?.alt} loading="lazy" />
+                        <li className="footer__messages-item" key={i}>
+                            <a href="#" tabIndex={0}>
+                                <img src={v?.src} alt={v?.alt} loading="lazy" />
+                            </a>
                         </li>
                     ))}
                 </ul>

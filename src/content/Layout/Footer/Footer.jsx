@@ -8,17 +8,17 @@ function Footer() {
     return <footer className="footer" id="footer">
         <div className="footer__content">
             <div className="footer__left-block">
-                <div className="footer__logo">
-                    <img src={data?.logo?.src} alt={data?.logo?.alt} onClick={(e) => { moveToSection(e) }} loading="lazy" />
-                </div>
+                <button className="footer__logo" tabIndex={0} onClick={(e) => { moveToSection(e) }}>
+                    <img src={data?.logo?.src} alt={data?.logo?.alt}  loading="lazy" />
+                </button>
                 <ul className="footer__links">
                     {data?.links?.map((v, i) => (
-                        <li className="footer__links-item" key={i} data-section={v?.section} onClick={(e) => moveToSection(e)}>{v?.text}</li>
+                        <li className="footer__links-item" key={i} data-section={v?.section} onClick={(e) => moveToSection(e)} tabIndex={0} role="button">{v?.text}</li>
                     ))}
                 </ul>
                 <ul className="footer__messages">
                     {data?.messages?.map((v, i) => (
-                        <li className="footer__messages-item" key={i}>
+                        <li className="footer__messages-item" key={i} tabIndex={0} role="button">
                             <img src={v?.src} alt={v?.alt} loading="lazy" />
                         </li>
                     ))}
@@ -27,7 +27,7 @@ function Footer() {
             <div className="footer__right-block">
                 <address className="footer__address">
                     {data?.info?.map((v, i) => (
-                        <span className="footer__address-link" key={i}>{v}</span>
+                        <a className="footer__address-link" href="#" key={i} tabIndex={0}>{v}</a>
                     ))}
                 </address>
             </div>

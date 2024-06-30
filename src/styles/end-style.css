@@ -8345,3 +8345,6 @@ body {
 section {
   opacity: 0;
 }
+button {
+  background-color: transparent;
+}

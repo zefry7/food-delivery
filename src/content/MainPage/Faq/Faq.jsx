@@ -69,12 +69,12 @@ function Faq() {
     return <section className="faq" id="faq">
         <div className="faq__content">
             <h2 className="faq__title">{data?.title}</h2>
-            <SwiperConstructor setting="settingFaq" data={data?.items}>
+            <SwiperConstructor setting="settingFaq">
                 {data?.items?.map((value, index) => (
                     <SwiperSlide key={index}>
                         {index === 0
-                            ? <input type="radio" name="faq-type" className='faq__item-input' data-index={index} defaultChecked onChange={(e) => animationOpacity(e)} onClick={(e) => e.target.blur()} aria-label='Выбор темы вопроса' />
-                            : <input type="radio" name="faq-type" className='faq__item-input' data-index={index} onChange={(e) => animationOpacity(e)} onClick={(e) => e.target.blur()} aria-label='Выбор темы вопроса' />
+                            ? <input type="radio" name="faq-type" className='faq__item-input' data-index={index} defaultChecked onChange={(e) => animationOpacity(e)} aria-label='Выбор темы вопроса' />
+                            : <input type="radio" name="faq-type" className='faq__item-input' data-index={index} onChange={(e) => animationOpacity(e)} aria-label='Выбор темы вопроса' />
                         }
                         <div className="faq__item">
                             <div className="faq__item-img"></div>

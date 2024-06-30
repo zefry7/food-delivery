@@ -18,7 +18,6 @@ if (url.length <= 2) {
 
 export const DataContext = createContext()
 
-
 root.render(
   <Provider store={store}>
     <DataContext.Provider value={data}>

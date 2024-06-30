@@ -57,16 +57,16 @@ function Menu() {
         dispath({ type: "edit", value: data?.complex[0]?.kcal })
     }, [dispath, data?.complex])
 
-    return <section className="menu" id="menu">
+    return <section className="menu" id="menu" aria-label="Секция с меню">
         <div className="menu__content">
-            <h2 className="menu__title">{data?.title}</h2>
-            <div className="menu__complex">
+            <h2 className="menu__title" aria-label="Меню блюд">{data?.title}</h2>
+            <div className="menu__complex" aria-label="Выбор калорийности на день">
                 <SwiperConstructor data={data?.complex} setting="settingComplex">
                     <>
                         {data?.complex?.map((value, index) => (
-                            <SwiperSlide key={index} onClick={() => dispath({ type: "edit", value: value?.kcal })}>
+                            <SwiperSlide key={index}>
                                 <p className='menu__complex-text'>{value.kcal} kcal
-                                    <input type="radio" name="complex" defaultChecked={index === 0 ? true : false} tabIndex={0} onClick={(e) => e.target.blur()} aria-label='Выбор калорийности' />
+                                    <input type="radio" name="complex" tabIndex={0} defaultChecked={index === 0 ? true : false} onClick={(e) => { dispath({ type: "edit", value: value?.kcal }) }} aria-label={`${value.kcal} калорий`} />
                                 </p>
                             </SwiperSlide>
                         ))}
@@ -87,8 +87,8 @@ function Menu() {
                     </div>
                     <div className="menu__center">
                         <div className="menu__center-swiper">
-                            <div className="menu__center-arrow-prev"></div>
-                            <SwiperConstructor setting={"settingMenu"} data={listDish}>
+                            <button className="menu__center-arrow-prev" tabIndex={0}></button>
+                            <SwiperConstructor setting={"settingMenu"} data={listDish} >
                                 {listDish?.map((value, index) => (
                                     <SwiperSlide data-index={index + 1 < 10 ? "0" + (index + 1) : index + 1} key={index}>
                                         <div className="menu__center-item">
@@ -110,7 +110,7 @@ function Menu() {
                                     </SwiperSlide>
                                 ))}
                             </SwiperConstructor>
-                            <div className="menu__center-arrow-next"></div>
+                            <button className="menu__center-arrow-next" tabIndex={0}></button>
                         </div>
                         <div className="menu__center-pagination"></div>
                         <p className="menu__center-description">
@@ -119,7 +119,7 @@ function Menu() {
                     </div>
                     <div className="menu__bottom">
                         <div className="menu__bottom-gd">
-                            <p className="menu__bottom-gd-text">
+                            <p className="menu__bottom-gd-text" tabIndex={0} role="button">
                                 {data?.mainBlock?.gd[0]}
                                 {countPrice.current}
                                 {data?.mainBlock?.gd[1]}

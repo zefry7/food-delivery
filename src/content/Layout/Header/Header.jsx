@@ -32,44 +32,44 @@ function Header() {
         sectionInFocus("header__link", "data-section", "header__link_show")
     }, [])
 
-    return <header className="header">
+    return <header className="header" aria-label="Верхняя часть сайта">
         <div className="header__content">
             <div className="header__menu">
-                <button className="header__menu-button" onClick={(e) => clickMenu(e)}>
+                <button className="header__menu-button" onClick={(e) => clickMenu(e)} tabIndex={0} aria-label="Кнопка меню">
                     <span></span>
                     <span></span>
                     <span></span>
                 </button>
-                <div className="header__logo" onClick={(e) => { moveToSection(e) }}>
+                <div className="header__logo" onClick={(e) => { moveToSection(e)}} tabIndex={0} aria-label="Логотип" role="button">
                     <img src={data?.logo?.src} alt={data?.logo?.alt} />
                 </div>
                 <div className="header__burger-menu-content">
-                    <nav className="header__nav">
+                    <nav className="header__nav" aria-label="Навигационное меню">
                         <ul className="header__links-row">
                             {data?.links?.map((v, i) => (
-                                <li className="header__link" id={"link-" + v?.section} key={i} data-section={v?.section} onClick={(e) => { moveToSection(e); clickMenu(e); }}>
+                                <li className="header__link" id={"link-" + v?.section} tabIndex={0} key={i} data-section={v?.section} onClick={(e) => { moveToSection(e); clickMenu(e); }} role="button">
                                     {v?.text}
                                 </li>
                             ))}
                         </ul>
                     </nav>
-                    <address className="header__tel">
-                        <a href="tel:000 000 000">{data?.tel}</a>
+                    <address className="header__tel" aria-label="Информация о номере телефона">
+                        <a href="tel:000 000 000" aria-label="Номер телефона">{data?.tel}</a>
                     </address>
                 </div>
-                <div className="header__lang">
+                <div className="header__lang" aria-label="Возможность сменить язык на сайте">
                     <select name="lang" aria-label="Выбор языка на сайте">
                         {data?.lang?.map((v, i) => (
-                            <option value={v} key={i}>{v}</option>
+                            <option value={v} key={i} aria-label={v}>{v}</option>
                         ))}
                     </select>
                 </div>
-                <div className="header__sing-in">
-                    <div className="header__account-img">
+                <button className="header__sing-in" tabIndex={0} aria-label="Кнопка для входя в аккаунт">
+                    <div className="header__account-img" aria-hidden="true">
                         <img src={data?.account?.img?.src} alt={data?.account?.img?.alt} />
                     </div>
-                    <span>{data?.account?.text}</span>
-                </div>
+                    <span aria-hidden="true">{data?.account?.text}</span>
+                </button>
             </div>
         </div>
     </header>

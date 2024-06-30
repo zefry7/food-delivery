@@ -46,6 +46,7 @@
             font-family: "MB";
             line-height: 120%;
             cursor: pointer;
+            position: relative;
             &:hover {
                 background-color: var(--orange-c);
                 color: var(--white-c);

@@ -65,8 +65,9 @@ function Menu() {
                     <>
                         {data?.complex?.map((value, index) => (
                             <SwiperSlide key={index} onClick={() => dispath({ type: "edit", value: value?.kcal })}>
-                                <input type="radio" name="complex" defaultChecked={index === 0 ? true : false} onClick={(e) => e.target.blur()} aria-label='Выбор калорийности' />
-                                <p className='menu__complex-text'>{value.kcal} kcal</p>
+                                <p className='menu__complex-text'>{value.kcal} kcal
+                                    <input type="radio" name="complex" defaultChecked={index === 0 ? true : false} tabIndex={0} onClick={(e) => e.target.blur()} aria-label='Выбор калорийности' />
+                                </p>
                             </SwiperSlide>
                         ))}
                     </>
@@ -78,7 +79,7 @@ function Menu() {
                         <div className="menu__line-week">
                             {data?.mainBlock?.days?.map((v, i) => (
                                 <div className="menu__day" key={i}>
-                                    <input type="radio" name="week" defaultChecked={i === 0 ? true : false} aria-label="Выбор дня недели" />
+                                    <input type="radio" name="week" defaultChecked={i === 0 ? true : false} tabIndex={0} aria-label="Выбор дня недели" />
                                     <p className="menu__day-text">{sizeWindow > 1024 ? v : v?.slice(0, 2)}</p>
                                 </div>
                             ))}
@@ -89,24 +90,24 @@ function Menu() {
                             <div className="menu__center-arrow-prev"></div>
                             <SwiperConstructor setting={"settingMenu"} data={listDish}>
                                 {listDish?.map((value, index) => (
-                                <SwiperSlide data-index={index + 1 < 10 ? "0" + (index + 1) : index + 1} key={index}>
-                                    <div className="menu__center-item">
-                                        <div className="menu__center-item-img">
-                                            <img src={value?.img?.src} alt={value?.img?.alt} loading="lazy" />
-                                        </div>
-                                        <div className="menu__center-item-text">
-                                            <p className="menu__center-item-type">{value?.type}</p>
-                                            <p className="menu__center-item-name">{value?.name}</p>
-                                            <div className="menu__center-item-info">
-                                                <p className="menu__center-item-protein">Protein - {value?.protein} g</p>
-                                                <p className="menu__center-item-fat">Fat - {value?.fat} g</p>
-                                                <p className="menu__center-item-carbo">Carbohydrates - {value?.carbo} g</p>
-                                                <p className="menu__center-item-energy">Energy - {value?.energy} kcal</p>
-                                                <p className="menu__center-item-weight">Total weight: {value?.weight} g</p>
+                                    <SwiperSlide data-index={index + 1 < 10 ? "0" + (index + 1) : index + 1} key={index}>
+                                        <div className="menu__center-item">
+                                            <div className="menu__center-item-img">
+                                                <img src={value?.img?.src} alt={value?.img?.alt} loading="lazy" />
+                                            </div>
+                                            <div className="menu__center-item-text">
+                                                <p className="menu__center-item-type">{value?.type}</p>
+                                                <p className="menu__center-item-name">{value?.name}</p>
+                                                <div className="menu__center-item-info">
+                                                    <p className="menu__center-item-protein">Protein - {value?.protein} g</p>
+                                                    <p className="menu__center-item-fat">Fat - {value?.fat} g</p>
+                                                    <p className="menu__center-item-carbo">Carbohydrates - {value?.carbo} g</p>
+                                                    <p className="menu__center-item-energy">Energy - {value?.energy} kcal</p>
+                                                    <p className="menu__center-item-weight">Total weight: {value?.weight} g</p>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </SwiperSlide>
+                                    </SwiperSlide>
                                 ))}
                             </SwiperConstructor>
                             <div className="menu__center-arrow-next"></div>

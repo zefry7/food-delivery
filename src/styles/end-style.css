@@ -3306,6 +3306,7 @@ select {
   font-family: "MB";
   line-height: 120%;
   cursor: pointer;
+  position: relative;
 }
 @media (min-width: 1440px) {
   .menu__complex-text {

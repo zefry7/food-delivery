@@ -8,6 +8,8 @@ function Faq() {
     const data = useContext(DataContext)?.faq
     const themeFaq = useSelector(state => state?.faq?.themeFaq)
     const dispath = useDispatch()
+    let timerData = null
+    let timerEffect = null
 
     const contentBlockQuestion = useMemo(() => {
         let rand = Math.trunc(Math.random() * 5)
@@ -24,30 +26,45 @@ function Faq() {
                 </div>
             </div>
         ))
-    }, [themeFaq, data?.question])
+    }, [themeFaq])
 
     const animationOpacity = useCallback((e) => {
         let el = document.getElementsByClassName("faq__block-question")[0]
         let listQuestion = document.querySelectorAll("input.faq__question-input:checked")
+        let time = 0
+
+        if(timerData) {
+            console.log("123");
+            clearTimeout(timerData)
+            timerData = null
+        }
+
+        if(timerEffect) {
+            clearTimeout(timerEffect)
+            timerEffect = null
+        }
+
         if (listQuestion.length > 0) {
-            setTimeout(() => {
-                el.style.opacity = 0;
-            }, 300)
-            setTimeout(() => {
-                el.style.opacity = 1;
-                dispath({ type: "changeTheme", value: e.target.getAttribute("data-index") })
-            }, 800)
+            el.style.opacity = 0;
+            time = 800
         } else {
             el.style.opacity = 0;
-            setTimeout(() => {
-                el.style.opacity = 1;
-                dispath({ type: "changeTheme", value: e.target.getAttribute("data-index") })
-            }, 500)
+            time = 500
         }
+        timerData = setTimeout(() => {
+            dispath({ type: "changeTheme", value: e.target.getAttribute("data-index") })
+            timerData = null
+        }, 300)
+
+
+        timerEffect = setTimeout(() => {
+            el.style.opacity = 1;
+        }, time)
+
         for (let x of listQuestion) {
             x.checked = false;
         }
-    }, [dispath])
+    }, [])
 
     return <section className="faq" id="faq">
         <div className="faq__content">

@@ -1,12 +1,14 @@
 import React, { useCallback, useContext, useEffect } from "react";
 import { DataContext } from "../../..";
 import { moveToSection, sectionInFocus } from "../../../styles/script/functionality";
+import { useSelector } from "react-redux";
 
 function Header() {
     let burgerContent, burgerButton
     const data = useContext(DataContext).header
+    const sizeWindow = useSelector(state => state.global.sizeWindow)
     const matchMediaMin = window.matchMedia("(min-width: 768px)")
-    const matchMediaMax = window.matchMedia("(max-width: 768px)")
+
     queueMicrotask(() => {
         burgerContent = document.getElementsByClassName("header__burger-menu-content")[0]
         burgerButton = document.getElementsByClassName("header__menu-button")[0]
@@ -14,12 +16,12 @@ function Header() {
 
     const clickMenu = useCallback((e) => {
         e.stopPropagation()
-        if (matchMediaMax.dispatchEvent) {
+        if (sizeWindow <= 768) {
             burgerContent.classList.toggle("header__burger-menu-content_active")
             burgerButton.classList.toggle("header__menu-button_active")
             document.body.classList.toggle("scroll-lock")
         }
-    }, [])
+    }, [sizeWindow])
 
     useEffect(() => {
         matchMediaMin.addEventListener("change", () => {
@@ -33,11 +35,11 @@ function Header() {
     return <header className="header">
         <div className="header__content">
             <div className="header__menu">
-                <div className="header__menu-button" onClick={(e) => clickMenu(e)}>
+                <button className="header__menu-button" onClick={(e) => clickMenu(e)}>
                     <span></span>
                     <span></span>
                     <span></span>
-                </div>
+                </button>
                 <div className="header__logo" onClick={(e) => { moveToSection(e) }}>
                     <img src={data?.logo?.src} alt={data?.logo?.alt} />
                 </div>

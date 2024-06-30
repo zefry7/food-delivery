@@ -48,7 +48,7 @@ export const data = {
             {
                 src: "./img/Intro/decor-2.webp",
                 alt: "Декорация",
-                dataSpeed: "0.09"
+                dataSpeed: "0.04"
             },
             {
                 src: "./img/Intro/decor-3.webp",
@@ -205,12 +205,12 @@ export const data = {
             {
                 src: "./img/Menu/decor-1.webp",
                 alt: "Декорация",
-                dataSpeed: "0.05"
+                dataSpeed: "0.04"
             },
             {
                 src: "./img/Menu/decor-2.webp",
                 alt: "Декорация",
-                dataSpeed: "0.03"
+                dataSpeed: "0.05"
             },
         ]
     },
